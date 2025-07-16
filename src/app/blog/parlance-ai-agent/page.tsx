@@ -9,19 +9,18 @@ export default function ParlanceBlog() {
     <div className="min-h-screen bg-white text-black flex flex-col">
       <HeroHeader />
       <main className="flex-1 w-full max-w-2xl mx-auto px-4 pt-32 pb-20">
-        <article className="prose prose-lg mx-auto text-center">
+        <article className="prose prose-lg mx-auto text-center [&_h2]:font-bold [&_h3]:font-bold">
           <div className="mb-16 flex flex-col items-center gap-6">
-            <div className="text-gray-500 text-base mb-2">{today} <span className="mx-2">|</span> <span className="font-medium">SendLead Team</span></div>
-            <h1 className="text-4xl font-bold mb-2 leading-tight">SendLead Launches Parlance</h1>
+            <div className="text-gray-500 text-base mb-2">{today} <span className="mx-2">|</span> <span className="font-medium">Sendlead Team</span></div>
+            <h1 className="text-4xl font-bold mb-2 leading-tight">Sendlead Launches Parlance</h1>
             <div className="text-xl text-gray-700 mb-8 font-medium">The AI Agent That Triples Your Appointment Bookings</div>
             <div className="w-full aspect-[16/7] relative rounded-2xl overflow-hidden mb-4">
               <Image src="/parlance.png" alt="SendLead Parlance AI Agent" fill className="object-cover" />
             </div>
-            <div className="text-lg text-gray-700 mb-2 max-w-2xl w-full text-left">
-              We’re thrilled to introduce <b>Parlance</b> to our SendLead customers—a revolutionary AI agent that’s already helping businesses set <b>3x as many appointments</b> as traditional follow-up methods. If you’ve been struggling with lead nurturing, missed follow-ups, or simply don’t have enough hours in the day to chase every prospect, Parlance is about to change everything for your business.
-            </div>
           </div>
           <div className="text-left space-y-8 text-lg leading-relaxed px-2 md:px-8">
+            <p> We’re thrilled to introduce <b>Parlance</b> to our Sendlead customers—a revolutionary AI agent that’s already helping businesses set <b>3x as many appointments</b> as traditional follow-up methods.</p> 
+            <p>If you’ve been struggling with lead nurturing, missed follow-ups, or simply don’t have enough hours in the day to chase every prospect, Parlance is about to change everything for your business.</p>
             <h2>The Problem Every Business Faces</h2>
             <p>You generate leads through ads, website forms, and referrals. But then what? The biggest challenge facing lead generation isn’t getting more leads—it’s converting those leads into customers. Small improvements in conversion rates have massive impacts on ROI and overall business success.</p>
             <p>The trends we’re seeing across the industry make this challenge even more pronounced. It’s harder than ever to get leads on the phone—cold calling response rates continue to decline, and prospects are increasingly screening their calls. Even when you do manage to reach them, today’s buyers want more time and information before making a decision. They expect instant responses to their questions, detailed information at their fingertips, and the ability to move through the sales process at their own pace.</p>
@@ -67,8 +66,8 @@ export default function ParlanceBlog() {
             <p>The businesses that thrive in 2025 and beyond will be those that can respond fastest, follow up most consistently, and convert leads most effectively. Parlance gives you all three advantages.</p>
             <p>With automated lead nurturing becoming essential for business growth, Parlance provides human-like service at machine-like scale.</p>
             <hr />
-            <p><i>For existing SendLead customers, Parlance is now available as part of your service. Contact our support team to activate Parlance for your account and begin experiencing 3x more appointment bookings.</i></p>
-            <p><i>New to SendLead? Discover how our complete lead nurturing solution, including Parlance, can transform your business. Visit sendlead.co to learn more about our AI-powered sales automation platform.</i></p>
+            <p><i>For existing Sendlead customers, Parlance is now available as part of your service. Contact our support team to activate Parlance for your account and begin experiencing 3x more appointment bookings.</i></p>
+            <p><i>New to Sendlead? Discover how our complete lead nurturing solution, including Parlance, can transform your business. Visit sendlead.co to learn more about our AI-powered sales automation platform.</i></p>
           </div>
         </article>
       </main>

@@ -14,14 +14,6 @@ const posts = [
     image: '/parlance.png',
     excerpt: 'Meet Parlance, the AI agent that books 3x more appointments by automating lead nurturing, qualification, and scheduling for your business.'
   },
-  {
-    slug: 'test-blog',
-    title: 'Scaling coordinated vulnerability disclosure',
-    category: 'Security',
-    date: 'June 9, 2025',
-    image: '/Group 20.png',
-    excerpt: 'OpenAI’s approach to reporting vulnerabilities in third-party software, built on integrity, cooperation, and scale.'
-  },
   // Add more posts here as needed
 ];
 
