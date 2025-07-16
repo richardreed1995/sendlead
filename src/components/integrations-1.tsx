@@ -1,14 +1,14 @@
-import Button from '/components/ui/button'
-import Card from '/components/ui/card'
-import ChevronRight from 'lucide-react'
+import { Button } from './ui/button'
+import { Card } from '../../card'
+import { ChevronRight } from 'lucide-react'
 import Link from 'next/link'
 import * as React from 'react'
-import Gemini from '/components/logos/Gemini'
-import Replit from '/components/logos/Replit'
-import MagicUI from '/components/logos/MagicUI'
-import VSCodium from '/components/logos/VSCodium'
-import MediaWiki from '/components/logos/MediaWiki'
-import GooglePaLM from '/components/logos/GooglePaLM'
+import Gemini from './logos/Gemini'
+import Replit from './logos/Replit'
+import MagicUI from './logos/MagicUI'
+import VSCodium from './logos/VSCodium'
+import MediaWiki from './logos/MediaWiki'
+import GooglePaLM from './logos/GooglePaLM'
 
 export default function IntegrationsSection() {
     return (
