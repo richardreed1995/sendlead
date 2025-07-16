@@ -236,13 +236,14 @@ export default function Features() {
                                     animate={{ opacity: 1, y: 0, scale: 1 }}
                                     exit={{ opacity: 0, y: 6, scale: 0.98 }}
                                     transition={{ duration: 0.2 }}
-                                    className="size-full overflow-hidden rounded-2xl border bg-zinc-900 shadow-md">
+                                    className="size-full overflow-hidden rounded-2xl border bg-white dark:bg-zinc-900 shadow-md">
                                     <Image
                                         src={images[activeItem].image}
                                         className="size-full object-cover object-left-top dark:mix-blend-lighten"
                                         alt={images[activeItem].alt}
                                         width={1207}
                                         height={929}
+                                        loading="lazy"
                                     />
                                 </motion.div>
                             </AnimatePresence>
