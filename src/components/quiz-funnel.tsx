@@ -50,7 +50,7 @@ export default function QuizFunnel() {
   // 4: How much are you currently spending on leads per month?
   // 5: We just need a few contact details:
 
-  function next() {
+  async function next() {
     setError("");
     if (step === 0 && !leadType) return setError("Please select a lead type");
     if (step === 1 && buyingLeads === null) return setError("Please select an option");
@@ -66,6 +66,25 @@ export default function QuizFunnel() {
         return setError("Please enter a valid phone number");
       }
       if (!agree) return setError("You must agree to the privacy policy");
+      // Send data to webhook
+      try {
+        await fetch("https://hook.eu2.make.com/xq1dvs5e98p1w88grh58skodmco254tx", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            leadType,
+            buyingLeads,
+            leadsPerWeek,
+            additionalLeads,
+            spend,
+            contact,
+            agree,
+            completedAt: new Date().toISOString(),
+          }),
+        });
+      } catch (e) {
+        // Fail silently
+      }
       router.push("/success");
       return;
     }
