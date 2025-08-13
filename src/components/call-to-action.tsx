@@ -12,7 +12,8 @@ export default function CallToAction() {
                     <div className="mt-12 flex flex-wrap justify-center gap-4">
                         <Button
                             asChild
-                            size="lg">
+                            size="lg"
+                            className="bg-[#2998FD] hover:bg-[#1f7fd9] text-white">
                             <Link href="/get-started">
                                 <span>Get Started</span>
                             </Link>

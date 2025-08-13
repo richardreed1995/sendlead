@@ -4,7 +4,7 @@ import { cn } from '../lib/utils'
 export const Logo = ({ className }: { className?: string }) => {
     return (
         <Image
-            src="/sendlead-logo.svg"
+            src="/Group 28 (1).png"
             alt="Sendlead logo"
             height={32}
             width={128}

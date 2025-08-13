@@ -894,6 +894,10 @@
     width: calc(var(--spacing) * 7);
   }
 
+  .w-8 {
+    width: calc(var(--spacing) * 8);
+  }
+
   .w-10 {
     width: calc(var(--spacing) * 10);
   }
@@ -1030,6 +1034,10 @@
 
   .-rotate-180 {
     rotate: -180deg;
+  }
+
+  .rotate-12 {
+    rotate: 12deg;
   }
 
   .rotate-180 {
@@ -1204,6 +1212,12 @@
     margin-inline-end: calc(calc(var(--spacing) * 2) * calc(1 - var(--tw-space-x-reverse)));
   }
 
+  :where(.space-x-3 > :not(:last-child)) {
+    --tw-space-x-reverse: 0;
+    margin-inline-start: calc(calc(var(--spacing) * 3) * var(--tw-space-x-reverse));
+    margin-inline-end: calc(calc(var(--spacing) * 3) * calc(1 - var(--tw-space-x-reverse)));
+  }
+
   :where(.divide-x > :not(:last-child)) {
     --tw-divide-x-reverse: 0;
     border-inline-style: var(--tw-border-style);
@@ -1317,6 +1331,10 @@
     border-style: none;
   }
 
+  .border-\[\#2998FD\] {
+    border-color: #2998fd;
+  }
+
   .border-black {
     border-color: var(--color-black);
   }
@@ -1361,6 +1379,10 @@
 
   .border-zinc-800 {
     border-color: var(--color-zinc-800);
+  }
+
+  .bg-\[\#2998FD\] {
+    background-color: #2998fd;
   }
 
   .bg-background {
@@ -1861,6 +1883,10 @@
     white-space: pre;
   }
 
+  .text-\[\#2998FD\] {
+    color: #2998fd;
+  }
+
   .text-black {
     color: var(--color-black);
   }
@@ -1923,10 +1949,6 @@
 
   .text-zinc-600 {
     color: var(--color-zinc-600);
-  }
-
-  .underline {
-    text-decoration-line: underline;
   }
 
   .underline-offset-4 {
@@ -2195,6 +2217,10 @@
     opacity: .5;
   }
 
+  .group-data-\[state\=open\]\:rotate-180:is(:where(.group)[data-state="open"] *) {
+    rotate: 180deg;
+  }
+
   .peer-disabled\:cursor-not-allowed:is(:where(.peer):disabled ~ *) {
     cursor: not-allowed;
   }
@@ -2254,6 +2280,18 @@
   .last\:border-b-0:last-child {
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 0;
+  }
+
+  @media (hover: hover) {
+    .hover\:bg-\[\#1f7fd9\]:hover {
+      background-color: #1f7fd9;
+    }
+  }
+
+  @media (hover: hover) {
+    .hover\:bg-\[\#2998FD\]:hover {
+      background-color: #2998fd;
+    }
   }
 
   @media (hover: hover) {
@@ -2337,6 +2375,12 @@
   @media (hover: hover) {
     .hover\:text-primary:hover {
       color: var(--primary);
+    }
+  }
+
+  @media (hover: hover) {
+    .hover\:text-white:hover {
+      color: var(--color-white);
     }
   }
 

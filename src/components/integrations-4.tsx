@@ -53,7 +53,8 @@ export default function IntegrationsSection() {
                         <Button
                             variant="outline"
                             size="sm"
-                            asChild>
+                            asChild
+                            className="border-[#2998FD] text-[#2998FD] hover:bg-[#2998FD] hover:text-white">
                             <Link href="/get-started">Get Started</Link>
                         </Button>
                     </div>
