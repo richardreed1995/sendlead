@@ -216,12 +216,18 @@ export default function QuizFunnel() {
         {step === 5 && (
           <div>
             <h3 className="text-xl font-bold mb-6 text-center">We just need a few contact details:</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
-              <Input placeholder="Enter Your First Name" value={contact.first} onChange={e => setContact({ ...contact, first: e.target.value })} />
-              <Input placeholder="Enter Your Last Name" value={contact.last} onChange={e => setContact({ ...contact, last: e.target.value })} />
-              <Input placeholder="Company Name" value={contact.company} onChange={e => setContact({ ...contact, company: e.target.value })} />
-              <Input placeholder="Phone Number" value={contact.phone} onChange={e => setContact({ ...contact, phone: e.target.value })} />
+            <div className="space-y-4 mb-4">
+              {/* First Name and Last Name on same line */}
+              <div className="grid grid-cols-2 gap-4">
+                <Input placeholder="Enter Your First Name" value={contact.first} onChange={e => setContact({ ...contact, first: e.target.value })} />
+                <Input placeholder="Enter Your Last Name" value={contact.last} onChange={e => setContact({ ...contact, last: e.target.value })} />
+              </div>
+              {/* Email on its own line */}
               <Input placeholder="Email Address" value={contact.email} onChange={e => setContact({ ...contact, email: e.target.value })} />
+              {/* Company Name on its own line */}
+              <Input placeholder="Company Name" value={contact.company} onChange={e => setContact({ ...contact, company: e.target.value })} />
+              {/* Phone Number on its own line */}
+              <Input placeholder="Phone Number" value={contact.phone} onChange={e => setContact({ ...contact, phone: e.target.value })} />
             </div>
             <div className="flex items-center mb-4">
               <input type="checkbox" id="agree" checked={agree} onChange={e => setAgree(e.target.checked)} className="mr-2" />
