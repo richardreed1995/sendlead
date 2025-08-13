@@ -16,7 +16,9 @@ export const metadata: Metadata = {
   title: "Sendlead | B2B Lead Generation Agency",
   description: "Sendlead is a data-driven B2B lead generation agency delivering qualified leads for technology companies. Discover our proven 7-step methodology for systematic growth and ROI.",
   icons: {
-    icon: '/favicon-32x32.png',
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
   },
 };
 
