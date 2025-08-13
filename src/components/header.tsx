@@ -80,7 +80,7 @@ export const HeroHeader = () => {
                                 <Button
                                     asChild
                                     size="sm"
-                                    className="lg:inline-flex">
+                                    className="lg:inline-flex bg-[#2998FD] hover:bg-[#1f7fd9] text-white">
                                     <Link href="/get-started">
                                         <span>Get Started</span>
                                     </Link>

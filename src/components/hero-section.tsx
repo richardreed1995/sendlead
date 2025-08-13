@@ -136,7 +136,7 @@ export default function HeroSection() {
                                         <Button
                                             asChild
                                             size="lg"
-                                            className="rounded-xl px-5 text-base">
+                                            className="rounded-xl px-5 text-base bg-[#2998FD] hover:bg-[#1f7fd9] text-white">
                                             <Link href="/get-started">
                                                 <span className="text-nowrap">Get Started</span>
                                             </Link>

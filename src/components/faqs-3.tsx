@@ -1,5 +1,6 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "./ui/accordion";
 import { DynamicIcon, type IconName } from 'lucide-react/dynamic'
+import { ChevronDown } from 'lucide-react'
 import Link from 'next/link'
 
 type FAQItem = {
@@ -33,7 +34,7 @@ export default function FAQsThree() {
             id: 'item-4',
             icon: 'brain-circuit',
             question: 'How do you qualify these leads?',
-            answer: "Our proprietary machine learning system qualifies leads across 14+ data points. We continue to qualify after we’ve generated the lead to provide additional context to your sales team (at no cost).",
+            answer: "Our proprietary machine learning system qualifies leads across 14+ data points. We continue to qualify after we've generated the lead to provide additional context to your sales team (at no cost).",
         },
         {
             id: 'item-5',
@@ -99,16 +100,19 @@ export default function FAQsThree() {
                                 <AccordionItem
                                     key={item.id}
                                     value={item.id}
-                                    className="bg-background shadow-xs rounded-lg border px-4 last:border-b">
-                                    <AccordionTrigger className="cursor-pointer items-center py-5 hover:no-underline">
-                                        <div className="flex items-center gap-3">
-                                            <div className="flex size-6">
-                                                <DynamicIcon
-                                                    name={item.icon}
-                                                    className="m-auto size-4"
-                                                />
+                                    className="bg-background shadow-xs rounded-lg border px-4 last:border-b group">
+                                    <AccordionTrigger className="cursor-pointer items-center py-5 hover:no-underline w-full">
+                                        <div className="flex items-center justify-between w-full">
+                                            <div className="flex items-center gap-3">
+                                                <div className="flex size-6">
+                                                    <DynamicIcon
+                                                        name={item.icon}
+                                                        className="m-auto size-4"
+                                                    />
+                                                </div>
+                                                <span className="text-base">{item.question}</span>
                                             </div>
-                                            <span className="text-base">{item.question}</span>
+                                            <ChevronDown className="h-5 w-5 text-muted-foreground transition-transform duration-200 group-data-[state=open]:rotate-180" />
                                         </div>
                                     </AccordionTrigger>
                                     <AccordionContent className="pb-5">
