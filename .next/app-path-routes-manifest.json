@@ -1,0 +1,9 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/favicon.ico/route": "/favicon.ico",
+  "/blog/page": "/blog",
+  "/page": "/",
+  "/success/page": "/success",
+  "/get-started/page": "/get-started",
+  "/blog/parlance-ai-agent/page": "/blog/parlance-ai-agent"
+}

@@ -800,10 +800,6 @@
     width: calc(var(--spacing) * 7);
   }
 
-  .w-8 {
-    width: calc(var(--spacing) * 8);
-  }
-
   .w-10 {
     width: calc(var(--spacing) * 10);
   }
@@ -896,10 +892,6 @@
     flex-shrink: 0;
   }
 
-  .flex-grow {
-    flex-grow: 1;
-  }
-
   .origin-left {
     transform-origin: 0;
   }
@@ -940,10 +932,6 @@
 
   .-rotate-180 {
     rotate: -180deg;
-  }
-
-  .rotate-12 {
-    rotate: 12deg;
   }
 
   .rotate-180 {
@@ -1116,12 +1104,6 @@
     --tw-space-x-reverse: 0;
     margin-inline-start: calc(calc(var(--spacing) * 2) * var(--tw-space-x-reverse));
     margin-inline-end: calc(calc(var(--spacing) * 2) * calc(1 - var(--tw-space-x-reverse)));
-  }
-
-  :where(.space-x-3 > :not(:last-child)) {
-    --tw-space-x-reverse: 0;
-    margin-inline-start: calc(calc(var(--spacing) * 3) * var(--tw-space-x-reverse));
-    margin-inline-end: calc(calc(var(--spacing) * 3) * calc(1 - var(--tw-space-x-reverse)));
   }
 
   :where(.divide-x > :not(:last-child)) {
