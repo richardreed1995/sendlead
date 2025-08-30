@@ -8,35 +8,35 @@ import Link from 'next/link'
 
 const links = [
     {
-        group: 'Lead Generation',
+        group: 'Sectors',
         items: [
             {
                 title: 'Mortgages',
-                href: '#',
+                href: '/mortgage',
             },
             {
-                title: 'Life Insurance',
-                href: '#',
+                title: 'Car Finance',
+                href: '/car-finance',
             },
             {
                 title: 'Business Loans',
-                href: '#',
+                href: '/business-loans',
             },
             {
-                title: 'Auto Insurance',
-                href: '#',
+                title: 'Life Insurance',
+                href: '/life-insurance',
             },
             {
-                title: 'Collaboration',
-                href: '#',
+                title: 'Secured Loans',
+                href: '/secured-loans',
             },
             {
-                title: 'Credit Repair',
-                href: '#',
+                title: 'Business Grants',
+                href: '/business-grants',
             },
             {
-                title: 'Pet Insurance',
-                href: '#',
+                title: 'Property Investment',
+                href: '/property-investment',
             },
         ],
     },
@@ -45,15 +45,15 @@ const links = [
         items: [
             {
                 title: 'About',
-                href: '#',
+                href: '/#about',
             },
             {
-                title: 'Careers',
-                href: '#',
+                title: 'Process',
+                href: '/process',
             },
             {
-                title: 'Blog',
-                href: '#',
+                title: 'Resources',
+                href: '/blog',
             },
         ],
     },
@@ -62,15 +62,15 @@ const links = [
         items: [
             {
                 title: 'Privacy Policy',
-                href: '#',
+                href: '/privacy-policy',
             },
             {
                 title: 'Cookie Policy',
-                href: '#',
+                href: '/cookies',
             },
             {
                 title: 'Terms',
-                href: '#',
+                href: '/terms-conditions',
             },
         ],
     },
