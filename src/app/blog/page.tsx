@@ -2,6 +2,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { HeroHeader } from '@/components/header';
 import FooterSection from '@/components/footer';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Sendlead | Blog",
+  description: "Latest insights, updates, and stories from Sendlead - your B2B lead generation partner.",
+};
 
 const today = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 

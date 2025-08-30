@@ -82,8 +82,8 @@ export default function HeroSection() {
                                     <Link
                                         href="#link"
                                         className="hover:bg-background dark:hover:border-t-border bg-muted group mx-auto flex w-fit items-center gap-4 rounded-full border p-1 pl-4 shadow-md shadow-zinc-950/5 transition-colors duration-300 dark:border-t-white/5 dark:shadow-zinc-950">
-                                        <Link href="/blog/parlance-ai-agent" className="text-foreground text-sm hover:text-primary transition-colors">
-                                            New: Launching Parlance, The AI Setting Agent
+                                        <Link href="/blog/parlance-ai-agent" className="text-foreground text-xs sm:text-sm hover:text-primary transition-colors">
+                                            New: Launching Parlance - AI Setting Agent
                                         </Link>
                                         <span className="dark:border-background block h-4 w-0.5 border-l bg-white dark:bg-zinc-700"></span>
 
@@ -104,7 +104,7 @@ export default function HeroSection() {
                                     preset="fade-in-blur"
                                     speedSegment={0.3}
                                     as="h1"
-                                    className="mt-10 text-balance text-6xl md:text-7xl lg:mt-16 xl:text-[5.25rem] font-medium">
+                                    className="mt-10 text-balance text-4xl sm:text-5xl md:text-6xl lg:mt-16 lg:text-7xl xl:text-[5.25rem] font-medium">
                                     Get Qualified Leads Delivered To Your CRM
                                 </TextEffect>
                                 <TextEffect
@@ -113,8 +113,17 @@ export default function HeroSection() {
                                     speedSegment={0.3}
                                     delay={0.5}
                                     as="p"
-                                    className="mx-auto mt-8 max-w-2xl text-balance text-lg">
-                                    We generate qualified leads for finance, healthcare, and insurance businesses. Pay-per-lead, real-time delivery, CRM ready, no setup fees.
+                                    className="mx-auto mt-8 max-w-3xl text-balance text-base sm:text-lg">
+                                    We generate qualified leads for finance, healthcare, and insurance businesses.
+                                </TextEffect>
+                                <TextEffect
+                                    per="line"
+                                    preset="fade-in-blur"
+                                    speedSegment={0.3}
+                                    delay={0.7}
+                                    as="p"
+                                    className="mx-auto mt-2 max-w-3xl text-balance text-sm sm:text-base text-muted-foreground">
+                                    Pay-per-lead, real-time delivery, CRM ready, no setup fees.
                                 </TextEffect>
 
                                 <AnimatedGroup
@@ -158,19 +167,20 @@ export default function HeroSection() {
                                 },
                                 ...transitionVariants,
                             }}>
-                            <div className="relative -mr-56 mt-8 overflow-hidden px-2 sm:mr-0 sm:mt-12 md:mt-20">
+                            <div className="relative mt-8 overflow-hidden px-2 sm:mt-12 md:mt-20">
                                 <div
                                     aria-hidden
                                     className="bg-linear-to-b to-background absolute inset-0 z-10 from-transparent from-35%"
                                 />
-                                <div className="inset-shadow-2xs ring-background dark:inset-shadow-white/20 bg-background relative mx-auto max-w-6xl overflow-hidden rounded-2xl border p-4 shadow-lg shadow-zinc-950/15 ring-1">
+                                <div className="inset-shadow-2xs ring-background dark:inset-shadow-white/20 bg-background relative mx-auto max-w-6xl overflow-hidden rounded-2xl border p-2 sm:p-4 shadow-lg shadow-zinc-950/15 ring-1">
                                     <Image
-                                        className="bg-background aspect-15/8 relative rounded-2xl"
+                                        className="bg-background aspect-15/8 relative rounded-2xl w-full h-auto object-cover"
                                         src="/Dashboard.jpg"
                                         alt="Sendlead dashboard screenshot"
                                         width={2700}
                                         height={1440}
                                         priority
+                                        style={{ maxWidth: '100%', height: 'auto' }}
                                     />
                                 </div>
                             </div>

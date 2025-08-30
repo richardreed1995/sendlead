@@ -79,10 +79,21 @@ var __TURBOPACK__imported__module__$5b$next$5d2f$internal$2f$font$2f$google$2f$g
 ;
 ;
 const metadata = {
-    title: "Sendlead | B2B Lead Generation Agency",
+    title: "Sendlead | Lead Generation Agency",
     description: "Sendlead is a data-driven B2B lead generation agency delivering qualified leads for technology companies. Discover our proven 7-step methodology for systematic growth and ROI.",
     icons: {
-        icon: '/favicon-32x32.png'
+        icon: [
+            {
+                url: '/favicon.png',
+                type: 'image/png'
+            },
+            {
+                url: '/favicon.ico',
+                type: 'image/x-icon'
+            }
+        ],
+        shortcut: '/favicon.ico',
+        apple: '/apple-touch-icon.png'
     }
 };
 function RootLayout({ children }) {
@@ -93,12 +104,12 @@ function RootLayout({ children }) {
             children: children
         }, void 0, false, {
             fileName: "[project]/src/app/layout.tsx",
-            lineNumber: 30,
+            lineNumber: 35,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/app/layout.tsx",
-        lineNumber: 29,
+        lineNumber: 34,
         columnNumber: 5
     }, this);
 }

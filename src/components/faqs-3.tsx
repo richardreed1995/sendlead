@@ -110,14 +110,14 @@ export default function FAQsThree() {
                                                         className="m-auto size-4"
                                                     />
                                                 </div>
-                                                <span className="text-base">{item.question}</span>
+                                                <span className="text-base sm:text-lg text-left">{item.question}</span>
                                             </div>
                                             <ChevronDown className="h-5 w-5 text-muted-foreground transition-transform duration-200 group-data-[state=open]:rotate-180" />
                                         </div>
                                     </AccordionTrigger>
                                     <AccordionContent className="pb-5">
-                                        <div className="px-9">
-                                            <p className="text-sm text-zinc-600 dark:text-zinc-300">{item.answer}</p>
+                                        <div className="px-4 sm:px-9">
+                                            <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-300 text-left">{item.answer}</p>
                                         </div>
                                     </AccordionContent>
                                 </AccordionItem>

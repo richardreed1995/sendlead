@@ -6,6 +6,12 @@ import CallToAction from "@/components/call-to-action";
 import Faqs3 from "@/components/faqs-3";
 import Footer from "@/components/footer";
 import Features from "@/components/features-12";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Sendlead | Lead Generation Agency",
+  description: "Sendlead is a data-driven B2B lead generation agency delivering qualified leads for technology companies. Discover our proven 7-step methodology for systematic growth and ROI.",
+};
 
 export default function Home() {
   return (
