@@ -1,6 +1,12 @@
 import { HeroHeader } from '@/components/header';
 import Image from 'next/image';
 import FooterSection from '@/components/footer';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Sendlead | Parlance AI Agent",
+  description: "Discover how Sendlead's Parlance AI agent triples your appointment bookings through intelligent lead nurturing and automated scheduling.",
+};
 
 const today = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 

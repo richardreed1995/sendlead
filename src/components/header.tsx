@@ -1,21 +1,31 @@
 'use client'
 import Link from 'next/link'
 import { Logo } from '@/components/logo'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, ChevronDown } from 'lucide-react'
 import { Button } from './ui/button'
 import React from 'react'
 import { cn } from "../lib/utils";
 
 const menuItems = [
-    { name: 'Overview', href: '/#overview' },
-    { name: 'Methodology', href: '/#methodology' },
-    { name: 'About', href: '/#about' },
-    { name: 'Blog', href: '/blog' },
+    { name: 'Process', href: '/#process' },
+    { name: 'About', href: '/about' },
+    { name: 'Resources', href: '/blog' },
+]
+
+const sectorItems = [
+    { name: 'Mortgages', href: '/mortgage' },
+    { name: 'Car Finance', href: '/car-finance' },
+    { name: 'Business Loans', href: '/business-loans' },
+    { name: 'Life Insurance', href: '/life-insurance' },
+    { name: 'Secured Loans', href: '/secured-loans' },
+    { name: 'Business Grants', href: '/business-grants' },
+    { name: 'Property Investment', href: '/property-investment' },
 ]
 
 export const HeroHeader = () => {
     const [menuState, setMenuState] = React.useState(false)
     const [isScrolled, setIsScrolled] = React.useState(false)
+    const [sectorsOpen, setSectorsOpen] = React.useState(false)
 
     React.useEffect(() => {
         const handleScroll = () => {
@@ -24,6 +34,7 @@ export const HeroHeader = () => {
         window.addEventListener('scroll', handleScroll)
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
+
     return (
         <header>
             <nav
@@ -50,6 +61,28 @@ export const HeroHeader = () => {
 
                         <div className="absolute inset-0 m-auto hidden size-fit lg:block">
                             <ul className="flex gap-8 text-sm">
+                                <li className="relative">
+                                    <button
+                                        onClick={() => setSectorsOpen(!sectorsOpen)}
+                                        onBlur={() => setTimeout(() => setSectorsOpen(false), 200)}
+                                        className="text-muted-foreground hover:text-accent-foreground flex items-center gap-1 duration-150">
+                                        <span>Sectors</span>
+                                        <ChevronDown className={cn("size-4 transition-transform duration-200", sectorsOpen && "rotate-180")} />
+                                    </button>
+                                    {sectorsOpen && (
+                                        <div className="absolute top-full left-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg py-2 z-50">
+                                            {sectorItems.map((item, index) => (
+                                                <Link
+                                                    key={index}
+                                                    href={item.href}
+                                                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#2998FD] transition-colors duration-150"
+                                                    onClick={() => setSectorsOpen(false)}>
+                                                    {item.name}
+                                                </Link>
+                                            ))}
+                                        </div>
+                                    )}
+                                </li>
                                 {menuItems.map((item, index) => (
                                     <li key={index}>
                                         <Link
@@ -65,6 +98,20 @@ export const HeroHeader = () => {
                         <div className="bg-background in-data-[state=active]:block lg:in-data-[state=active]:flex mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border p-6 shadow-2xl shadow-zinc-300/20 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent">
                             <div className="lg:hidden">
                                 <ul className="space-y-6 text-base">
+                                    <li>
+                                        <div className="text-muted-foreground font-medium mb-3">Sectors</div>
+                                        <ul className="space-y-3 ml-4">
+                                            {sectorItems.map((item, index) => (
+                                                <li key={index}>
+                                                    <Link
+                                                        href={item.href}
+                                                        className="text-muted-foreground hover:text-accent-foreground block duration-150 text-sm">
+                                                        {item.name}
+                                                    </Link>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </li>
                                     {menuItems.map((item, index) => (
                                         <li key={index}>
                                             <Link

@@ -5,9 +5,9 @@ export default function Features() {
         <section id="overview" className="py-6 md:py-10 scroll-mt-24">
             <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-16">
                 <div className="relative z-10 mx-auto max-w-xl space-y-4 text-center md:space-y-8">
-                    <h2 className="text-balance text-4xl font-medium lg:text-5xl">Why Choose Sendlead?</h2>
+                    <h2 className="text-balance text-4xl font-medium lg:text-5xl">Six Reasons To Choose Sendlead</h2>
                     <p className="text-muted-foreground text-base md:text-lg">
-                        The modern way to fill your pipeline: exclusive, AI-qualified prospects delivered instantly to your CRM.
+                        Exclusive, AI-qualified prospects delivered instantly to your CRM.
                     </p>
                 </div>
 
