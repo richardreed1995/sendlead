@@ -1,9 +1,20 @@
 {
-  "/favicon.ico/route": "/favicon.ico",
   "/_not-found/page": "/_not-found",
-  "/page": "/",
-  "/blog/page": "/blog",
+  "/favicon.ico/route": "/favicon.ico",
   "/blog/parlance-ai-agent/page": "/blog/parlance-ai-agent",
+  "/business-loans/page": "/business-loans",
+  "/mortgage/page": "/mortgage",
+  "/life-insurance/page": "/life-insurance",
+  "/property-investment/page": "/property-investment",
+  "/car-finance/page": "/car-finance",
+  "/privacy-policy/page": "/privacy-policy",
+  "/blog/page": "/blog",
+  "/page": "/",
+  "/business-grants/page": "/business-grants",
+  "/secured-loans/page": "/secured-loans",
+  "/terms-conditions/page": "/terms-conditions",
+  "/about/page": "/about",
+  "/cookies/page": "/cookies",
   "/get-started/page": "/get-started",
   "/success/page": "/success"
 }

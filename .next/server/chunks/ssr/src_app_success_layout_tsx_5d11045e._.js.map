@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///Users/richardreed/Sendlead/src/app/success/layout.tsx"],"sourcesContent":["import type { Metadata } from 'next';\n\nexport const metadata: Metadata = {\n  title: \"Sendlead | Application Submitted\",\n  description: \"Your application has been submitted successfully. We'll be in touch within 24 hours to discuss your specific needs.\",\n};\n\nexport default function SuccessLayout({\n  children,\n}: {\n  children: React.ReactNode;\n}) {\n  return children;\n}\n"],"names":[],"mappings":";;;;AAEO,MAAM,WAAqB;IAChC,OAAO;IACP,aAAa;AACf;AAEe,SAAS,cAAc,EACpC,QAAQ,EAGT;IACC,OAAO;AACT","debugId":null}}]
-}

@@ -1,14 +1,20 @@
 {
-  "/about/page": "app/about/page.js",
-  "/blog/page": "app/blog/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
   "/blog/parlance-ai-agent/page": "app/blog/parlance-ai-agent/page.js",
   "/business-loans/page": "app/business-loans/page.js",
+  "/mortgage/page": "app/mortgage/page.js",
+  "/life-insurance/page": "app/life-insurance/page.js",
+  "/property-investment/page": "app/property-investment/page.js",
   "/car-finance/page": "app/car-finance/page.js",
+  "/privacy-policy/page": "app/privacy-policy/page.js",
+  "/blog/page": "app/blog/page.js",
+  "/page": "app/page.js",
+  "/business-grants/page": "app/business-grants/page.js",
+  "/secured-loans/page": "app/secured-loans/page.js",
+  "/terms-conditions/page": "app/terms-conditions/page.js",
+  "/about/page": "app/about/page.js",
   "/cookies/page": "app/cookies/page.js",
   "/get-started/page": "app/get-started/page.js",
-  "/life-insurance/page": "app/life-insurance/page.js",
-  "/mortgage/page": "app/mortgage/page.js",
-  "/page": "app/page.js",
-  "/privacy-policy/page": "app/privacy-policy/page.js",
-  "/secured-loans/page": "app/secured-loans/page.js"
+  "/success/page": "app/success/page.js"
 }

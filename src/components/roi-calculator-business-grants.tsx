@@ -15,7 +15,27 @@ const LeadROICalculator = () => {
     referralsPerClient: 0.6
   });
 
-  const [results, setResults] = useState({});
+  const [results, setResults] = useState<{
+    totalInvestment: number;
+    leadsConverted: number;
+    immediateRevenue: number;
+    immediateProfit: number;
+    immediateROI: number;
+    lifetimeValuePerLead: number;
+    totalLifetimeRevenue: number;
+    totalLifetimeProfit: number;
+    lifetimeROI: number;
+  }>({
+    totalInvestment: 0,
+    leadsConverted: 0,
+    immediateRevenue: 0,
+    immediateProfit: 0,
+    immediateROI: 0,
+    lifetimeValuePerLead: 0,
+    totalLifetimeRevenue: 0,
+    totalLifetimeProfit: 0,
+    lifetimeROI: 0
+  });
 
   useEffect(() => {
     calculateROI();
@@ -52,14 +72,14 @@ const LeadROICalculator = () => {
     });
   };
 
-  const handleInputChange = (field, value) => {
+  const handleInputChange = (field: keyof typeof inputs, value: string) => {
     setInputs(prev => ({
       ...prev,
       [field]: parseFloat(value) || 0
     }));
   };
 
-  const formatCurrency = (amount) => {
+  const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-GB', {
       style: 'currency',
       currency: 'GBP',
@@ -67,7 +87,7 @@ const LeadROICalculator = () => {
     }).format(amount);
   };
 
-  const formatPercentage = (percentage) => {
+  const formatPercentage = (percentage: number) => {
     return `${Math.round(percentage)}%`;
   };
 
