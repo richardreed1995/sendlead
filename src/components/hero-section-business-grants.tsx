@@ -10,7 +10,7 @@ export default function HeroSectionBusinessGrants() {
           <div className="mb-3 sm:mb-4 lg:mb-5">
             <div className="inline-flex items-center gap-1 sm:gap-2 bg-gray-100 px-2 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm text-gray-700">
               <span className="text-yellow-500">★★★★★</span>
-              <span>Trusted by Leading Business Grant Consultants</span>
+              <span>Trusted by 50+ Business Grant Consultants</span>
             </div>
           </div>
           

@@ -17,11 +17,19 @@ export const metadata: Metadata = {
   description: "Sendlead is a data-driven B2B lead generation agency delivering qualified leads for technology companies. Discover our proven 7-step methodology for systematic growth and ROI.",
   icons: {
     icon: [
-      { url: '/favicon.png', type: 'image/png' },
-      { url: '/favicon.ico', type: 'image/x-icon' },
+      { url: '/favicon.svg?v=2', type: 'image/svg+xml' },
+      { url: '/favicon.ico?v=2', type: 'image/x-icon' },
+      { url: '/favicon.png?v=2', type: 'image/png', sizes: '32x32' },
     ],
-    shortcut: '/favicon.ico',
-    apple: '/apple-touch-icon.png',
+    shortcut: '/favicon.ico?v=2',
+    apple: [
+      { url: '/apple-touch-icon.png?v=2', sizes: '180x180', type: 'image/png' },
+    ],
+  },
+  manifest: '/manifest.json',
+  other: {
+    'msapplication-TileColor': '#2998FD',
+    'theme-color': '#2998FD',
   },
 };
 
@@ -32,6 +40,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=2" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="msapplication-TileColor" content="#2998FD" />
+        <meta name="theme-color" content="#2998FD" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

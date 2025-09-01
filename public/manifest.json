@@ -1,0 +1,28 @@
+{
+  "name": "Sendlead | Lead Generation Agency",
+  "short_name": "Sendlead",
+  "description": "Data-driven B2B lead generation agency delivering qualified leads for technology companies",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2998FD",
+  "icons": [
+    {
+      "src": "/favicon.svg?v=2",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.png?v=2",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png?v=2",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
+

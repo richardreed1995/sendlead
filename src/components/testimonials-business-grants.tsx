@@ -4,21 +4,21 @@ import Link from "next/link";
 const testimonials = [
   {
     quote: "Sendlead transformed our business grant consultancy completely. We were stuck competing for scraps from the big lead companies, now we get exclusive prospects who actually want to speak with us. Revenue doubled in four months.",
-    name: "Helen Taylor",
-    role: "Managing Director",
-    company: "Taylor Grant Solutions"
+    name: "James Mitchell",
+    role: "Director",
+    company: "Premier Finance Solutions"
   },
   {
     quote: "Finally found a lead company that understands business grant consultants. No more chasing dead leads or fighting five other consultants for the same client. The qualification process actually works.",
-    name: "Peter Davies",
+    name: "Sarah Henderson",
     role: "Founder",
-    company: "Davies Grant Consultancy"
+    company: "Henderson Vehicle Finance"
   },
   {
     quote: "Been in business grants for 15 years and tried every lead source going. Sendlead is the only one that consistently delivers quality prospects. Our conversion rate went from 12% to 28%.",
-    name: "Natalie Brown",
+    name: "Marcus Thompson",
     role: "Senior Partner",
-    company: "Brown & Associates Grants"
+    company: "Thompson & Associates"
   }
 ];
 
