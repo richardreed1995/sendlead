@@ -5,10 +5,12 @@ import { Menu, X, ChevronDown } from 'lucide-react'
 import { Button } from './ui/button'
 import React from 'react'
 import { cn } from "../lib/utils";
+import { usePathname } from 'next/navigation';
 
 const menuItems = [
     { name: 'Process', href: '/#process' },
     { name: 'About', href: '/about' },
+    { name: 'ROI', href: '/roi' },
     { name: 'Resources', href: '/blog' },
 ]
 
@@ -26,6 +28,7 @@ export const HeroHeader = () => {
     const [menuState, setMenuState] = React.useState(false)
     const [isScrolled, setIsScrolled] = React.useState(false)
     const [sectorsOpen, setSectorsOpen] = React.useState(false)
+    const pathname = usePathname()
 
     React.useEffect(() => {
         const handleScroll = () => {
@@ -124,14 +127,23 @@ export const HeroHeader = () => {
                                 </ul>
                             </div>
                             <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
-                                <Button
-                                    asChild
-                                    size="sm"
-                                    className="lg:inline-flex bg-[#2998FD] hover:bg-[#1f7fd9] text-white">
-                                    <Link href="/get-started">
-                                        <span>Get Started</span>
-                                    </Link>
-                                </Button>
+                                {pathname === '/roi' ? (
+                                    <Button
+                                        size="sm"
+                                        className="lg:inline-flex bg-[#2998FD] hover:bg-[#1f7fd9] text-white"
+                                        onClick={() => document.getElementById('roi-calculator')?.scrollIntoView({ behavior: 'smooth' })}>
+                                        <span>Calculate your ROI</span>
+                                    </Button>
+                                ) : (
+                                    <Button
+                                        asChild
+                                        size="sm"
+                                        className="lg:inline-flex bg-[#2998FD] hover:bg-[#1f7fd9] text-white">
+                                        <Link href="/get-started">
+                                            <span>Get Started</span>
+                                        </Link>
+                                    </Button>
+                                )}
                             </div>
                         </div>
                     </div>
