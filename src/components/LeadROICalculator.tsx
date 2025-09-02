@@ -2,6 +2,30 @@
 
 import React, { useState, useEffect } from 'react';
 
+type VerticalKey = 'mortgages' | 'carInsurance' | 'businessLoans' | 'lifeInsurance' | 'securedLoans' | 'businessGrants' | 'propertyInvestment' | 'custom';
+
+interface VerticalData {
+  name: string;
+  conversionRate: number;
+  avgDealValue: number;
+  commissionRate: number;
+  repeatBusinessRate: number;
+  clientLifetimeYears: number;
+  referralsPerClient: number;
+}
+
+interface ROIResults {
+  totalInvestment: number;
+  leadsConverted: number;
+  immediateRevenue: number;
+  immediateProfit: number;
+  immediateROI: number;
+  lifetimeValuePerLead: number;
+  totalLifetimeRevenue: number;
+  totalLifetimeProfit: number;
+  lifetimeROI: number;
+}
+
 const LeadROICalculator = () => {
   const [inputs, setInputs] = useState({
     numLeads: 50,
@@ -13,10 +37,20 @@ const LeadROICalculator = () => {
     referralsPerClient: 0.5
   });
 
-  const [results, setResults] = useState({});
-  const [selectedVertical, setSelectedVertical] = useState('custom');
+  const [results, setResults] = useState<ROIResults>({
+    totalInvestment: 0,
+    leadsConverted: 0,
+    immediateRevenue: 0,
+    immediateProfit: 0,
+    immediateROI: 0,
+    lifetimeValuePerLead: 0,
+    totalLifetimeRevenue: 0,
+    totalLifetimeProfit: 0,
+    lifetimeROI: 0
+  });
+  const [selectedVertical, setSelectedVertical] = useState<VerticalKey>('custom');
 
-  const verticals = {
+  const verticals: Record<VerticalKey, VerticalData> = {
     mortgages: {
       name: 'Mortgages',
       conversionRate: 15,
@@ -175,7 +209,7 @@ const LeadROICalculator = () => {
               </label>
               <select
                 value={selectedVertical}
-                onChange={(e) => setSelectedVertical(e.target.value)}
+                onChange={(e) => setSelectedVertical(e.target.value as VerticalKey)}
                 className="w-full px-3 py-2 border border-input rounded-md shadow-sm focus:ring-2 focus:ring-[#2998FD] focus:border-[#2998FD] bg-background text-foreground"
               >
                 {Object.entries(verticals).map(([key, vertical]) => (
@@ -281,12 +315,12 @@ const LeadROICalculator = () => {
               <div className="flex justify-between items-center mb-2">
                 <span className="text-sm font-medium text-muted-foreground">Total Investment</span>
                 <span className="text-lg font-semibold text-foreground">
-                  {formatCurrency(results.totalInvestment || 0)}
+                  {formatCurrency(results.totalInvestment)}
                 </span>
               </div>
               <div className="flex justify-between items-center">
                 <span className="text-sm text-muted-foreground">Leads Converted</span>
-                <span className="text-sm text-foreground">{results.leadsConverted || 0}</span>
+                <span className="text-sm text-foreground">{results.leadsConverted}</span>
               </div>
             </div>
 
@@ -298,19 +332,19 @@ const LeadROICalculator = () => {
                 <div className="flex justify-between">
                   <span className="text-sm text-green-700">Revenue</span>
                   <span className="text-sm font-medium text-green-800">
-                    {formatCurrency(results.immediateRevenue || 0)}
+                    {formatCurrency(results.immediateRevenue)}
                   </span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-sm text-green-700">Profit</span>
                   <span className="text-sm font-medium text-green-800">
-                    {formatCurrency(results.immediateProfit || 0)}
+                    {formatCurrency(results.immediateProfit)}
                   </span>
                 </div>
                 <div className="flex justify-between border-t border-green-200 pt-2">
                   <span className="text-sm font-medium text-green-800">ROI</span>
-                  <span className={`text-lg font-bold ${(results.immediateROI || 0) > 0 ? 'text-green-800' : 'text-red-600'}`}>
-                    {formatPercentage(results.immediateROI || 0)}
+                  <span className={`text-lg font-bold ${results.immediateROI > 0 ? 'text-green-800' : 'text-red-600'}`}>
+                    {formatPercentage(results.immediateROI)}
                   </span>
                 </div>
               </div>
@@ -324,19 +358,19 @@ const LeadROICalculator = () => {
                 <div className="flex justify-between">
                   <span className="text-sm text-blue-700">Total Revenue</span>
                   <span className="text-sm font-medium text-blue-800">
-                    {formatCurrency(results.totalLifetimeRevenue || 0)}
+                    {formatCurrency(results.totalLifetimeRevenue)}
                   </span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-sm text-blue-700">Total Profit</span>
                   <span className="text-sm font-medium text-blue-800">
-                    {formatCurrency(results.totalLifetimeProfit || 0)}
+                    {formatCurrency(results.totalLifetimeProfit)}
                   </span>
                 </div>
                 <div className="flex justify-between border-t border-blue-200 pt-2">
                   <span className="text-sm font-medium text-blue-800">Lifetime ROI</span>
-                  <span className={`text-lg font-bold ${(results.lifetimeROI || 0) > 0 ? 'text-blue-800' : 'text-red-600'}`}>
-                    {formatPercentage(results.lifetimeROI || 0)}
+                  <span className={`text-lg font-bold ${results.lifetimeROI > 0 ? 'text-blue-800' : 'text-red-600'}`}>
+                    {formatPercentage(results.lifetimeROI)}
                   </span>
                 </div>
               </div>
