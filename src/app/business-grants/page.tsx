@@ -22,9 +22,9 @@ export default function BusinessGrantsPage() {
       <HeroHeader />
       <main className="flex-1 flex flex-col">
         <HeroSectionBusinessGrants />
-        <BenefitsBusinessGrants />
-        <ResultsSectionBusinessGrants />
         <AutomationFlowsBusinessGrants />
+        <ResultsSectionBusinessGrants />
+        <BenefitsBusinessGrants />
         <TestimonialsBusinessGrants />
         <ROISectionBusinessGrants />
         <CostComparisonBusinessGrants />

@@ -24,9 +24,9 @@ export default function SecuredLoansPage() {
       <HeroHeader />
       <main className="flex-1 flex flex-col">
         <HeroSectionSecuredLoans />
-        <BenefitsSecuredLoans />
-        <ResultsSectionSecuredLoans />
         <AutomationFlowsSecuredLoans />
+        <ResultsSectionSecuredLoans />
+        <BenefitsSecuredLoans />
         <TestimonialsSecuredLoans />
         <ROISectionSecuredLoans />
         <CostComparisonSecuredLoans />

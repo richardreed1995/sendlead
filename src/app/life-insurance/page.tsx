@@ -24,9 +24,9 @@ export default function LifeInsurancePage() {
       <HeroHeader />
       <main className="flex-1 flex flex-col">
         <HeroSectionLifeInsurance />
-        <BenefitsLifeInsurance />
-        <ResultsSectionLifeInsurance />
         <AutomationFlowsLifeInsurance />
+        <ResultsSectionLifeInsurance />
+        <BenefitsLifeInsurance />
         <TestimonialsLifeInsurance />
         <ROISectionLifeInsurance />
         <CostComparisonLifeInsurance />

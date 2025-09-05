@@ -24,9 +24,9 @@ export default function BusinessLoansPage() {
       <HeroHeader />
       <main className="flex-1 flex flex-col">
         <HeroSectionBusinessLoans />
-        <BenefitsBusinessLoans />
-        <ResultsSectionBusinessLoans />
         <AutomationFlowsBusinessLoans />
+        <ResultsSectionBusinessLoans />
+        <BenefitsBusinessLoans />
         <TestimonialsBusinessLoans />
         <ROISectionBusinessLoans />
         <CostComparisonBusinessLoans />
