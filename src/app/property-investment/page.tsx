@@ -24,9 +24,9 @@ export default function PropertyInvestmentPage() {
       <HeroHeader />
       <main className="flex-1 flex flex-col">
         <HeroSectionPropertyInvestment />
-        <BenefitsPropertyInvestment />
-        <ResultsSectionPropertyInvestment />
         <AutomationFlowsPropertyInvestment />
+        <ResultsSectionPropertyInvestment />
+        <BenefitsPropertyInvestment />
         <TestimonialsPropertyInvestment />
         <ROISectionPropertyInvestment />
         <CostComparisonPropertyInvestment />

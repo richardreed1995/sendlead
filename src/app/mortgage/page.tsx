@@ -22,9 +22,9 @@ export default function MortgagePage() {
       <HeroHeader />
       <main className="flex-1 flex flex-col">
         <HeroSectionMortgage />
-        <BenefitsMortgage />
-        <ResultsSectionMortgage />
         <AutomationFlowsMortgage />
+        <ResultsSectionMortgage />
+        <BenefitsMortgage />
         <TestimonialsMortgage />
         <ROISectionMortgage />
         <CostComparisonMortgage />

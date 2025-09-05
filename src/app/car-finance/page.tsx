@@ -23,9 +23,9 @@ export default function CarFinancePage() {
       <HeroHeader />
       <main className="flex-1 flex flex-col">
         <HeroSectionCarFinance />
-        <BenefitsCarFinance />
-        <ResultsSectionCarFinance />
         <AutomationFlowsCarFinance />
+        <ResultsSectionCarFinance />
+        <BenefitsCarFinance />
         <TestimonialsCarFinance />
         <ROISectionCarFinance />
         <CostComparisonCarFinance />
