@@ -6,6 +6,7 @@ import { Card } from "../../card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { Home, Car, Building2, Gift, Shield, Lock, TrendingUp, MoreHorizontal } from "lucide-react";
 
 const leadTypes = [
@@ -202,7 +203,16 @@ export default function QuizFunnel() {
                   <div className={`w-6 h-6 rounded border-2 flex items-center justify-center mr-3 transition-all ${agree ? "border-blue-600 bg-blue-600" : "border-gray-300"}`}>
                     {agree && <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>}
                   </div>
-                  <span className="text-sm font-medium">I agree to the privacy policy and terms & conditions</span>
+                    <span className="text-sm font-medium">
+                      I agree to the{" "}
+                      <Link href="/privacy-policy" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
+                        privacy policy
+                      </Link>
+                      {" "}and{" "}
+                      <Link href="/terms-conditions" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
+                        terms & conditions
+                      </Link>
+                    </span>
                 </div>
               </button>
             </div>
@@ -293,7 +303,16 @@ export default function QuizFunnel() {
                     <div className={`w-6 h-6 rounded border-2 flex items-center justify-center mr-3 transition-all ${agree ? "border-blue-600 bg-blue-600" : "border-gray-300"}`}>
                       {agree && <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>}
                     </div>
-                    <span className="text-sm font-medium">I agree to the privacy policy and terms & conditions</span>
+                    <span className="text-sm font-medium">
+                      I agree to the{" "}
+                      <Link href="/privacy-policy" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
+                        privacy policy
+                      </Link>
+                      {" "}and{" "}
+                      <Link href="/terms-conditions" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
+                        terms & conditions
+                      </Link>
+                    </span>
                   </div>
                 </button>
               </div>
