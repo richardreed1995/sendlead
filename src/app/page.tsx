@@ -7,6 +7,7 @@ import Faqs3 from "@/components/faqs-3";
 import Footer from "@/components/footer";
 import Features from "@/components/features-12";
 import type { Metadata } from "next";
+import CompetitiveAdvantages from "@/components/competitive-advantages";
 
 export const metadata: Metadata = {
   title: "Sendlead | Lead Generation Agency",
@@ -21,9 +22,10 @@ export default function Home() {
       </header>
       <main className="flex-1 flex flex-col gap-12">
         <LogoCloud />
-        <Features4 />
-        <Methodology />
         <Features />
+        <CompetitiveAdvantages />
+        <Methodology />
+        <Features4 />
         <Faqs3 />
         <CallToAction />
       </main>

@@ -92,16 +92,16 @@ const LeadROICalculator = () => {
   };
 
   return (
-    <div className="w-full max-w-4xl mx-auto py-12">
-      <div className="grid lg:grid-cols-2 gap-8">
+    <div className="w-full max-w-6xl mx-auto bg-card border border-border rounded-lg shadow-sm">
+      <div className="grid lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-border">
         {/* Inputs */}
-        <div>
-          <h3 className="text-lg font-medium text-gray-900 mb-4">Your Business Details</h3>
+        <div className="p-6">
+          <h3 className="text-lg font-medium text-foreground mb-4">Your Business Details</h3>
           
           <div className="space-y-4">
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-foreground mb-2">
                   Number of Leads
                 </label>
                 <input
@@ -113,7 +113,7 @@ const LeadROICalculator = () => {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-foreground mb-2">
                   Conversion Rate (%)
                 </label>
                 <input
@@ -130,7 +130,7 @@ const LeadROICalculator = () => {
 
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-foreground mb-2">
                   Average Deal Value (£)
                 </label>
                 <input
@@ -142,7 +142,7 @@ const LeadROICalculator = () => {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-foreground mb-2">
                   Commission Rate (%)
                 </label>
                 <input
@@ -158,7 +158,7 @@ const LeadROICalculator = () => {
 
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-foreground mb-2">
                   Repeat Business (%)
                 </label>
                 <input
@@ -171,7 +171,7 @@ const LeadROICalculator = () => {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-foreground mb-2">
                   Referrals Per Client
                 </label>
                 <input
@@ -188,13 +188,13 @@ const LeadROICalculator = () => {
         </div>
 
         {/* Results */}
-        <div>
-          <h3 className="text-lg font-medium text-gray-900 mb-4">Your ROI Breakdown</h3>
+        <div className="p-6">
+          <h3 className="text-lg font-medium text-foreground mb-4">Your ROI Breakdown</h3>
           
           <div className="space-y-4">
             <div className="bg-gray-50 p-4 rounded-md">
               <div className="flex justify-between items-center mb-2">
-                <span className="text-sm font-medium text-gray-600">Total Investment</span>
+                <span className="text-sm font-medium text-muted-foreground">Total Investment</span>
                 <span className="text-lg font-semibold text-gray-900">
                   {formatCurrency(results.totalInvestment || 0)}
                 </span>

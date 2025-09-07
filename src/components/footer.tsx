@@ -45,11 +45,15 @@ const links = [
         items: [
             {
                 title: 'About',
-                href: '/#about',
+                href: '/about',
             },
             {
-                title: 'Process',
-                href: '/process',
+                title: 'How it works',
+                href: '/#how-it-works',
+            },
+            {
+                title: 'Careers',
+                href: '/careers',
             },
             {
                 title: 'Resources',

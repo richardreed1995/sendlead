@@ -8,7 +8,7 @@ import { cn } from "../lib/utils";
 import { usePathname } from 'next/navigation';
 
 const menuItems = [
-    { name: 'Process', href: '/#process' },
+    { name: 'How it works', href: '/#how-it-works' },
     { name: 'About', href: '/about' },
     { name: 'ROI', href: '/roi' },
     { name: 'Resources', href: '/blog' },
@@ -127,23 +127,14 @@ export const HeroHeader = () => {
                                 </ul>
                             </div>
                             <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
-                                {pathname === '/roi' ? (
-                                    <Button
-                                        size="sm"
-                                        className="lg:inline-flex bg-[#2998FD] hover:bg-[#1f7fd9] text-white"
-                                        onClick={() => document.getElementById('roi-calculator')?.scrollIntoView({ behavior: 'smooth' })}>
-                                        <span>Calculate your ROI</span>
-                                    </Button>
-                                ) : (
-                                    <Button
-                                        asChild
-                                        size="sm"
-                                        className="lg:inline-flex bg-[#2998FD] hover:bg-[#1f7fd9] text-white">
-                                        <Link href="/get-started">
-                                            <span>Get Started</span>
-                                        </Link>
-                                    </Button>
-                                )}
+                                <Button
+                                    asChild
+                                    size="sm"
+                                    className="lg:inline-flex bg-[#2998FD] hover:bg-[#1f7fd9] text-white">
+                                    <Link href="/get-started">
+                                        <span>Get Started</span>
+                                    </Link>
+                                </Button>
                             </div>
                         </div>
                     </div>
