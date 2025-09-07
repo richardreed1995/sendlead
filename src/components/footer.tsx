@@ -110,7 +110,7 @@ export default function FooterSection() {
                             </svg>
                         </Link>
                         <Link
-                            href="#"
+                            href="https://www.facebook.com/people/Sendlead/61580038896024/"
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="Facebook"
@@ -127,7 +127,7 @@ export default function FooterSection() {
                             </svg>
                         </Link>
                         <Link
-                            href="#"
+                            href="https://www.instagram.com/send.lead/"
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="Instagram"
