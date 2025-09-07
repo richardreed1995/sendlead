@@ -1,14 +1,13 @@
 import HeroSectionBusinessGrants from "@/components/hero-section-business-grants";
-import TestimonialsBusinessGrants from "@/components/testimonials-business-grants";
 import AutomationFlowsBusinessGrants from "@/components/automation-flows-business-grants";
 import BenefitsBusinessGrants from "@/components/benefits-business-grants";
 import FAQSBusinessGrants from "@/components/faqs-business-grants";
 import { HeroHeader } from "@/components/header";
 import FooterSection from "@/components/footer";
-import ResultsSectionBusinessGrants from "@/components/results-section-business-grants";
 import CostComparisonBusinessGrants from "@/components/cost-comparison-business-grants";
 import ROISectionBusinessGrants from "@/components/roi-section-business-grants";
 import CallToAction from "@/components/call-to-action";
+import CompetitiveAdvantages from "@/components/competitive-advantages";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -23,9 +22,8 @@ export default function BusinessGrantsPage() {
       <main className="flex-1 flex flex-col">
         <HeroSectionBusinessGrants />
         <AutomationFlowsBusinessGrants />
-        <ResultsSectionBusinessGrants />
         <BenefitsBusinessGrants />
-        <TestimonialsBusinessGrants />
+        <CompetitiveAdvantages />
         <ROISectionBusinessGrants />
         <CostComparisonBusinessGrants />
         <FAQSBusinessGrants />

@@ -235,8 +235,8 @@ var _s = __turbopack_context__.k.signature();
 ;
 const menuItems = [
     {
-        name: 'Process',
-        href: '/#process'
+        name: 'How it works',
+        href: '/#how-it-works'
     },
     {
         name: 'About',
@@ -525,24 +525,7 @@ const HeroHeader = ()=>{
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit",
-                                    children: pathname === '/roi' ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
-                                        size: "sm",
-                                        className: "lg:inline-flex bg-[#2998FD] hover:bg-[#1f7fd9] text-white",
-                                        onClick: ()=>document.getElementById('roi-calculator')?.scrollIntoView({
-                                                behavior: 'smooth'
-                                            }),
-                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                            children: "Calculate your ROI"
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/components/header.tsx",
-                                            lineNumber: 135,
-                                            columnNumber: 41
-                                        }, this)
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/header.tsx",
-                                        lineNumber: 131,
-                                        columnNumber: 37
-                                    }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
                                         asChild: true,
                                         size: "sm",
                                         className: "lg:inline-flex bg-[#2998FD] hover:bg-[#1f7fd9] text-white",
@@ -552,18 +535,18 @@ const HeroHeader = ()=>{
                                                 children: "Get Started"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/header.tsx",
-                                                lineNumber: 143,
-                                                columnNumber: 45
+                                                lineNumber: 135,
+                                                columnNumber: 41
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/header.tsx",
-                                            lineNumber: 142,
-                                            columnNumber: 41
+                                            lineNumber: 134,
+                                            columnNumber: 37
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/header.tsx",
-                                        lineNumber: 138,
-                                        columnNumber: 37
+                                        lineNumber: 130,
+                                        columnNumber: 33
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/header.tsx",

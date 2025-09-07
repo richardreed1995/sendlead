@@ -4,15 +4,27 @@
       "static/media/or3nQ6H_1_WfwkMZI_qYFrcdmhHkjko-s.p.be19f591.woff2",
       "static/media/gyByhwUxId8gMEwcGFWNOITd-s.p.da1ebef7.woff2"
     ],
-    "[project]/src/app/blog/page": [
+    "[project]/src/app/business-loans/page": [
       "static/media/or3nQ6H_1_WfwkMZI_qYFrcdmhHkjko-s.p.be19f591.woff2",
       "static/media/gyByhwUxId8gMEwcGFWNOITd-s.p.da1ebef7.woff2"
     ],
-    "[project]/src/app/cookies/page": [
+    "[project]/src/app/car-finance/page": [
       "static/media/or3nQ6H_1_WfwkMZI_qYFrcdmhHkjko-s.p.be19f591.woff2",
       "static/media/gyByhwUxId8gMEwcGFWNOITd-s.p.da1ebef7.woff2"
     ],
-    "[project]/src/app/get-started/page": [
+    "[project]/src/app/careers/account-strategist/page": [
+      "static/media/or3nQ6H_1_WfwkMZI_qYFrcdmhHkjko-s.p.be19f591.woff2",
+      "static/media/gyByhwUxId8gMEwcGFWNOITd-s.p.da1ebef7.woff2"
+    ],
+    "[project]/src/app/careers/page": [
+      "static/media/or3nQ6H_1_WfwkMZI_qYFrcdmhHkjko-s.p.be19f591.woff2",
+      "static/media/gyByhwUxId8gMEwcGFWNOITd-s.p.da1ebef7.woff2"
+    ],
+    "[project]/src/app/life-insurance/page": [
+      "static/media/or3nQ6H_1_WfwkMZI_qYFrcdmhHkjko-s.p.be19f591.woff2",
+      "static/media/gyByhwUxId8gMEwcGFWNOITd-s.p.da1ebef7.woff2"
+    ],
+    "[project]/src/app/mortgage/page": [
       "static/media/or3nQ6H_1_WfwkMZI_qYFrcdmhHkjko-s.p.be19f591.woff2",
       "static/media/gyByhwUxId8gMEwcGFWNOITd-s.p.da1ebef7.woff2"
     ],
@@ -25,10 +37,6 @@
       "static/media/gyByhwUxId8gMEwcGFWNOITd-s.p.da1ebef7.woff2"
     ],
     "[project]/src/app/roi/page": [
-      "static/media/or3nQ6H_1_WfwkMZI_qYFrcdmhHkjko-s.p.be19f591.woff2",
-      "static/media/gyByhwUxId8gMEwcGFWNOITd-s.p.da1ebef7.woff2"
-    ],
-    "[project]/src/app/terms-conditions/page": [
       "static/media/or3nQ6H_1_WfwkMZI_qYFrcdmhHkjko-s.p.be19f591.woff2",
       "static/media/gyByhwUxId8gMEwcGFWNOITd-s.p.da1ebef7.woff2"
     ]

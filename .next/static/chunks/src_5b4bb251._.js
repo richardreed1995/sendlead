@@ -25,7 +25,17 @@ const LeadROICalculator = ()=>{
         clientLifetimeYears: 5,
         referralsPerClient: 0.5
     });
-    const [results, setResults] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])({});
+    const [results, setResults] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])({
+        totalInvestment: 0,
+        leadsConverted: 0,
+        immediateRevenue: 0,
+        immediateProfit: 0,
+        immediateROI: 0,
+        lifetimeValuePerLead: 0,
+        totalLifetimeRevenue: 0,
+        totalLifetimeProfit: 0,
+        lifetimeROI: 0
+    });
     const [selectedVertical, setSelectedVertical] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])('custom');
     const verticals = {
         mortgages: {
@@ -183,7 +193,7 @@ const LeadROICalculator = ()=>{
                             children: "Your Business Details"
                         }, void 0, false, {
                             fileName: "[project]/src/components/LeadROICalculator.tsx",
-                            lineNumber: 169,
+                            lineNumber: 203,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -196,7 +206,7 @@ const LeadROICalculator = ()=>{
                                             children: "Industry"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                            lineNumber: 173,
+                                            lineNumber: 207,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -208,18 +218,18 @@ const LeadROICalculator = ()=>{
                                                     children: vertical.name
                                                 }, key, false, {
                                                     fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                                    lineNumber: 182,
+                                                    lineNumber: 216,
                                                     columnNumber: 19
                                                 }, this))
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                            lineNumber: 176,
+                                            lineNumber: 210,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                    lineNumber: 172,
+                                    lineNumber: 206,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -232,7 +242,7 @@ const LeadROICalculator = ()=>{
                                                     children: "Number of Leads"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                                    lineNumber: 189,
+                                                    lineNumber: 223,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -243,13 +253,13 @@ const LeadROICalculator = ()=>{
                                                     min: "1"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                                    lineNumber: 192,
+                                                    lineNumber: 226,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                            lineNumber: 188,
+                                            lineNumber: 222,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -259,7 +269,7 @@ const LeadROICalculator = ()=>{
                                                     children: "Conversion Rate (%)"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                                    lineNumber: 201,
+                                                    lineNumber: 235,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -272,19 +282,19 @@ const LeadROICalculator = ()=>{
                                                     step: "0.1"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                                    lineNumber: 204,
+                                                    lineNumber: 238,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                            lineNumber: 200,
+                                            lineNumber: 234,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                    lineNumber: 187,
+                                    lineNumber: 221,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -297,7 +307,7 @@ const LeadROICalculator = ()=>{
                                                     children: "Average Deal Value (£)"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                                    lineNumber: 218,
+                                                    lineNumber: 252,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -308,13 +318,13 @@ const LeadROICalculator = ()=>{
                                                     min: "1"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                                    lineNumber: 221,
+                                                    lineNumber: 255,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                            lineNumber: 217,
+                                            lineNumber: 251,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -324,7 +334,7 @@ const LeadROICalculator = ()=>{
                                                     children: "Commission Rate / Margin (%)"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                                    lineNumber: 230,
+                                                    lineNumber: 264,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -336,19 +346,19 @@ const LeadROICalculator = ()=>{
                                                     step: "0.01"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                                    lineNumber: 233,
+                                                    lineNumber: 267,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                            lineNumber: 229,
+                                            lineNumber: 263,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                    lineNumber: 216,
+                                    lineNumber: 250,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -361,7 +371,7 @@ const LeadROICalculator = ()=>{
                                                     children: "Repeat Business (%)"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                                    lineNumber: 246,
+                                                    lineNumber: 280,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -373,13 +383,13 @@ const LeadROICalculator = ()=>{
                                                     max: "100"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                                    lineNumber: 249,
+                                                    lineNumber: 283,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                            lineNumber: 245,
+                                            lineNumber: 279,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -389,7 +399,7 @@ const LeadROICalculator = ()=>{
                                                     children: "Referrals Per Client"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                                    lineNumber: 259,
+                                                    lineNumber: 293,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -401,31 +411,31 @@ const LeadROICalculator = ()=>{
                                                     step: "0.1"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                                    lineNumber: 262,
+                                                    lineNumber: 296,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                            lineNumber: 258,
+                                            lineNumber: 292,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                    lineNumber: 244,
+                                    lineNumber: 278,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/LeadROICalculator.tsx",
-                            lineNumber: 171,
+                            lineNumber: 205,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/LeadROICalculator.tsx",
-                    lineNumber: 168,
+                    lineNumber: 202,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -436,7 +446,7 @@ const LeadROICalculator = ()=>{
                             children: "Your ROI Breakdown"
                         }, void 0, false, {
                             fileName: "[project]/src/components/LeadROICalculator.tsx",
-                            lineNumber: 277,
+                            lineNumber: 311,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -453,21 +463,21 @@ const LeadROICalculator = ()=>{
                                                     children: "Total Investment"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                                    lineNumber: 282,
+                                                    lineNumber: 316,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     className: "text-lg font-semibold text-foreground",
-                                                    children: formatCurrency(results.totalInvestment || 0)
+                                                    children: formatCurrency(results.totalInvestment)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                                    lineNumber: 283,
+                                                    lineNumber: 317,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                            lineNumber: 281,
+                                            lineNumber: 315,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -478,27 +488,27 @@ const LeadROICalculator = ()=>{
                                                     children: "Leads Converted"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                                    lineNumber: 288,
+                                                    lineNumber: 322,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     className: "text-sm text-foreground",
-                                                    children: results.leadsConverted || 0
+                                                    children: results.leadsConverted
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                                    lineNumber: 289,
+                                                    lineNumber: 323,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                            lineNumber: 287,
+                                            lineNumber: 321,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                    lineNumber: 280,
+                                    lineNumber: 314,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -511,12 +521,12 @@ const LeadROICalculator = ()=>{
                                                 children: "Immediate ROI (90 Days)"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                                lineNumber: 295,
+                                                lineNumber: 329,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                            lineNumber: 294,
+                                            lineNumber: 328,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -530,21 +540,21 @@ const LeadROICalculator = ()=>{
                                                             children: "Revenue"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                                            lineNumber: 299,
+                                                            lineNumber: 333,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                             className: "text-sm font-medium text-green-800",
-                                                            children: formatCurrency(results.immediateRevenue || 0)
+                                                            children: formatCurrency(results.immediateRevenue)
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                                            lineNumber: 300,
+                                                            lineNumber: 334,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                                    lineNumber: 298,
+                                                    lineNumber: 332,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -555,21 +565,21 @@ const LeadROICalculator = ()=>{
                                                             children: "Profit"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                                            lineNumber: 305,
+                                                            lineNumber: 339,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                             className: "text-sm font-medium text-green-800",
-                                                            children: formatCurrency(results.immediateProfit || 0)
+                                                            children: formatCurrency(results.immediateProfit)
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                                            lineNumber: 306,
+                                                            lineNumber: 340,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                                    lineNumber: 304,
+                                                    lineNumber: 338,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -580,33 +590,33 @@ const LeadROICalculator = ()=>{
                                                             children: "ROI"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                                            lineNumber: 311,
+                                                            lineNumber: 345,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                            className: `text-lg font-bold ${(results.immediateROI || 0) > 0 ? 'text-green-800' : 'text-red-600'}`,
-                                                            children: formatPercentage(results.immediateROI || 0)
+                                                            className: `text-lg font-bold ${results.immediateROI > 0 ? 'text-green-800' : 'text-red-600'}`,
+                                                            children: formatPercentage(results.immediateROI)
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                                            lineNumber: 312,
+                                                            lineNumber: 346,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                                    lineNumber: 310,
+                                                    lineNumber: 344,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                            lineNumber: 297,
+                                            lineNumber: 331,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                    lineNumber: 293,
+                                    lineNumber: 327,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -619,12 +629,12 @@ const LeadROICalculator = ()=>{
                                                 children: "Lifetime Value"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                                lineNumber: 321,
+                                                lineNumber: 355,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                            lineNumber: 320,
+                                            lineNumber: 354,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -638,21 +648,21 @@ const LeadROICalculator = ()=>{
                                                             children: "Total Revenue"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                                            lineNumber: 325,
+                                                            lineNumber: 359,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                             className: "text-sm font-medium text-blue-800",
-                                                            children: formatCurrency(results.totalLifetimeRevenue || 0)
+                                                            children: formatCurrency(results.totalLifetimeRevenue)
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                                            lineNumber: 326,
+                                                            lineNumber: 360,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                                    lineNumber: 324,
+                                                    lineNumber: 358,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -663,21 +673,21 @@ const LeadROICalculator = ()=>{
                                                             children: "Total Profit"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                                            lineNumber: 331,
+                                                            lineNumber: 365,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                             className: "text-sm font-medium text-blue-800",
-                                                            children: formatCurrency(results.totalLifetimeProfit || 0)
+                                                            children: formatCurrency(results.totalLifetimeProfit)
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                                            lineNumber: 332,
+                                                            lineNumber: 366,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                                    lineNumber: 330,
+                                                    lineNumber: 364,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -688,60 +698,60 @@ const LeadROICalculator = ()=>{
                                                             children: "Lifetime ROI"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                                            lineNumber: 337,
+                                                            lineNumber: 371,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                            className: `text-lg font-bold ${(results.lifetimeROI || 0) > 0 ? 'text-blue-800' : 'text-red-600'}`,
-                                                            children: formatPercentage(results.lifetimeROI || 0)
+                                                            className: `text-lg font-bold ${results.lifetimeROI > 0 ? 'text-blue-800' : 'text-red-600'}`,
+                                                            children: formatPercentage(results.lifetimeROI)
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                                            lineNumber: 338,
+                                                            lineNumber: 372,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                                    lineNumber: 336,
+                                                    lineNumber: 370,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                            lineNumber: 323,
+                                            lineNumber: 357,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/LeadROICalculator.tsx",
-                                    lineNumber: 319,
+                                    lineNumber: 353,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/LeadROICalculator.tsx",
-                            lineNumber: 279,
+                            lineNumber: 313,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/LeadROICalculator.tsx",
-                    lineNumber: 276,
+                    lineNumber: 310,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/LeadROICalculator.tsx",
-            lineNumber: 166,
+            lineNumber: 200,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/LeadROICalculator.tsx",
-        lineNumber: 164,
+        lineNumber: 198,
         columnNumber: 5
     }, this);
 };
-_s(LeadROICalculator, "4KO4aV9CmgQE4saSe8UGZP8XCqo=");
+_s(LeadROICalculator, "AsgHlL8poFUFrLqWdmJJGdLLQb0=");
 _c = LeadROICalculator;
 const __TURBOPACK__default__export__ = LeadROICalculator;
 var _c;
@@ -985,8 +995,8 @@ var _s = __turbopack_context__.k.signature();
 ;
 const menuItems = [
     {
-        name: 'Process',
-        href: '/#process'
+        name: 'How it works',
+        href: '/#how-it-works'
     },
     {
         name: 'About',
@@ -1275,24 +1285,7 @@ const HeroHeader = ()=>{
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit",
-                                    children: pathname === '/roi' ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
-                                        size: "sm",
-                                        className: "lg:inline-flex bg-[#2998FD] hover:bg-[#1f7fd9] text-white",
-                                        onClick: ()=>document.getElementById('roi-calculator')?.scrollIntoView({
-                                                behavior: 'smooth'
-                                            }),
-                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                            children: "Calculate your ROI"
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/components/header.tsx",
-                                            lineNumber: 135,
-                                            columnNumber: 41
-                                        }, this)
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/header.tsx",
-                                        lineNumber: 131,
-                                        columnNumber: 37
-                                    }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
                                         asChild: true,
                                         size: "sm",
                                         className: "lg:inline-flex bg-[#2998FD] hover:bg-[#1f7fd9] text-white",
@@ -1302,18 +1295,18 @@ const HeroHeader = ()=>{
                                                 children: "Get Started"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/header.tsx",
-                                                lineNumber: 143,
-                                                columnNumber: 45
+                                                lineNumber: 135,
+                                                columnNumber: 41
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/header.tsx",
-                                            lineNumber: 142,
-                                            columnNumber: 41
+                                            lineNumber: 134,
+                                            columnNumber: 37
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/header.tsx",
-                                        lineNumber: 138,
-                                        columnNumber: 37
+                                        lineNumber: 130,
+                                        columnNumber: 33
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/header.tsx",

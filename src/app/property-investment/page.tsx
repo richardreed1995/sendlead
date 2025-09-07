@@ -1,16 +1,15 @@
 import HeroSectionPropertyInvestment from "@/components/hero-section-property-investment";
-import TestimonialsPropertyInvestment from "@/components/testimonials-property-investment";
 import AutomationFlowsPropertyInvestment from "@/components/automation-flows-property-investment";
 import BenefitsPropertyInvestment from "@/components/benefits-property-investment";
 import FAQSPropertyInvestment from "@/components/faqs-property-investment";
 import CTAPropertyInvestment from "@/components/cta-property-investment";
 import { HeroHeader } from "@/components/header";
 import FooterSection from "@/components/footer";
-import ResultsSectionPropertyInvestment from "@/components/results-section-property-investment";
 import CostComparisonPropertyInvestment from "@/components/cost-comparison-property-investment";
 import FinalCTAPropertyInvestment from "@/components/final-cta-property-investment";
 import ROISectionPropertyInvestment from "@/components/roi-section-property-investment";
 import CallToAction from "@/components/call-to-action";
+import CompetitiveAdvantages from "@/components/competitive-advantages";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -25,9 +24,8 @@ export default function PropertyInvestmentPage() {
       <main className="flex-1 flex flex-col">
         <HeroSectionPropertyInvestment />
         <AutomationFlowsPropertyInvestment />
-        <ResultsSectionPropertyInvestment />
         <BenefitsPropertyInvestment />
-        <TestimonialsPropertyInvestment />
+        <CompetitiveAdvantages />
         <ROISectionPropertyInvestment />
         <CostComparisonPropertyInvestment />
         <FAQSPropertyInvestment />

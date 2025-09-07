@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file:///Users/richardreed/Sendlead/src/app/careers/dark-header.css"],"sourcesContent":["/* Dark header styles for job pages */\n.dark-header nav {\n  background: rgba(17, 24, 39, 0.95) !important;\n  backdrop-filter: blur(10px);\n}\n\n.dark-header nav .text-muted-foreground {\n  color: rgb(209, 213, 219) !important;\n}\n\n.dark-header nav .text-muted-foreground:hover {\n  color: white !important;\n}\n\n.dark-header nav .bg-background {\n  background: rgba(17, 24, 39, 0.95) !important;\n}\n\n.dark-header nav .bg-background\\/50 {\n  background: rgba(17, 24, 39, 0.95) !important;\n}\n"],"names":[],"mappings":"AACA;;;;;AAKA;;;;AAIA;;;;AAIA","debugId":null}}]
+}

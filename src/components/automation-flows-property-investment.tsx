@@ -4,32 +4,32 @@ import Image from "next/image";
 
 const flows = [
   {
-    title: "Strategy & Qualification Setup",
-    description: "We capture your exact target client profile, investment criteria, and delivery preferences. No generic leads - everything is tailored to your specific property investment requirements.",
+    title: "We Show You The Numbers First",
+    description: "Before you spend a penny, we analyse your property investment operation and show you exactly how much money you could make by working with us. No surprises, just clear projections based on real industry data.",
     image: "/Group 13.png",
     alt: "Financial + ROI Modelling"
   },
   {
-    title: "Build Targeting Infrastructure",
-    description: "We create precision-targeted campaigns using proven property investment lead generation systems. Our AI qualification process ensures only serious prospects reach you.",
+    title: "We Create Your Funnel",
+    description: "We build a complete property investment acquisition system that looks and feels like your brand. When potential customers interact with us, they think they're dealing directly with you.",
     image: "/Group 12.png",
     alt: "Build Branded Assets"
   },
   {
-    title: "Real-Time Lead Delivery",
-    description: "Qualified leads sync instantly to your CRM with complete contact details and qualification data. No delays, no aged leads, no manual data entry required.",
+    title: "We Find The Right Customers",
+    description: "Using our proven qualification system, we filter out tyre-kickers and time-wasters. We only send you investors who are genuinely interested and can afford your services. We even verify their contact details so you know they're real.",
     image: "/Group 14.png",
     alt: "Qualification"
   },
   {
-    title: "Automated Follow-Up Systems",
-    description: "Leads receive immediate confirmation they'll hear from you, plus ongoing nurture sequences that keep them engaged until they're ready to proceed with their investment application.",
+    title: "We Help You Close The Deal",
+    description: "We don't just hand over leads and disappear. Our 24-step follow-up system nurtures prospects until they're ready to buy, making your job much easier.",
     image: "/Group 15.png",
     alt: "Follow-up"
   },
   {
-    title: "Performance Tracking & Optimisation",
-    description: "Weekly reporting on lead quality, conversion rates, and campaign performance. We continuously optimise to improve your results over time.",
+    title: "You See Everything",
+    description: "We provide detailed reports showing exactly how many leads convert, your return on investment, and where your best customers are coming from.",
     image: "/Group 19.png",
     alt: "Performance Analytics + Reporting"
   }

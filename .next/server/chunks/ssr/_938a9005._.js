@@ -364,11 +364,15 @@ const links = [
         items: [
             {
                 title: 'About',
-                href: '/#about'
+                href: '/about'
             },
             {
-                title: 'Process',
-                href: '/process'
+                title: 'How it works',
+                href: '/#how-it-works'
+            },
+            {
+                title: 'Careers',
+                href: '/careers'
             },
             {
                 title: 'Resources',
@@ -409,12 +413,12 @@ function FooterSection() {
                             className: "block size-fit",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$logo$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Logo"], {}, void 0, false, {
                                 fileName: "[project]/src/components/footer.tsx",
-                                lineNumber: 88,
+                                lineNumber: 92,
                                 columnNumber: 25
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/footer.tsx",
-                            lineNumber: 84,
+                            lineNumber: 88,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -437,17 +441,17 @@ function FooterSection() {
                                             d: "M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/footer.tsx",
-                                            lineNumber: 103,
+                                            lineNumber: 107,
                                             columnNumber: 33
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/footer.tsx",
-                                        lineNumber: 97,
+                                        lineNumber: 101,
                                         columnNumber: 29
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/footer.tsx",
-                                    lineNumber: 91,
+                                    lineNumber: 95,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -467,17 +471,17 @@ function FooterSection() {
                                             d: "M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/footer.tsx",
-                                            lineNumber: 120,
+                                            lineNumber: 124,
                                             columnNumber: 33
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/footer.tsx",
-                                        lineNumber: 114,
+                                        lineNumber: 118,
                                         columnNumber: 29
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/footer.tsx",
-                                    lineNumber: 108,
+                                    lineNumber: 112,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -497,34 +501,34 @@ function FooterSection() {
                                             d: "M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/footer.tsx",
-                                            lineNumber: 137,
+                                            lineNumber: 141,
                                             columnNumber: 33
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/footer.tsx",
-                                        lineNumber: 131,
+                                        lineNumber: 135,
                                         columnNumber: 29
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/footer.tsx",
-                                    lineNumber: 125,
+                                    lineNumber: 129,
                                     columnNumber: 25
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/footer.tsx",
-                            lineNumber: 90,
+                            lineNumber: 94,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/footer.tsx",
-                    lineNumber: 83,
+                    lineNumber: 87,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/footer.tsx",
-                lineNumber: 82,
+                lineNumber: 86,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -543,7 +547,7 @@ function FooterSection() {
                                                 children: link.group
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/footer.tsx",
-                                                lineNumber: 152,
+                                                lineNumber: 156,
                                                 columnNumber: 33
                                             }, this),
                                             link.items.map((item, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -553,23 +557,23 @@ function FooterSection() {
                                                         children: item.title
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/footer.tsx",
-                                                        lineNumber: 158,
+                                                        lineNumber: 162,
                                                         columnNumber: 41
                                                     }, this)
                                                 }, index, false, {
                                                     fileName: "[project]/src/components/footer.tsx",
-                                                    lineNumber: 154,
+                                                    lineNumber: 158,
                                                     columnNumber: 37
                                                 }, this))
                                         ]
                                     }, index, true, {
                                         fileName: "[project]/src/components/footer.tsx",
-                                        lineNumber: 149,
+                                        lineNumber: 153,
                                         columnNumber: 29
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/src/components/footer.tsx",
-                                lineNumber: 147,
+                                lineNumber: 151,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -583,7 +587,7 @@ function FooterSection() {
                                             children: "Subscribe to our newsletter"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/footer.tsx",
-                                            lineNumber: 166,
+                                            lineNumber: 170,
                                             columnNumber: 29
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -597,7 +601,7 @@ function FooterSection() {
                                                     className: "h-8 text-sm"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/footer.tsx",
-                                                    lineNumber: 172,
+                                                    lineNumber: 176,
                                                     columnNumber: 33
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Button"], {
@@ -605,30 +609,30 @@ function FooterSection() {
                                                     children: "Submit"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/footer.tsx",
-                                                    lineNumber: 179,
+                                                    lineNumber: 183,
                                                     columnNumber: 33
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/footer.tsx",
-                                            lineNumber: 171,
+                                            lineNumber: 175,
                                             columnNumber: 29
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/footer.tsx",
-                                    lineNumber: 165,
+                                    lineNumber: 169,
                                     columnNumber: 25
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/footer.tsx",
-                                lineNumber: 164,
+                                lineNumber: 168,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/footer.tsx",
-                        lineNumber: 146,
+                        lineNumber: 150,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -642,24 +646,24 @@ function FooterSection() {
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/footer.tsx",
-                            lineNumber: 185,
+                            lineNumber: 189,
                             columnNumber: 21
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/footer.tsx",
-                        lineNumber: 184,
+                        lineNumber: 188,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/footer.tsx",
-                lineNumber: 145,
+                lineNumber: 149,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/footer.tsx",
-        lineNumber: 81,
+        lineNumber: 85,
         columnNumber: 9
     }, this);
 }

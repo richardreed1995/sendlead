@@ -106,6 +106,12 @@
       "namedRegex": "^/property\\-investment(?:/)?$"
     },
     {
+      "page": "/roi",
+      "regex": "^/roi(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/roi(?:/)?$"
+    },
+    {
       "page": "/secured-loans",
       "regex": "^/secured\\-loans(?:/)?$",
       "routeKeys": {},

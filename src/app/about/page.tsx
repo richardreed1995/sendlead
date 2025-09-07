@@ -4,7 +4,7 @@ import Footer from "@/components/footer";
 import Link from 'next/link';
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '../../../card';
-import { Globe, Shield, Target, TrendingUp, Users, CheckCircle, Star, Briefcase, Zap, Cpu, Fingerprint, Pencil, Settings2, Sparkles, Clock } from 'lucide-react';
+import { Globe, Shield, Target, TrendingUp, Eye, Award, BarChart3, ShieldCheck, Handshake, Clock } from 'lucide-react';
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -37,27 +37,27 @@ const partnershipCards = [
 
 const valuesCards = [
     {
-        icon: <Zap className="size-5 text-zinc-500" />,
+        icon: <Eye className="size-5 text-zinc-500" />,
         title: 'Transparency',
         description: 'Complete visibility into our qualification processes, lead sources, and performance metrics. No black box operations.',
     },
     {
-        icon: <Cpu className="size-5 text-zinc-500" />,
+        icon: <Award className="size-5 text-zinc-500" />,
         title: 'Quality Over Quantity',
         description: "We'd rather deliver 50 properly qualified exclusive leads than 500 shared, unvetted prospects. Quality drives ROI.",
     },
     {
-        icon: <Fingerprint className="size-5 text-zinc-500" />,
+        icon: <BarChart3 className="size-5 text-zinc-500" />,
         title: 'Data-Driven',
         description: 'Every decision is backed by performance data. We continuously test and optimise based on conversion metrics, not assumptions.',
     },
     {
-        icon: <Pencil className="size-5 text-zinc-500" />,
+        icon: <ShieldCheck className="size-5 text-zinc-500" />,
         title: 'Compliance First',
         description: 'Full GDPR, FCA, and ASA compliance across all campaigns. We do things properly from day one.',
     },
     {
-        icon: <Settings2 className="size-5 text-zinc-500" />,
+        icon: <Handshake className="size-5 text-zinc-500" />,
         title: 'Partnership Approach',
         description: 'We\'re invested in your long-term success, not just lead volume. We adapt and optimise based on your feedback and results.',
     },
@@ -68,26 +68,6 @@ const valuesCards = [
     },
 ];
 
-const careerCards = [
-    {
-        icon: <Users className="size-6 text-zinc-500" />,
-        title: 'Lead Generation Specialist',
-        location: 'Full-time, Brighton office',
-        description: 'Experience with Meta Ads and lead qualification systems required. Competitive salary plus performance bonuses.',
-    },
-    {
-        icon: <Briefcase className="size-6 text-zinc-500" />,
-        title: 'Account Manager',
-        location: 'Full-time, Remote (UK only)',
-        description: 'Manage client relationships and optimise campaign performance. Strong communication skills essential.',
-    },
-    {
-        icon: <TrendingUp className="size-6 text-zinc-500" />,
-        title: 'Data Analyst',
-        location: 'Full-time, Brighton office',
-        description: 'Analyse campaign performance and lead quality metrics. Experience with SQL and data visualisation tools preferred.',
-    },
-];
 
 export default function AboutPage() {
   return (
@@ -229,7 +209,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Careers Section - Cards */}
+        {/* Careers Section - Link to careers page */}
         <section className="py-16 md:py-24 bg-gray-50">
           <div className="mx-auto max-w-5xl px-6 md:px-8">
             <div className="mx-auto max-w-4xl space-y-8">
@@ -240,29 +220,22 @@ export default function AboutPage() {
                 </p>
               </div>
               
-              <h3 className="text-xl font-semibold text-center">Current Opportunities</h3>
-              
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {careerCards.map((career, index) => (
-                  <Card key={index} className="bg-white shadow-md">
-                    <CardContent className="p-6">
-                      <div className="flex items-center gap-3 mb-3">
-                        {career.icon}
-                        <h4 className="text-lg font-semibold">{career.title}</h4>
-                      </div>
-                      <p className="text-muted-foreground text-sm mb-3">{career.location}</p>
-                      <p className="text-muted-foreground text-sm">{career.description}</p>
-                    </CardContent>
-                  </Card>
-                ))}
+              <div className="text-center space-y-6">
+                <p className="text-lg text-muted-foreground">
+                  We have exciting opportunities for Customer Success Managers, Lead Generation Specialists, and Data Analysts.
+                </p>
+                <p className="text-base text-muted-foreground">
+                  All positions are remote with UK hours. View our current openings and detailed job descriptions.
+                </p>
+                
+                <div className="flex justify-center">
+                  <Link href="/careers">
+                    <Button size="lg" className="bg-[#2998FD] hover:bg-[#1f7fd9] text-white">
+                      View Open Positions
+                    </Button>
+                  </Link>
+                </div>
               </div>
-
-              <p className="text-lg text-muted-foreground text-center">
-                <strong>Apply:</strong> Send your CV to{' '}
-                <a href="mailto:info@sendlead.co" className="text-blue-600 hover:underline">
-                  info@sendlead.co
-                </a>
-              </p>
             </div>
           </div>
         </section>

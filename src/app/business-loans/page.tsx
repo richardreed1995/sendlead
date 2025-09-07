@@ -1,16 +1,15 @@
 import HeroSectionBusinessLoans from "@/components/hero-section-business-loans";
-import TestimonialsBusinessLoans from "@/components/testimonials-business-loans";
 import AutomationFlowsBusinessLoans from "@/components/automation-flows-business-loans";
 import BenefitsBusinessLoans from "@/components/benefits-business-loans";
 import FAQSBusinessLoans from "@/components/faqs-business-loans";
 import CTABusinessLoans from "@/components/cta-business-loans";
 import { HeroHeader } from "@/components/header";
 import FooterSection from "@/components/footer";
-import ResultsSectionBusinessLoans from "@/components/results-section-business-loans";
 import CostComparisonBusinessLoans from "@/components/cost-comparison-business-loans";
 import FinalCTABusinessLoans from "@/components/final-cta-business-loans";
 import ROISectionBusinessLoans from "@/components/roi-section-business-loans";
 import CallToAction from "@/components/call-to-action";
+import CompetitiveAdvantages from "@/components/competitive-advantages";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -25,9 +24,8 @@ export default function BusinessLoansPage() {
       <main className="flex-1 flex flex-col">
         <HeroSectionBusinessLoans />
         <AutomationFlowsBusinessLoans />
-        <ResultsSectionBusinessLoans />
         <BenefitsBusinessLoans />
-        <TestimonialsBusinessLoans />
+        <CompetitiveAdvantages />
         <ROISectionBusinessLoans />
         <CostComparisonBusinessLoans />
         <FAQSBusinessLoans />

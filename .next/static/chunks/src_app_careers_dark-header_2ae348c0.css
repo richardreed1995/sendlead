@@ -1,0 +1,20 @@
+/* [project]/src/app/careers/dark-header.css [app-client] (css) */
+.dark-header nav {
+  backdrop-filter: blur(10px);
+  background: #111827f2 !important;
+}
+
+.dark-header nav .text-muted-foreground {
+  color: #d1d5db !important;
+}
+
+.dark-header nav .text-muted-foreground:hover {
+  color: #fff !important;
+}
+
+.dark-header nav .bg-background, .dark-header nav .bg-background\/50 {
+  background: #111827f2 !important;
+}
+
+
+/*# sourceMappingURL=src_app_careers_dark-header_2ae348c0.css.map*/
