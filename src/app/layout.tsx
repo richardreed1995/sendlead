@@ -15,6 +15,53 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Sendlead | Lead Generation Agency",
   description: "Sendlead is a data-driven B2B lead generation agency delivering qualified leads for technology companies. Discover our proven 7-step methodology for systematic growth and ROI.",
+  keywords: "lead generation, B2B leads, qualified leads, lead generation agency, business leads, sales leads, lead generation UK, lead generation services, CRM leads, exclusive leads",
+  authors: [{ name: "Sendlead" }],
+  creator: "Sendlead",
+  publisher: "Sendlead",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://sendlead.co.uk'),
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_GB',
+    url: 'https://sendlead.co.uk',
+    siteName: 'Sendlead',
+    title: 'Sendlead | Lead Generation Agency',
+    description: 'Sendlead is a data-driven B2B lead generation agency delivering qualified leads for technology companies. Discover our proven 7-step methodology for systematic growth and ROI.',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Sendlead - Lead Generation Agency',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Sendlead | Lead Generation Agency',
+    description: 'Sendlead is a data-driven B2B lead generation agency delivering qualified leads for technology companies.',
+    images: ['/og-image.jpg'],
+    creator: '@sendlead',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   icons: {
     icon: [
       { url: '/favicon.svg?v=2', type: 'image/svg+xml' },
