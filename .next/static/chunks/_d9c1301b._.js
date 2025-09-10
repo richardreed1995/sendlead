@@ -244,6 +244,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$b
 var __TURBOPACK__imported__module__$5b$project$5d2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/card.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/input.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/next@15.3.5_react-dom@19.1.0_react@19.1.0__react@19.1.0/node_modules/next/navigation.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/next@15.3.5_react-dom@19.1.0_react@19.1.0__react@19.1.0/node_modules/next/dist/client/app-dir/link.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$525$2e$0_react$40$19$2e$1$2e$0$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$house$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Home$3e$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/lucide-react@0.525.0_react@19.1.0/node_modules/lucide-react/dist/esm/icons/house.js [app-client] (ecmascript) <export default as Home>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$525$2e$0_react$40$19$2e$1$2e$0$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$car$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Car$3e$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/lucide-react@0.525.0_react@19.1.0/node_modules/lucide-react/dist/esm/icons/car.js [app-client] (ecmascript) <export default as Car>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$525$2e$0_react$40$19$2e$1$2e$0$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$building$2d$2$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Building2$3e$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/lucide-react@0.525.0_react@19.1.0/node_modules/lucide-react/dist/esm/icons/building-2.js [app-client] (ecmascript) <export default as Building2>");
@@ -261,6 +262,7 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
+;
 const leadTypes = [
     {
         id: "mortgages",
@@ -269,7 +271,7 @@ const leadTypes = [
             className: "h-6 w-6 text-gray-700"
         }, void 0, false, {
             fileName: "[project]/src/components/quiz-funnel.tsx",
-            lineNumber: 12,
+            lineNumber: 13,
             columnNumber: 48
         }, this)
     },
@@ -280,7 +282,7 @@ const leadTypes = [
             className: "h-6 w-6 text-gray-700"
         }, void 0, false, {
             fileName: "[project]/src/components/quiz-funnel.tsx",
-            lineNumber: 13,
+            lineNumber: 14,
             columnNumber: 54
         }, this)
     },
@@ -291,7 +293,7 @@ const leadTypes = [
             className: "h-6 w-6 text-gray-700"
         }, void 0, false, {
             fileName: "[project]/src/components/quiz-funnel.tsx",
-            lineNumber: 14,
+            lineNumber: 15,
             columnNumber: 58
         }, this)
     },
@@ -302,7 +304,7 @@ const leadTypes = [
             className: "h-6 w-6 text-gray-700"
         }, void 0, false, {
             fileName: "[project]/src/components/quiz-funnel.tsx",
-            lineNumber: 15,
+            lineNumber: 16,
             columnNumber: 58
         }, this)
     },
@@ -313,7 +315,7 @@ const leadTypes = [
             className: "h-6 w-6 text-gray-700"
         }, void 0, false, {
             fileName: "[project]/src/components/quiz-funnel.tsx",
-            lineNumber: 16,
+            lineNumber: 17,
             columnNumber: 56
         }, this)
     },
@@ -324,7 +326,7 @@ const leadTypes = [
             className: "h-6 w-6 text-gray-700"
         }, void 0, false, {
             fileName: "[project]/src/components/quiz-funnel.tsx",
-            lineNumber: 17,
+            lineNumber: 18,
             columnNumber: 60
         }, this)
     },
@@ -335,7 +337,7 @@ const leadTypes = [
             className: "h-6 w-6 text-gray-700"
         }, void 0, false, {
             fileName: "[project]/src/components/quiz-funnel.tsx",
-            lineNumber: 18,
+            lineNumber: 19,
             columnNumber: 68
         }, this)
     },
@@ -346,7 +348,7 @@ const leadTypes = [
             className: "h-6 w-6 text-gray-700"
         }, void 0, false, {
             fileName: "[project]/src/components/quiz-funnel.tsx",
-            lineNumber: 19,
+            lineNumber: 20,
             columnNumber: 40
         }, this)
     }
@@ -474,7 +476,7 @@ function QuizFunnel() {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/quiz-funnel.tsx",
-                                lineNumber: 122,
+                                lineNumber: 123,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -484,13 +486,13 @@ function QuizFunnel() {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/quiz-funnel.tsx",
-                                lineNumber: 123,
+                                lineNumber: 124,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/quiz-funnel.tsx",
-                        lineNumber: 121,
+                        lineNumber: 122,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -502,18 +504,18 @@ function QuizFunnel() {
                             }
                         }, void 0, false, {
                             fileName: "[project]/src/components/quiz-funnel.tsx",
-                            lineNumber: 126,
+                            lineNumber: 127,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/quiz-funnel.tsx",
-                        lineNumber: 125,
+                        lineNumber: 126,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/quiz-funnel.tsx",
-                lineNumber: 120,
+                lineNumber: 121,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -531,13 +533,13 @@ function QuizFunnel() {
                                         children: "*"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/quiz-funnel.tsx",
-                                        lineNumber: 134,
+                                        lineNumber: 135,
                                         columnNumber: 104
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/quiz-funnel.tsx",
-                                lineNumber: 134,
+                                lineNumber: 135,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -551,7 +553,7 @@ function QuizFunnel() {
                                                 children: type.icon
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/quiz-funnel.tsx",
-                                                lineNumber: 142,
+                                                lineNumber: 143,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -559,18 +561,18 @@ function QuizFunnel() {
                                                 children: type.label
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/quiz-funnel.tsx",
-                                                lineNumber: 143,
+                                                lineNumber: 144,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, type.id, true, {
                                         fileName: "[project]/src/components/quiz-funnel.tsx",
-                                        lineNumber: 137,
+                                        lineNumber: 138,
                                         columnNumber: 17
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/src/components/quiz-funnel.tsx",
-                                lineNumber: 135,
+                                lineNumber: 136,
                                 columnNumber: 13
                             }, this),
                             error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -578,13 +580,13 @@ function QuizFunnel() {
                                 children: error
                             }, void 0, false, {
                                 fileName: "[project]/src/components/quiz-funnel.tsx",
-                                lineNumber: 147,
+                                lineNumber: 148,
                                 columnNumber: 23
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/quiz-funnel.tsx",
-                        lineNumber: 133,
+                        lineNumber: 134,
                         columnNumber: 11
                     }, this),
                     step === 1 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -599,13 +601,13 @@ function QuizFunnel() {
                                         children: "*"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/quiz-funnel.tsx",
-                                        lineNumber: 152,
+                                        lineNumber: 153,
                                         columnNumber: 94
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/quiz-funnel.tsx",
-                                lineNumber: 152,
+                                lineNumber: 153,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -617,7 +619,7 @@ function QuizFunnel() {
                                         children: "Yes"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/quiz-funnel.tsx",
-                                        lineNumber: 154,
+                                        lineNumber: 155,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -626,13 +628,13 @@ function QuizFunnel() {
                                         children: "No"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/quiz-funnel.tsx",
-                                        lineNumber: 160,
+                                        lineNumber: 161,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/quiz-funnel.tsx",
-                                lineNumber: 153,
+                                lineNumber: 154,
                                 columnNumber: 13
                             }, this),
                             error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -640,13 +642,13 @@ function QuizFunnel() {
                                 children: error
                             }, void 0, false, {
                                 fileName: "[project]/src/components/quiz-funnel.tsx",
-                                lineNumber: 167,
+                                lineNumber: 168,
                                 columnNumber: 23
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/quiz-funnel.tsx",
-                        lineNumber: 151,
+                        lineNumber: 152,
                         columnNumber: 11
                     }, this),
                     step === 2 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -661,13 +663,13 @@ function QuizFunnel() {
                                         children: "*"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/quiz-funnel.tsx",
-                                        lineNumber: 172,
+                                        lineNumber: 173,
                                         columnNumber: 97
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/quiz-funnel.tsx",
-                                lineNumber: 172,
+                                lineNumber: 173,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -678,12 +680,12 @@ function QuizFunnel() {
                                         children: option.label
                                     }, option.id, false, {
                                         fileName: "[project]/src/components/quiz-funnel.tsx",
-                                        lineNumber: 175,
+                                        lineNumber: 176,
                                         columnNumber: 17
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/src/components/quiz-funnel.tsx",
-                                lineNumber: 173,
+                                lineNumber: 174,
                                 columnNumber: 13
                             }, this),
                             error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -691,13 +693,13 @@ function QuizFunnel() {
                                 children: error
                             }, void 0, false, {
                                 fileName: "[project]/src/components/quiz-funnel.tsx",
-                                lineNumber: 184,
+                                lineNumber: 185,
                                 columnNumber: 23
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/quiz-funnel.tsx",
-                        lineNumber: 171,
+                        lineNumber: 172,
                         columnNumber: 11
                     }, this),
                     step === 3 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -707,7 +709,7 @@ function QuizFunnel() {
                                 children: "Contact details"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/quiz-funnel.tsx",
-                                lineNumber: 189,
+                                lineNumber: 190,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -722,7 +724,7 @@ function QuizFunnel() {
                                             })
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/quiz-funnel.tsx",
-                                        lineNumber: 191,
+                                        lineNumber: 192,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
@@ -735,7 +737,7 @@ function QuizFunnel() {
                                             })
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/quiz-funnel.tsx",
-                                        lineNumber: 192,
+                                        lineNumber: 193,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
@@ -747,7 +749,7 @@ function QuizFunnel() {
                                             })
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/quiz-funnel.tsx",
-                                        lineNumber: 193,
+                                        lineNumber: 194,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
@@ -759,13 +761,13 @@ function QuizFunnel() {
                                             })
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/quiz-funnel.tsx",
-                                        lineNumber: 194,
+                                        lineNumber: 195,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/quiz-funnel.tsx",
-                                lineNumber: 190,
+                                lineNumber: 191,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -788,41 +790,69 @@ function QuizFunnel() {
                                                         clipRule: "evenodd"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/quiz-funnel.tsx",
-                                                        lineNumber: 203,
+                                                        lineNumber: 204,
                                                         columnNumber: 107
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/quiz-funnel.tsx",
-                                                    lineNumber: 203,
+                                                    lineNumber: 204,
                                                     columnNumber: 31
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/quiz-funnel.tsx",
-                                                lineNumber: 202,
+                                                lineNumber: 203,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 className: "text-sm font-medium",
-                                                children: "I agree to the privacy policy and terms & conditions"
-                                            }, void 0, false, {
+                                                children: [
+                                                    "I agree to the",
+                                                    " ",
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                                        href: "/privacy-policy",
+                                                        className: "text-blue-600 hover:underline",
+                                                        target: "_blank",
+                                                        rel: "noopener noreferrer",
+                                                        children: "privacy policy"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/components/quiz-funnel.tsx",
+                                                        lineNumber: 208,
+                                                        columnNumber: 23
+                                                    }, this),
+                                                    " ",
+                                                    "and",
+                                                    " ",
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                                        href: "/terms-conditions",
+                                                        className: "text-blue-600 hover:underline",
+                                                        target: "_blank",
+                                                        rel: "noopener noreferrer",
+                                                        children: "terms & conditions"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/components/quiz-funnel.tsx",
+                                                        lineNumber: 212,
+                                                        columnNumber: 23
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
                                                 fileName: "[project]/src/components/quiz-funnel.tsx",
-                                                lineNumber: 205,
-                                                columnNumber: 19
+                                                lineNumber: 206,
+                                                columnNumber: 21
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/quiz-funnel.tsx",
-                                        lineNumber: 201,
+                                        lineNumber: 202,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/quiz-funnel.tsx",
-                                    lineNumber: 197,
+                                    lineNumber: 198,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/quiz-funnel.tsx",
-                                lineNumber: 196,
+                                lineNumber: 197,
                                 columnNumber: 13
                             }, this),
                             error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -830,7 +860,7 @@ function QuizFunnel() {
                                 children: error
                             }, void 0, false, {
                                 fileName: "[project]/src/components/quiz-funnel.tsx",
-                                lineNumber: 209,
+                                lineNumber: 219,
                                 columnNumber: 23
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -839,19 +869,19 @@ function QuizFunnel() {
                                 children: "Get Started"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/quiz-funnel.tsx",
-                                lineNumber: 210,
+                                lineNumber: 220,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/quiz-funnel.tsx",
-                        lineNumber: 188,
+                        lineNumber: 189,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/quiz-funnel.tsx",
-                lineNumber: 131,
+                lineNumber: 132,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -871,13 +901,13 @@ function QuizFunnel() {
                                             children: "*"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/quiz-funnel.tsx",
-                                            lineNumber: 225,
+                                            lineNumber: 235,
                                             columnNumber: 106
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/quiz-funnel.tsx",
-                                    lineNumber: 225,
+                                    lineNumber: 235,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -891,7 +921,7 @@ function QuizFunnel() {
                                                     children: type.icon
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/quiz-funnel.tsx",
-                                                    lineNumber: 233,
+                                                    lineNumber: 243,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -899,18 +929,18 @@ function QuizFunnel() {
                                                     children: type.label
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/quiz-funnel.tsx",
-                                                    lineNumber: 234,
+                                                    lineNumber: 244,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, type.id, true, {
                                             fileName: "[project]/src/components/quiz-funnel.tsx",
-                                            lineNumber: 228,
+                                            lineNumber: 238,
                                             columnNumber: 19
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/quiz-funnel.tsx",
-                                    lineNumber: 226,
+                                    lineNumber: 236,
                                     columnNumber: 15
                                 }, this),
                                 error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -918,13 +948,13 @@ function QuizFunnel() {
                                     children: error
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/quiz-funnel.tsx",
-                                    lineNumber: 238,
+                                    lineNumber: 248,
                                     columnNumber: 25
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/quiz-funnel.tsx",
-                            lineNumber: 224,
+                            lineNumber: 234,
                             columnNumber: 13
                         }, this),
                         step === 1 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -939,13 +969,13 @@ function QuizFunnel() {
                                             children: "*"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/quiz-funnel.tsx",
-                                            lineNumber: 243,
+                                            lineNumber: 253,
                                             columnNumber: 96
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/quiz-funnel.tsx",
-                                    lineNumber: 243,
+                                    lineNumber: 253,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -957,7 +987,7 @@ function QuizFunnel() {
                                             children: "Yes"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/quiz-funnel.tsx",
-                                            lineNumber: 245,
+                                            lineNumber: 255,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -966,13 +996,13 @@ function QuizFunnel() {
                                             children: "No"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/quiz-funnel.tsx",
-                                            lineNumber: 251,
+                                            lineNumber: 261,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/quiz-funnel.tsx",
-                                    lineNumber: 244,
+                                    lineNumber: 254,
                                     columnNumber: 15
                                 }, this),
                                 error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -980,13 +1010,13 @@ function QuizFunnel() {
                                     children: error
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/quiz-funnel.tsx",
-                                    lineNumber: 258,
+                                    lineNumber: 268,
                                     columnNumber: 25
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/quiz-funnel.tsx",
-                            lineNumber: 242,
+                            lineNumber: 252,
                             columnNumber: 13
                         }, this),
                         step === 2 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1001,13 +1031,13 @@ function QuizFunnel() {
                                             children: "*"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/quiz-funnel.tsx",
-                                            lineNumber: 263,
+                                            lineNumber: 273,
                                             columnNumber: 99
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/quiz-funnel.tsx",
-                                    lineNumber: 263,
+                                    lineNumber: 273,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1018,12 +1048,12 @@ function QuizFunnel() {
                                             children: option.label
                                         }, option.id, false, {
                                             fileName: "[project]/src/components/quiz-funnel.tsx",
-                                            lineNumber: 266,
+                                            lineNumber: 276,
                                             columnNumber: 19
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/quiz-funnel.tsx",
-                                    lineNumber: 264,
+                                    lineNumber: 274,
                                     columnNumber: 15
                                 }, this),
                                 error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1031,13 +1061,13 @@ function QuizFunnel() {
                                     children: error
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/quiz-funnel.tsx",
-                                    lineNumber: 275,
+                                    lineNumber: 285,
                                     columnNumber: 25
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/quiz-funnel.tsx",
-                            lineNumber: 262,
+                            lineNumber: 272,
                             columnNumber: 13
                         }, this),
                         step === 3 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1047,7 +1077,7 @@ function QuizFunnel() {
                                     children: "Contact details"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/quiz-funnel.tsx",
-                                    lineNumber: 280,
+                                    lineNumber: 290,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1062,7 +1092,7 @@ function QuizFunnel() {
                                                 })
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/quiz-funnel.tsx",
-                                            lineNumber: 282,
+                                            lineNumber: 292,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
@@ -1075,7 +1105,7 @@ function QuizFunnel() {
                                                 })
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/quiz-funnel.tsx",
-                                            lineNumber: 283,
+                                            lineNumber: 293,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
@@ -1087,7 +1117,7 @@ function QuizFunnel() {
                                                 })
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/quiz-funnel.tsx",
-                                            lineNumber: 284,
+                                            lineNumber: 294,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
@@ -1099,13 +1129,13 @@ function QuizFunnel() {
                                                 })
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/quiz-funnel.tsx",
-                                            lineNumber: 285,
+                                            lineNumber: 295,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/quiz-funnel.tsx",
-                                    lineNumber: 281,
+                                    lineNumber: 291,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1128,41 +1158,69 @@ function QuizFunnel() {
                                                             clipRule: "evenodd"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/quiz-funnel.tsx",
-                                                            lineNumber: 294,
+                                                            lineNumber: 304,
                                                             columnNumber: 109
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/quiz-funnel.tsx",
-                                                        lineNumber: 294,
+                                                        lineNumber: 304,
                                                         columnNumber: 33
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/quiz-funnel.tsx",
-                                                    lineNumber: 293,
+                                                    lineNumber: 303,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     className: "text-sm font-medium",
-                                                    children: "I agree to the privacy policy and terms & conditions"
-                                                }, void 0, false, {
+                                                    children: [
+                                                        "I agree to the",
+                                                        " ",
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                                            href: "/privacy-policy",
+                                                            className: "text-blue-600 hover:underline",
+                                                            target: "_blank",
+                                                            rel: "noopener noreferrer",
+                                                            children: "privacy policy"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/src/components/quiz-funnel.tsx",
+                                                            lineNumber: 308,
+                                                            columnNumber: 23
+                                                        }, this),
+                                                        " ",
+                                                        "and",
+                                                        " ",
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                                            href: "/terms-conditions",
+                                                            className: "text-blue-600 hover:underline",
+                                                            target: "_blank",
+                                                            rel: "noopener noreferrer",
+                                                            children: "terms & conditions"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/src/components/quiz-funnel.tsx",
+                                                            lineNumber: 312,
+                                                            columnNumber: 23
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
                                                     fileName: "[project]/src/components/quiz-funnel.tsx",
-                                                    lineNumber: 296,
+                                                    lineNumber: 306,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/quiz-funnel.tsx",
-                                            lineNumber: 292,
+                                            lineNumber: 302,
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/quiz-funnel.tsx",
-                                        lineNumber: 288,
+                                        lineNumber: 298,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/quiz-funnel.tsx",
-                                    lineNumber: 287,
+                                    lineNumber: 297,
                                     columnNumber: 15
                                 }, this),
                                 error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1170,7 +1228,7 @@ function QuizFunnel() {
                                     children: error
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/quiz-funnel.tsx",
-                                    lineNumber: 300,
+                                    lineNumber: 319,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -1179,30 +1237,30 @@ function QuizFunnel() {
                                     children: "Get Started"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/quiz-funnel.tsx",
-                                    lineNumber: 301,
+                                    lineNumber: 320,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/quiz-funnel.tsx",
-                            lineNumber: 279,
+                            lineNumber: 289,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/quiz-funnel.tsx",
-                    lineNumber: 222,
+                    lineNumber: 232,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/quiz-funnel.tsx",
-                lineNumber: 221,
+                lineNumber: 231,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/quiz-funnel.tsx",
-        lineNumber: 119,
+        lineNumber: 120,
         columnNumber: 5
     }, this);
 }

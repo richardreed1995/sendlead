@@ -81,6 +81,59 @@ var __TURBOPACK__imported__module__$5b$next$5d2f$internal$2f$font$2f$google$2f$g
 const metadata = {
     title: "Sendlead | Lead Generation Agency",
     description: "Sendlead is a data-driven B2B lead generation agency delivering qualified leads for technology companies. Discover our proven 7-step methodology for systematic growth and ROI.",
+    keywords: "lead generation, B2B leads, qualified leads, lead generation agency, business leads, sales leads, lead generation UK, lead generation services, CRM leads, exclusive leads",
+    authors: [
+        {
+            name: "Sendlead"
+        }
+    ],
+    creator: "Sendlead",
+    publisher: "Sendlead",
+    formatDetection: {
+        email: false,
+        address: false,
+        telephone: false
+    },
+    metadataBase: new URL('https://sendlead.co.uk'),
+    alternates: {
+        canonical: '/'
+    },
+    openGraph: {
+        type: 'website',
+        locale: 'en_GB',
+        url: 'https://sendlead.co.uk',
+        siteName: 'Sendlead',
+        title: 'Sendlead | Lead Generation Agency',
+        description: 'Sendlead is a data-driven B2B lead generation agency delivering qualified leads for technology companies. Discover our proven 7-step methodology for systematic growth and ROI.',
+        images: [
+            {
+                url: '/og-image.jpg',
+                width: 1200,
+                height: 630,
+                alt: 'Sendlead - Lead Generation Agency'
+            }
+        ]
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Sendlead | Lead Generation Agency',
+        description: 'Sendlead is a data-driven B2B lead generation agency delivering qualified leads for technology companies.',
+        images: [
+            '/og-image.jpg'
+        ],
+        creator: '@sendlead'
+    },
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            'max-video-preview': -1,
+            'max-image-preview': 'large',
+            'max-snippet': -1
+        }
+    },
     icons: {
         icon: [
             {
@@ -124,7 +177,7 @@ function RootLayout({ children }) {
                         href: "/favicon.svg?v=2"
                     }, void 0, false, {
                         fileName: "[project]/src/app/layout.tsx",
-                        lineNumber: 44,
+                        lineNumber: 91,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("link", {
@@ -133,7 +186,7 @@ function RootLayout({ children }) {
                         href: "/favicon.ico?v=2"
                     }, void 0, false, {
                         fileName: "[project]/src/app/layout.tsx",
-                        lineNumber: 45,
+                        lineNumber: 92,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("link", {
@@ -143,7 +196,7 @@ function RootLayout({ children }) {
                         href: "/favicon.png?v=2"
                     }, void 0, false, {
                         fileName: "[project]/src/app/layout.tsx",
-                        lineNumber: 46,
+                        lineNumber: 93,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("link", {
@@ -152,7 +205,7 @@ function RootLayout({ children }) {
                         href: "/apple-touch-icon.png?v=2"
                     }, void 0, false, {
                         fileName: "[project]/src/app/layout.tsx",
-                        lineNumber: 47,
+                        lineNumber: 94,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("link", {
@@ -160,7 +213,7 @@ function RootLayout({ children }) {
                         href: "/manifest.json"
                     }, void 0, false, {
                         fileName: "[project]/src/app/layout.tsx",
-                        lineNumber: 48,
+                        lineNumber: 95,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("meta", {
@@ -168,7 +221,7 @@ function RootLayout({ children }) {
                         content: "#2998FD"
                     }, void 0, false, {
                         fileName: "[project]/src/app/layout.tsx",
-                        lineNumber: 49,
+                        lineNumber: 96,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("meta", {
@@ -176,13 +229,13 @@ function RootLayout({ children }) {
                         content: "#2998FD"
                     }, void 0, false, {
                         fileName: "[project]/src/app/layout.tsx",
-                        lineNumber: 50,
+                        lineNumber: 97,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/layout.tsx",
-                lineNumber: 43,
+                lineNumber: 90,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("body", {
@@ -190,13 +243,13 @@ function RootLayout({ children }) {
                 children: children
             }, void 0, false, {
                 fileName: "[project]/src/app/layout.tsx",
-                lineNumber: 52,
+                lineNumber: 99,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/layout.tsx",
-        lineNumber: 42,
+        lineNumber: 89,
         columnNumber: 5
     }, this);
 }

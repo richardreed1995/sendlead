@@ -13,10 +13,18 @@ const today = new Date().toLocaleDateString('en-US', { year: 'numeric', month: '
 
 const posts = [
   {
-    slug: 'parlance-ai-agent',
-    title: 'SendLead Launches Parlance: The AI Agent That Triples Your Appointment Bookings',
-    category: 'Product',
+    slug: 'mortgage-lead-generation',
+    title: 'The Complete Guide to Mortgage Lead Generation in the UK',
+    category: 'Guide',
     date: today,
+    image: '/gradii-1920x1080.png',
+    excerpt: 'Proven strategies that top-performing brokers use to consistently attract, convert, and delight mortgage prospects in the competitive UK market.'
+  },
+  {
+    slug: 'parlance-ai-agent',
+    title: 'Sendlead Launches Parlance: The AI Agent That Triples Your Appointment Bookings',
+    category: 'Product',
+    date: 'August 15, 2024',
     image: '/parlance.png',
     excerpt: 'Meet Parlance, the AI agent that books 3x more appointments by automating lead nurturing, qualification, and scheduling for your business.'
   },
