@@ -2,5 +2,29 @@
   "buildCommand": "pnpm run build",
   "outputDirectory": ".next",
   "installCommand": "pnpm install",
-  "framework": "nextjs"
+  "framework": "nextjs",
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "sendlead.co"
+        }
+      ],
+      "destination": "https://www.sendlead.co/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "http://sendlead.co"
+        }
+      ],
+      "destination": "https://www.sendlead.co/:path*",
+      "permanent": true
+    }
+  ]
 }
