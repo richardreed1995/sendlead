@@ -40,6 +40,12 @@
       "namedRegex": "^/blog(?:/)?$"
     },
     {
+      "page": "/blog/mortgage-lead-generation",
+      "regex": "^/blog/mortgage\\-lead\\-generation(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/blog/mortgage\\-lead\\-generation(?:/)?$"
+    },
+    {
       "page": "/blog/parlance-ai-agent",
       "regex": "^/blog/parlance\\-ai\\-agent(?:/)?$",
       "routeKeys": {},
@@ -62,6 +68,30 @@
       "regex": "^/car\\-finance(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/car\\-finance(?:/)?$"
+    },
+    {
+      "page": "/careers",
+      "regex": "^/careers(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/careers(?:/)?$"
+    },
+    {
+      "page": "/careers/account-strategist",
+      "regex": "^/careers/account\\-strategist(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/careers/account\\-strategist(?:/)?$"
+    },
+    {
+      "page": "/careers/creative-strategist",
+      "regex": "^/careers/creative\\-strategist(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/careers/creative\\-strategist(?:/)?$"
+    },
+    {
+      "page": "/careers/data-analyst",
+      "regex": "^/careers/data\\-analyst(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/careers/data\\-analyst(?:/)?$"
     },
     {
       "page": "/cookies",

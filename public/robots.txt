@@ -1,12 +1,9 @@
+# *
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://sendlead.co.uk/sitemap.xml
+# Host
+Host: https://www.sendlead.co
 
-# Crawl-delay
-Crawl-delay: 1
-
-# Disallow admin or private areas (if any)
-# Disallow: /admin/
-# Disallow: /private/
+# Sitemaps
+Sitemap: https://www.sendlead.co/sitemap.xml
