@@ -7,8 +7,8 @@ import Link from "next/link"
 
 export default function SuccessPage() {
   useEffect(() => {
-    // Track successful qualification
-    trackEvent("ViewContent")
+    // Track successful application submission
+    trackEvent("SubmitApplication")
   }, [])
 
   return (
