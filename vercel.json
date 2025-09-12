@@ -12,7 +12,7 @@
           "value": "sendlead.co"
         }
       ],
-      "destination": "https://www.sendlead.co/:path*",
+      "destination": "https://www.sendlead.co/$1",
       "permanent": true
     },
     {
@@ -23,7 +23,7 @@
           "value": "http://sendlead.co"
         }
       ],
-      "destination": "https://www.sendlead.co/:path*",
+      "destination": "https://www.sendlead.co/$1",
       "permanent": true
     }
   ]
