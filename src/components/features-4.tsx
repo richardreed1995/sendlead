@@ -45,7 +45,7 @@ export default function Features() {
                             <Calculator className="size-5 text-zinc-500" />
                             <h3 className="text-base font-semibold">Unpredictable Pricing</h3>
                         </div>
-                        <p className="text-sm text-muted-foreground">£100 per lead, 50 leads minimum trial period. No long-term contracts, scale up and down as you need. Simple and straightforward.</p>
+                        <p className="text-sm text-muted-foreground">Fixed price per lead. No long-term contracts, scale up and down as you need. Simple and straightforward.</p>
                     </div>
                     <div className="space-y-3">
                         <div className="flex items-center gap-2">
