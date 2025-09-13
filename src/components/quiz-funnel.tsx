@@ -189,10 +189,43 @@ export default function QuizFunnel() {
           <div>
             <h3 className="text-xl font-bold mb-6 text-center">Contact details</h3>
             <div className="space-y-4 mb-6">
-              <Input placeholder="Full Name *" value={contact.name} onChange={e => setContact({ ...contact, name: e.target.value })} />
-              <Input placeholder="Email Address *" type="email" value={contact.email} onChange={e => setContact({ ...contact, email: e.target.value })} />
-              <Input placeholder="Phone Number *" value={contact.phone} onChange={e => setContact({ ...contact, phone: e.target.value })} />
-              <Input placeholder="Website *" value={contact.website} onChange={e => setContact({ ...contact, website: e.target.value })} />
+              <div>
+                <Label htmlFor="fullName" className="text-sm font-medium text-gray-700 mb-2 block">Full Name</Label>
+                <Input 
+                  id="fullName"
+                  placeholder="James Smith" 
+                  value={contact.name} 
+                  onChange={e => setContact({ ...contact, name: e.target.value })} 
+                />
+              </div>
+              <div>
+                <Label htmlFor="email" className="text-sm font-medium text-gray-700 mb-2 block">Email Address</Label>
+                <Input 
+                  id="email"
+                  placeholder="james.smith@acme.com" 
+                  type="email" 
+                  value={contact.email} 
+                  onChange={e => setContact({ ...contact, email: e.target.value })} 
+                />
+              </div>
+              <div>
+                <Label htmlFor="phone" className="text-sm font-medium text-gray-700 mb-2 block">Phone Number</Label>
+                <Input 
+                  id="phone"
+                  placeholder="07362342247" 
+                  value={contact.phone} 
+                  onChange={e => setContact({ ...contact, phone: e.target.value })} 
+                />
+              </div>
+              <div>
+                <Label htmlFor="website" className="text-sm font-medium text-gray-700 mb-2 block">Website</Label>
+                <Input 
+                  id="website"
+                  placeholder="www.acme.com" 
+                  value={contact.website} 
+                  onChange={e => setContact({ ...contact, website: e.target.value })} 
+                />
+              </div>
             </div>
             <div className="mb-6">
               <button
@@ -203,7 +236,7 @@ export default function QuizFunnel() {
                   <div className={`w-6 h-6 rounded border-2 flex items-center justify-center mr-3 transition-all ${agree ? "border-blue-600 bg-blue-600" : "border-gray-300"}`}>
                     {agree && <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>}
                   </div>
-                    <span className="text-sm font-medium">
+                    <span className="text-[10px] font-medium">
                       I agree to the{" "}
                       <Link href="/privacy-policy" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
                         privacy policy
@@ -289,10 +322,43 @@ export default function QuizFunnel() {
             <div>
               <h3 className="text-xl font-bold mb-6 text-center">Contact details</h3>
               <div className="space-y-4 mb-6">
-                <Input placeholder="Full Name *" value={contact.name} onChange={e => setContact({ ...contact, name: e.target.value })} />
-                <Input placeholder="Email Address *" type="email" value={contact.email} onChange={e => setContact({ ...contact, email: e.target.value })} />
-                <Input placeholder="Phone Number *" value={contact.phone} onChange={e => setContact({ ...contact, phone: e.target.value })} />
-                <Input placeholder="Website *" value={contact.website} onChange={e => setContact({ ...contact, website: e.target.value })} />
+                <div>
+                  <Label htmlFor="fullName-desktop" className="text-sm font-medium text-gray-700 mb-2 block">Full Name</Label>
+                  <Input 
+                    id="fullName-desktop"
+                    placeholder="James Smith" 
+                    value={contact.name} 
+                    onChange={e => setContact({ ...contact, name: e.target.value })} 
+                  />
+                </div>
+                <div>
+                  <Label htmlFor="email-desktop" className="text-sm font-medium text-gray-700 mb-2 block">Email Address</Label>
+                  <Input 
+                    id="email-desktop"
+                    placeholder="james.smith@acme.com" 
+                    type="email" 
+                    value={contact.email} 
+                    onChange={e => setContact({ ...contact, email: e.target.value })} 
+                  />
+                </div>
+                <div>
+                  <Label htmlFor="phone-desktop" className="text-sm font-medium text-gray-700 mb-2 block">Phone Number</Label>
+                  <Input 
+                    id="phone-desktop"
+                    placeholder="07362342247" 
+                    value={contact.phone} 
+                    onChange={e => setContact({ ...contact, phone: e.target.value })} 
+                  />
+                </div>
+                <div>
+                  <Label htmlFor="website-desktop" className="text-sm font-medium text-gray-700 mb-2 block">Website</Label>
+                  <Input 
+                    id="website-desktop"
+                    placeholder="www.acme.com" 
+                    value={contact.website} 
+                    onChange={e => setContact({ ...contact, website: e.target.value })} 
+                  />
+                </div>
               </div>
               <div className="mb-6">
                 <button
@@ -303,7 +369,7 @@ export default function QuizFunnel() {
                     <div className={`w-6 h-6 rounded border-2 flex items-center justify-center mr-3 transition-all ${agree ? "border-blue-600 bg-blue-600" : "border-gray-300"}`}>
                       {agree && <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>}
                     </div>
-                    <span className="text-sm font-medium">
+                    <span className="text-[10px] font-medium">
                       I agree to the{" "}
                       <Link href="/privacy-policy" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
                         privacy policy
