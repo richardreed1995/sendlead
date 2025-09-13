@@ -5,7 +5,7 @@ import Methodology from "@/components/methodology";
 import CallToAction from "@/components/call-to-action";
 import Faqs3 from "@/components/faqs-3";
 import Footer from "@/components/footer";
-import Features from "@/components/features-12";
+import AutomationFlowsHomepage from "@/components/automation-flows-homepage";
 import type { Metadata } from "next";
 import CompetitiveAdvantages from "@/components/competitive-advantages";
 
@@ -22,7 +22,7 @@ export default function Home() {
       </header>
       <main className="flex-1 flex flex-col gap-12">
         <LogoCloud />
-        <Features />
+        <AutomationFlowsHomepage />
         <CompetitiveAdvantages />
         <Methodology />
         <Features4 />
