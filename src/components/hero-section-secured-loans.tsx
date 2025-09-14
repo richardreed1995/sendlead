@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function HeroSectionSecuredLoans() {
   return (
@@ -23,9 +24,33 @@ export default function HeroSectionSecuredLoans() {
             We'll generate qualified secured loan leads from your perfect fit prospects with proven systems. All delivered directly to your CRM.
           </p>
           
-          <div className="flex justify-center">
+          {/* CTA Button - Desktop Above Image */}
+          <div className="hidden md:flex justify-center mb-8">
             <Link href="/get-started">
-              <Button size="sm" className="bg-[#2998FD] hover:bg-[#1f7fd9] text-white">
+              <Button size="lg" className="bg-[#2998FD] hover:bg-[#1f7fd9] text-white px-12 py-6 text-xl font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300">
+                Get Started
+              </Button>
+            </Link>
+          </div>
+          
+          {/* Dashboard Image - Mobile and Desktop */}
+          <div className="relative mx-auto max-w-4xl mb-8">
+            <div className="bg-white rounded-2xl shadow-2xl p-2 border border-gray-200">
+              <Image
+                className="w-full h-auto rounded-xl object-cover object-left-top"
+                src="/Dashboard1.jpg"
+                alt="Sendlead dashboard screenshot showing secured loan leads"
+                width={1200}
+                height={750}
+                priority
+              />
+            </div>
+          </div>
+          
+          {/* CTA Button - Mobile Below Image */}
+          <div className="md:hidden flex justify-center">
+            <Link href="/get-started">
+              <Button size="lg" className="bg-[#2998FD] hover:bg-[#1f7fd9] text-white px-12 py-6 text-xl font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300">
                 Get Started
               </Button>
             </Link>

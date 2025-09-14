@@ -52,7 +52,7 @@ export default function AutomationFlowsHomepage() {
     <section className="py-24 bg-white">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="relative z-10 mx-auto max-w-2xl space-y-4 text-center md:space-y-8 mb-16">
-          <h2 className="text-balance text-4xl font-medium lg:text-5xl">How We Help You Get More Customers</h2>
+          <h2 className="text-balance text-2xl font-bold md:text-xl lg:text-5xl">How We Help You Get More Customers</h2>
           <p className="text-muted-foreground text-base md:text-lg">We generate high-quality leads for your business and help you convert them into paying customers. Think of us as your dedicated customer acquisition team.</p>
         </div>
         
@@ -64,9 +64,9 @@ export default function AutomationFlowsHomepage() {
                 <div className="flex-1">
                   <div className="mb-4 flex items-center gap-3">
                     <span className="text-gray-900 font-bold text-xl">{index + 1})</span>
-                    <h3 className="text-2xl font-medium text-gray-900">{flow.title}</h3>
+                    <h3 className="text-lg font-medium text-gray-900 md:text-2xl">{flow.title}</h3>
                   </div>
-                  <p className="text-lg text-gray-600 leading-relaxed">
+                  <p className="text-base text-gray-600 leading-relaxed md:text-lg">
                     {flow.description}
                   </p>
                 </div>

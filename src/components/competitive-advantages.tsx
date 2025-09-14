@@ -20,13 +20,77 @@ export default function CompetitiveAdvantages({
             </p>
           </div>
           
-          <div className="bg-white rounded-lg shadow-sm overflow-hidden border border-gray-200">
-            <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-200">
+          {/* Mobile List View */}
+          <div className="md:hidden space-y-4">
+            <div className="bg-green-50 rounded-lg p-4 border border-green-200">
+              <div className="flex items-start gap-3">
+                <span className="text-green-600 font-bold text-lg mt-0.5">✓</span>
+                <div>
+                  <h4 className="font-semibold text-gray-900 text-base">100% Exclusive Leads</h4>
+                  <p className="text-sm text-gray-600 mt-1">Your leads are never shared with competitors</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-green-50 rounded-lg p-4 border border-green-200">
+              <div className="flex items-start gap-3">
+                <span className="text-green-600 font-bold text-lg mt-0.5">✓</span>
+                <div>
+                  <h4 className="font-semibold text-gray-900 text-base">AI-Powered Qualification</h4>
+                  <p className="text-sm text-gray-600 mt-1">Advanced AI filters out time-wasters automatically</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-green-50 rounded-lg p-4 border border-green-200">
+              <div className="flex items-start gap-3">
+                <span className="text-green-600 font-bold text-lg mt-0.5">✓</span>
+                <div>
+                  <h4 className="font-semibold text-gray-900 text-base">Real-Time Delivery</h4>
+                  <p className="text-sm text-gray-600 mt-1">Get leads instantly as they come in</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-green-50 rounded-lg p-4 border border-green-200">
+              <div className="flex items-start gap-3">
+                <span className="text-green-600 font-bold text-lg mt-0.5">✓</span>
+                <div>
+                  <h4 className="font-semibold text-gray-900 text-base">Multi-Sector Expertise</h4>
+                  <p className="text-sm text-gray-600 mt-1">We work across all financial sectors</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-green-50 rounded-lg p-4 border border-green-200">
+              <div className="flex items-start gap-3">
+                <span className="text-green-600 font-bold text-lg mt-0.5">✓</span>
+                <div>
+                  <h4 className="font-semibold text-gray-900 text-base">Transparent Pricing</h4>
+                  <p className="text-sm text-gray-600 mt-1">No hidden fees, clear cost structure</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-green-50 rounded-lg p-4 border border-green-200">
+              <div className="flex items-start gap-3">
+                <span className="text-green-600 font-bold text-lg mt-0.5">✓</span>
+                <div>
+                  <h4 className="font-semibold text-gray-900 text-base">Proven Results</h4>
+                  <p className="text-sm text-gray-600 mt-1">Consistent, high-quality lead generation</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop Table View */}
+          <div className="hidden md:block bg-white rounded-lg shadow-sm overflow-hidden border border-gray-200">
+            <div className="grid grid-cols-3 divide-x divide-gray-200">
               {/* Column Headers */}
-              <div className="bg-zinc-800 p-4 border-b md:border-b-0 md:border-r border-gray-200">
+              <div className="bg-zinc-800 p-4 border-r border-gray-200">
                 <h3 className="text-lg font-semibold text-white text-center">Feature</h3>
               </div>
-              <div className="bg-zinc-800 p-4 border-b md:border-b-0 md:border-r border-gray-200">
+              <div className="bg-zinc-800 p-4 border-r border-gray-200">
                 <div className="flex justify-center">
                   <img src="/logo-white.png" alt="Sendlead" className="h-8 w-auto" />
                 </div>
@@ -38,7 +102,7 @@ export default function CompetitiveAdvantages({
             
             {/* Comparison Rows */}
             <div className="divide-y divide-gray-200">
-              <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-200">
+              <div className="grid grid-cols-3 divide-x divide-gray-200">
                 <div className="p-4 bg-gray-50 flex items-center justify-center">
                   <h4 className="font-medium text-foreground">Lead Exclusivity</h4>
                 </div>
@@ -56,7 +120,7 @@ export default function CompetitiveAdvantages({
                 </div>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-200">
+              <div className="grid grid-cols-3 divide-x divide-gray-200">
                 <div className="p-4 bg-gray-50 flex items-center justify-center">
                   <h4 className="font-medium text-foreground">Lead Qualification</h4>
                 </div>
@@ -74,7 +138,7 @@ export default function CompetitiveAdvantages({
                 </div>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-200">
+              <div className="grid grid-cols-3 divide-x divide-gray-200">
                 <div className="p-4 bg-gray-50 flex items-center justify-center">
                   <h4 className="font-medium text-foreground">Delivery Speed</h4>
                 </div>
@@ -92,7 +156,7 @@ export default function CompetitiveAdvantages({
                 </div>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-200">
+              <div className="grid grid-cols-3 divide-x divide-gray-200">
                 <div className="p-4 bg-gray-50 flex items-center justify-center">
                   <h4 className="font-medium text-foreground">Sector Expertise</h4>
                 </div>
@@ -110,7 +174,7 @@ export default function CompetitiveAdvantages({
                 </div>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-200">
+              <div className="grid grid-cols-3 divide-x divide-gray-200">
                 <div className="p-4 bg-gray-50 flex items-center justify-center">
                   <h4 className="font-medium text-foreground">Pricing Structure</h4>
                 </div>
@@ -128,7 +192,7 @@ export default function CompetitiveAdvantages({
                 </div>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-200">
+              <div className="grid grid-cols-3 divide-x divide-gray-200">
                 <div className="p-4 bg-gray-50 flex items-center justify-center">
                   <h4 className="font-medium text-foreground">Performance</h4>
                 </div>
