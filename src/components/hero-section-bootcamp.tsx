@@ -30,7 +30,14 @@ export default function HeroSectionBootcamp() {
     try {
       console.log('Attempting to send Slack notification...');
       
-      const response = await fetch('https://hooks.slack.com/services/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', {
+      const webhookUrl = process.env.NEXT_PUBLIC_SLACK_WEBHOOK_URL;
+      
+      if (!webhookUrl) {
+        console.error('Slack webhook URL not configured');
+        return;
+      }
+      
+      const response = await fetch(webhookUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
