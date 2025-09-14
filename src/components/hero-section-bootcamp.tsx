@@ -24,72 +24,40 @@ export default function HeroSectionBootcamp() {
   const handleFullFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
+    console.log('Form submitted with data:', formData);
+    
     // Send Slack notification
     try {
-      await fetch('https://hooks.slack.com/services/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', {
+      console.log('Attempting to send Slack notification...');
+      
+      const response = await fetch('https://hooks.slack.com/services/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', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          text: `🎉 New Bootcamp Signup!`,
-          blocks: [
-            {
-              type: "header",
-              text: {
-                type: "plain_text",
-                text: "🎉 New Bootcamp Signup!"
-              }
-            },
-            {
-              type: "section",
-              fields: [
-                {
-                  type: "mrkdwn",
-                  text: `*Name:*\n${formData.name}`
-                },
-                {
-                  type: "mrkdwn",
-                  text: `*Email:*\n${formData.email}`
-                },
-                {
-                  type: "mrkdwn",
-                  text: `*Company Website:*\n${formData.companyWebsite}`
-                },
-                {
-                  type: "mrkdwn",
-                  text: `*Current Revenue:*\n${formData.currentRevenue}`
-                }
-              ]
-            },
-            {
-              type: "section",
-              text: {
-                type: "mrkdwn",
-                text: `*Biggest Challenge:*\n${formData.biggestChallenge}`
-              }
-            },
-            {
-              type: "context",
-              elements: [
-                {
-                  type: "mrkdwn",
-                  text: `📅 ${new Date().toLocaleString('en-GB', { 
-                    timeZone: 'Europe/London',
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric',
-                    hour: '2-digit',
-                    minute: '2-digit'
-                  })}`
-                }
-              ]
-            }
-          ]
+          text: `🎉 New Bootcamp Signup!\n\nName: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.companyWebsite}\nRevenue: ${formData.currentRevenue}\nChallenge: ${formData.biggestChallenge}\n\nTime: ${new Date().toLocaleString('en-GB', { 
+            timeZone: 'Europe/London',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit'
+          })}`
         })
       });
+      
+      console.log('Slack response status:', response.status);
+      console.log('Slack response:', await response.text());
+      
+      if (!response.ok) {
+        throw new Error(`Slack webhook failed with status: ${response.status}`);
+      }
+      
+      console.log('Slack notification sent successfully!');
     } catch (error) {
       console.error('Failed to send Slack notification:', error);
+      // Still redirect even if Slack fails
     }
     
     // Redirect to thank you page
