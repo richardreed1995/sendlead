@@ -418,18 +418,7 @@ export default function CourseContent() {
                           {item.completed && <CheckCircle className="w-3 h-3 text-white" />}
                         </button>
                         <span className="text-gray-700">
-                          {item.link ? (
-                            <Link 
-                              href={item.link} 
-                              target="_blank" 
-                              rel="noopener noreferrer"
-                              className="text-[#2998FD] hover:text-[#1f7fd9] hover:underline"
-                            >
-                              {item.text}
-                            </Link>
-                          ) : (
-                            item.text
-                          )}
+                          {item.text}
                         </span>
                       </div>
                     ))}
