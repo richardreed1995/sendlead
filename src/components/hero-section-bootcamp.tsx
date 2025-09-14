@@ -21,10 +21,77 @@ export default function HeroSectionBootcamp() {
     }
   };
 
-  const handleFullFormSubmit = (e: React.FormEvent) => {
+  const handleFullFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
+    
+    // Send Slack notification
+    try {
+      await fetch('https://hooks.slack.com/services/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', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          text: `🎉 New Bootcamp Signup!`,
+          blocks: [
+            {
+              type: "header",
+              text: {
+                type: "plain_text",
+                text: "🎉 New Bootcamp Signup!"
+              }
+            },
+            {
+              type: "section",
+              fields: [
+                {
+                  type: "mrkdwn",
+                  text: `*Name:*\n${formData.name}`
+                },
+                {
+                  type: "mrkdwn",
+                  text: `*Email:*\n${formData.email}`
+                },
+                {
+                  type: "mrkdwn",
+                  text: `*Company Website:*\n${formData.companyWebsite}`
+                },
+                {
+                  type: "mrkdwn",
+                  text: `*Current Revenue:*\n${formData.currentRevenue}`
+                }
+              ]
+            },
+            {
+              type: "section",
+              text: {
+                type: "mrkdwn",
+                text: `*Biggest Challenge:*\n${formData.biggestChallenge}`
+              }
+            },
+            {
+              type: "context",
+              elements: [
+                {
+                  type: "mrkdwn",
+                  text: `📅 ${new Date().toLocaleString('en-GB', { 
+                    timeZone: 'Europe/London',
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit'
+                  })}`
+                }
+              ]
+            }
+          ]
+        })
+      });
+    } catch (error) {
+      console.error('Failed to send Slack notification:', error);
+    }
+    
     // Redirect to thank you page
     window.location.href = '/bootcamp/thank-you';
   };
