@@ -22,6 +22,7 @@ export default function HeroSectionBootcamp() {
   };
 
   const handleFullFormSubmit = async (e: React.FormEvent) => {
+    console.log('🚀 handleFullFormSubmit function called!');
     e.preventDefault();
     
     console.log('Form submitted with data:', formData);
@@ -31,6 +32,8 @@ export default function HeroSectionBootcamp() {
       console.log('Attempting to send Slack notification...');
       
       const webhookUrl = process.env.NEXT_PUBLIC_SLACK_WEBHOOK_URL;
+      
+      console.log('Environment webhook URL:', webhookUrl);
       
       if (!webhookUrl) {
         console.error('Slack webhook URL not configured');
@@ -124,7 +127,9 @@ export default function HeroSectionBootcamp() {
                 </p>
               </form>
             ) : (
-              <form onSubmit={handleFullFormSubmit} className="space-y-4">
+              <div>
+                <p>Step 2 form rendered - step value: {step}</p>
+                <form onSubmit={handleFullFormSubmit} className="space-y-4">
                 <div>
                   <input
                     type="text"
@@ -186,6 +191,7 @@ export default function HeroSectionBootcamp() {
                   Back to email step
                 </button>
               </form>
+              </div>
             )}
           </div>
           
