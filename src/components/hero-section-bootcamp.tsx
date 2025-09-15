@@ -24,7 +24,13 @@ export default function HeroSectionBootcamp() {
   const handleFullFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Send Slack notification
+    // Validate all required fields
+    if (!formData.email || !formData.name || !formData.companyWebsite || !formData.currentRevenue || !formData.biggestChallenge) {
+      alert('Please fill in all required fields.');
+      return;
+    }
+    
+    // Send Slack notification with complete form data
     try {
       const webhookUrl = process.env.NEXT_PUBLIC_SLACK_WEBHOOK_URL;
       
