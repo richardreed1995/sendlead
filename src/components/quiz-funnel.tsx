@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "../../card";
 import { Input } from "@/components/ui/input";
@@ -96,23 +96,36 @@ export default function QuizFunnel() {
     }
     if (!agree) return setError("You must agree to the privacy policy and terms & conditions");
     
-    // Send data to webhook
+    // Send data to Make.com webhook
     try {
-      await fetch("https://hook.eu2.make.com/xq1dvs5e98p1w88grh58skodmco254tx", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          leadType,
-          buyingLeads,
-          salesReps,
-          contact,
-          agree,
-          completedAt: new Date().toISOString(),
-        }),
-      });
-    } catch (e) {
-      // Fail silently
+      const webhookUrl = process.env.NEXT_PUBLIC_MAKE_WEBHOOK || process.env.MAKE_WEBHOOK;
+      
+      if (webhookUrl) {
+        const response = await fetch(webhookUrl, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            leadType,
+            buyingLeads,
+            salesReps,
+            contact,
+            agree,
+            completedAt: new Date().toISOString(),
+          }),
+        });
+        
+        if (!response.ok) {
+          console.error('Make.com webhook failed:', response.status, response.statusText);
+        } else {
+          console.log('Lead data sent to Make.com successfully');
+        }
+      } else {
+        console.error('Make.com webhook URL is not configured');
+      }
+    } catch (error) {
+      console.error('Failed to send data to Make.com:', error);
     }
+    
     router.push("/success");
   }
 
