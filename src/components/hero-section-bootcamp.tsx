@@ -22,52 +22,32 @@ export default function HeroSectionBootcamp() {
   };
 
   const handleFullFormSubmit = async (e: React.FormEvent) => {
-    console.log('🚀 handleFullFormSubmit function called!');
     e.preventDefault();
-    
-    console.log('Form submitted with data:', formData);
     
     // Send Slack notification
     try {
-      console.log('Attempting to send Slack notification...');
-      
       const webhookUrl = process.env.NEXT_PUBLIC_SLACK_WEBHOOK_URL;
       
-      console.log('Environment webhook URL:', webhookUrl);
-      
-      if (!webhookUrl) {
-        console.error('Slack webhook URL not configured');
-        return;
+      if (webhookUrl) {
+        await fetch(webhookUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            text: `🎉 New Bootcamp Signup!\n\nName: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.companyWebsite}\nRevenue: ${formData.currentRevenue}\nChallenge: ${formData.biggestChallenge}\n\nTime: ${new Date().toLocaleString('en-GB', { 
+              timeZone: 'Europe/London',
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+              hour: '2-digit',
+              minute: '2-digit'
+            })}`
+          })
+        });
       }
-      
-      const response = await fetch(webhookUrl, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          text: `🎉 New Bootcamp Signup!\n\nName: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.companyWebsite}\nRevenue: ${formData.currentRevenue}\nChallenge: ${formData.biggestChallenge}\n\nTime: ${new Date().toLocaleString('en-GB', { 
-            timeZone: 'Europe/London',
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric',
-            hour: '2-digit',
-            minute: '2-digit'
-          })}`
-        })
-      });
-      
-      console.log('Slack response status:', response.status);
-      console.log('Slack response:', await response.text());
-      
-      if (!response.ok) {
-        throw new Error(`Slack webhook failed with status: ${response.status}`);
-      }
-      
-      console.log('Slack notification sent successfully!');
     } catch (error) {
       console.error('Failed to send Slack notification:', error);
-      // Still redirect even if Slack fails
     }
     
     // Redirect to thank you page
@@ -127,9 +107,7 @@ export default function HeroSectionBootcamp() {
                 </p>
               </form>
             ) : (
-              <div>
-                <p>Step 2 form rendered - step value: {step}</p>
-                <form onSubmit={handleFullFormSubmit} className="space-y-4">
+              <form onSubmit={handleFullFormSubmit} className="space-y-4">
                 <div>
                   <input
                     type="text"
@@ -191,7 +169,6 @@ export default function HeroSectionBootcamp() {
                   Back to email step
                 </button>
               </form>
-              </div>
             )}
           </div>
           
