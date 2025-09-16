@@ -31,7 +31,7 @@ const faqs = [
   },
   {
     question: "What's the investment?",
-    answer: "Fixed cost per lead. Most partners start with a test order of 25-50 leads to test the quality and scale up their volume from there. No setup fees, no monthly retainers, no long-term contracts."
+    answer: "£100 per qualified lead. 50 lead minimum trial. No setup fees, no monthly retainers, no long-term contracts. Scale up or down based on your capacity and results."
   }
 ];
 

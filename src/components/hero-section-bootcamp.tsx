@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import Image from "next/image";
+import emailjs from '@emailjs/browser';
 
 export default function HeroSectionBootcamp() {
   const [step, setStep] = useState(1);
@@ -28,6 +29,37 @@ export default function HeroSectionBootcamp() {
     if (!formData.email || !formData.name || !formData.companyWebsite || !formData.currentRevenue || !formData.biggestChallenge) {
       alert('Please fill in all required fields.');
       return;
+    }
+    
+    // Send email notification
+    try {
+      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+      
+      if (serviceId && templateId && publicKey) {
+        const templateParams = {
+          to_email: 'richard@pushsend.co',
+          from_name: formData.name,
+          from_email: formData.email,
+          company_website: formData.companyWebsite,
+          current_revenue: formData.currentRevenue,
+          biggest_challenge: formData.biggestChallenge,
+          timestamp: new Date().toLocaleString('en-GB', { 
+            timeZone: 'Europe/London',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit'
+          })
+        };
+        
+        await emailjs.send(serviceId, templateId, templateParams, publicKey);
+        console.log('Email sent successfully');
+      }
+    } catch (error) {
+      console.error('Failed to send email:', error);
     }
     
     // Send Slack notification with complete form data
