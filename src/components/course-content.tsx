@@ -19,9 +19,7 @@ export default function CourseContent() {
       duration: "45 minutes",
       videoId: "dQw4w9WgXcQ",
       downloads: [
-        { name: "ICP Worksheet", type: "PDF", size: "2.1 MB" },
-        { name: "Dream Scenario Template", type: "DOCX", size: "1.8 MB" },
-        { name: "Customer Avatar Checklist", type: "PDF", size: "1.2 MB" }
+        { name: "Data analyst GPT", type: "Link", url: "https://chatgpt.com/g/g-68ca8174e44c8191a23c5b77fd045b69-broker-customer-data-analyst-avatar-creator" }
       ],
       content: "In this module, you'll learn how to identify your Ideal Customer Profile (ICP) and create a detailed dream scenario that guides your lead generation efforts. We'll cover the psychology behind customer decision-making and how to position your services for maximum appeal."
     },
@@ -32,9 +30,7 @@ export default function CourseContent() {
       duration: "38 minutes",
       videoId: "dQw4w9WgXcQ",
       downloads: [
-        { name: "ROI Calculator", type: "XLSX", size: "3.2 MB" },
-        { name: "Lifetime Value Template", type: "PDF", size: "1.5 MB" },
-        { name: "Cost Analysis Worksheet", type: "PDF", size: "2.3 MB" }
+        { name: "ROI calculator", type: "Link", url: "https://www.sendlead.co/roi" }
       ],
       content: "Understanding ROI is crucial for sustainable lead generation. This module breaks down the real costs of different lead sources and shows you how to calculate true profitability, not just upfront costs."
     },
@@ -45,9 +41,7 @@ export default function CourseContent() {
       duration: "52 minutes",
       videoId: "dQw4w9WgXcQ",
       downloads: [
-        { name: "Method Comparison Chart", type: "PDF", size: "2.8 MB" },
-        { name: "Attraction Strategy Planner", type: "DOCX", size: "2.1 MB" },
-        { name: "Scaling Roadmap", type: "PDF", size: "1.9 MB" }
+        { name: "Client Attraction GPT", type: "Link", url: "https://chatgpt.com/g/g-68ca8678ae588191b3e91b4256eeeea2-broker-lead-roi-calculator" }
       ],
       content: "Not all lead generation methods are created equal. Learn which approaches work best for different business stages and how to avoid the common mistakes that waste time and money."
     },
@@ -58,22 +52,18 @@ export default function CourseContent() {
       duration: "41 minutes",
       videoId: "dQw4w9WgXcQ",
       downloads: [
-        { name: "Lead Scoring System", type: "XLSX", size: "4.1 MB" },
-        { name: "Qualification Questions", type: "PDF", size: "1.7 MB" },
-        { name: "Budget Verification Script", type: "DOCX", size: "1.4 MB" }
+        { name: "Broker Quiz Builder GPT", type: "Link", url: "https://chatgpt.com/g/g-68ca88a3913481918e8fc22fa694b041-broker-quiz-builder" }
       ],
       content: "Stop wasting time on unqualified leads. This module teaches you a systematic approach to qualifying prospects before they even reach your calendar, saving hours every week."
     },
     {
       id: 5,
-      title: "Landing Pages & Quizzes That Convert",
+      title: "Landing Pages That Convert",
       description: "Create interactive lead magnets that qualify prospects whilst building trust, plus the psychology behind forms that actually convert.",
       duration: "48 minutes",
       videoId: "dQw4w9WgXcQ",
       downloads: [
-        { name: "Landing Page Templates", type: "ZIP", size: "12.3 MB" },
-        { name: "Quiz Builder Guide", type: "PDF", size: "3.2 MB" },
-        { name: "Form Psychology Cheat Sheet", type: "PDF", size: "1.8 MB" }
+        { name: "Landing Page Format", type: "Link", url: "https://pbs.twimg.com/media/Ge9XdF6XIAAutBF?format=png&name=medium" }
       ],
       content: "Learn the psychology behind high-converting landing pages and interactive quizzes that not only capture leads but pre-qualify them for your services."
     },
@@ -84,9 +74,7 @@ export default function CourseContent() {
       duration: "55 minutes",
       videoId: "dQw4w9WgXcQ",
       downloads: [
-        { name: "Email Sequence Templates", type: "DOCX", size: "5.2 MB" },
-        { name: "CRM Automation Guide", type: "PDF", size: "2.9 MB" },
-        { name: "Follow-Up Calendar", type: "XLSX", size: "1.6 MB" }
+        { name: "Newsletter Format", type: "Link", url: "https://pbs.twimg.com/media/GLN8FW5WUAAkZ14?format=png&name=4096x4096" }
       ],
       content: "Most leads are lost in follow-up. This module shows you how to build automated systems that nurture prospects through the entire sales funnel without constant manual effort."
     },
@@ -97,9 +85,7 @@ export default function CourseContent() {
       duration: "43 minutes",
       videoId: "dQw4w9WgXcQ",
       downloads: [
-        { name: "Scaling Checklist", type: "PDF", size: "2.4 MB" },
-        { name: "Team Structure Guide", type: "PDF", size: "1.9 MB" },
-        { name: "Partner Evaluation Framework", type: "DOCX", size: "2.1 MB" }
+        { name: "Business Coach GPT", type: "Link", url: "https://chatgpt.com/g/g-68ca912036e88191857edf49e052bca1-business-constraint-coach-for-brokers" }
       ],
       content: "Ready to scale? This final module prepares you for high-volume lead generation and shows you when and how to partner with proven lead providers for maximum growth."
     }
@@ -322,13 +308,26 @@ export default function CourseContent() {
                             <FileText className="w-5 h-5 text-gray-400" />
                             <div>
                               <p className="font-medium text-gray-900">{download.name}</p>
-                              <p className="text-sm text-gray-500">{download.type} • {download.size}</p>
+                              <p className="text-sm text-gray-500">{download.type}{download.size ? ` • ${download.size}` : ''}</p>
                             </div>
                           </div>
-                          <Button size="sm" className="bg-[#2998FD] hover:bg-[#1f7fd9] text-white">
-                            <Download className="w-4 h-4 mr-2" />
-                            Download
-                          </Button>
+                          {download.url ? (
+                            <Link 
+                              href={download.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <Button size="sm" className="bg-[#2998FD] hover:bg-[#1f7fd9] text-white">
+                                <Download className="w-4 h-4 mr-2" />
+                                Open Link
+                              </Button>
+                            </Link>
+                          ) : (
+                            <Button size="sm" className="bg-[#2998FD] hover:bg-[#1f7fd9] text-white">
+                              <Download className="w-4 h-4 mr-2" />
+                              Download
+                            </Button>
+                          )}
                         </div>
                       ))}
                     </div>
