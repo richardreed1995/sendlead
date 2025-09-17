@@ -173,13 +173,14 @@ export default function HeroSectionBootcamp() {
                     className="w-full px-4 py-3 text-lg border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#2998FD] focus:border-transparent outline-none"
                     required
                   >
-                    <option value="">Current revenue</option>
-                    <option value="under-50k">Under £50k</option>
-                    <option value="50k-100k">£50k - £100k</option>
+                    <option value="">Current annual revenue</option>
+                    <option value="under-100k">Under £100k</option>
                     <option value="100k-250k">£100k - £250k</option>
                     <option value="250k-500k">£250k - £500k</option>
                     <option value="500k-1m">£500k - £1m</option>
-                    <option value="over-1m">Over £1m</option>
+                    <option value="1m-2m">£1m - £2m</option>
+                    <option value="2m-5m">£2m - £5m</option>
+                    <option value="over-5m">Over £5m</option>
                   </select>
                 </div>
                 <div>

@@ -5,13 +5,30 @@ import { Button } from "@/components/ui/button";
 import { Play, Download, CheckCircle, Clock, FileText, Video, BookOpen, ArrowRight, Menu, X } from "lucide-react";
 import Link from "next/link";
 
+interface DownloadItem {
+  name: string;
+  type: string;
+  size?: string;
+  url?: string;
+}
+
+interface Module {
+  id: number;
+  title: string;
+  description: string;
+  duration: string;
+  videoId: string;
+  downloads: DownloadItem[];
+  content: string;
+}
+
 export default function CourseContent() {
   const [completedModules, setCompletedModules] = useState<Set<number>>(new Set());
   const [currentModule, setCurrentModule] = useState<number | null>(null);
   const [completedChecklist, setCompletedChecklist] = useState<Set<number>>(new Set());
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const modules = [
+  const modules: Module[] = [
     {
       id: 1,
       title: "Nail Your ICP & Dream Scenario",
