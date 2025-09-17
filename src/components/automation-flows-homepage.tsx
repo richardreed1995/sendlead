@@ -49,7 +49,7 @@ const flows = [
 
 export default function AutomationFlowsHomepage() {
   return (
-    <section className="py-24 bg-white">
+    <section id="how-it-works" className="py-24 bg-white">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="relative z-10 mx-auto max-w-2xl space-y-4 text-center md:space-y-8 mb-16">
           <h2 className="text-balance text-2xl font-bold md:text-xl lg:text-5xl">How We Help You Get More Customers</h2>

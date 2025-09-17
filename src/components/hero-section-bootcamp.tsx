@@ -106,7 +106,7 @@ export default function HeroSectionBootcamp() {
           {/* Trust Indicator Tab */}
           <div className="mb-3 sm:mb-4 lg:mb-5">
             <div className="inline-flex items-center gap-1 sm:gap-2 bg-gray-100 px-2 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm text-gray-700">
-              <span>🎟️ Free 7-Day On-Demand Bootcamp for Finance Brokers 🎟️</span>
+              <span>🎟️ Free 7-Day Bootcamp for Finance Brokers 🎟️</span>
             </div>
           </div>
           
@@ -174,22 +174,20 @@ export default function HeroSectionBootcamp() {
                     required
                   >
                     <option value="">Current annual revenue</option>
-                    <option value="under-100k">Under £100k</option>
-                    <option value="100k-250k">£100k - £250k</option>
-                    <option value="250k-500k">£250k - £500k</option>
-                    <option value="500k-1m">£500k - £1m</option>
-                    <option value="1m-2m">£1m - £2m</option>
-                    <option value="2m-5m">£2m - £5m</option>
-                    <option value="over-5m">Over £5m</option>
+                    <option value="under-150k">Under £150,000</option>
+                    <option value="150k-500k">£150,000-£500,000</option>
+                    <option value="500k-2m">£500,000 - £2 million</option>
+                    <option value="2m-10m">£2 million - £10 million</option>
+                    <option value="over-10m">Over £10 million</option>
                   </select>
                 </div>
                 <div>
                   <textarea
-                    placeholder="What's your biggest challenge at the moment?"
+                    placeholder="What's your biggest challenge?"
                     value={formData.biggestChallenge}
                     onChange={(e) => handleInputChange("biggestChallenge", e.target.value)}
-                    rows={3}
-                    className="w-full px-4 py-3 text-lg border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#2998FD] focus:border-transparent outline-none resize-none"
+                    rows={2}
+                    className="w-full px-4 py-3 text-base border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#2998FD] focus:border-transparent outline-none resize-none"
                     required
                   />
                 </div>
