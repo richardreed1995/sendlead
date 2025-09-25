@@ -1,5 +1,3 @@
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import Image from "next/image";
 
 const flows = [
@@ -85,13 +83,6 @@ export default function AutomationFlowsHomepage() {
           ))}
         </div>
 
-        <div className="text-center">
-          <Link href="/get-started">
-            <Button size="sm" className="bg-[#2998FD] hover:bg-[#1f7fd9] text-white">
-              Get Started
-            </Button>
-          </Link>
-        </div>
       </div>
     </section>
   );

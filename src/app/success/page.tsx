@@ -17,7 +17,7 @@ export default function SuccessPage() {
   return (
     <div className="min-h-screen bg-white flex flex-col">
       {/* Logo */}
-      <div className="py-8 px-4">
+      <div className="py-16 px-4">
         <div className="max-w-2xl mx-auto flex justify-center">
           <Link href="/">
             <Logo />

@@ -1,7 +1,15 @@
+"use client"
+
 import { Button } from "./ui/button";
-import Link from 'next/link'
 
 export default function CallToAction() {
+    const scrollToCalendly = () => {
+        const calendlySection = document.getElementById('calendly-embed');
+        if (calendlySection) {
+            calendlySection.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <section className="py-16">
             <div className="mx-auto max-w-5xl rounded-3xl border px-6 py-12 md:py-20 lg:py-32 bg-black text-white">
@@ -11,12 +19,10 @@ export default function CallToAction() {
 
                     <div className="mt-12 flex flex-wrap justify-center gap-4">
                         <Button
-                            asChild
                             size="lg"
-                            className="bg-[#2998FD] hover:bg-[#1f7fd9] text-white">
-                            <Link href="/get-started">
-                                <span>Get Started</span>
-                            </Link>
+                            className="bg-[#2998FD] hover:bg-[#1f7fd9] text-white"
+                            onClick={scrollToCalendly}>
+                            Get Started
                         </Button>
                     </div>
                 </div>

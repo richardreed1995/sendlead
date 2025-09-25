@@ -44,7 +44,7 @@ export const HeroHeaderFBLP = () => {
                 isVisible ? 'translate-y-0' : '-translate-y-full'
             )}>
                 {/* Mobile: Simple static bar */}
-                <div className="sm:hidden bg-white border-b border-gray-100">
+                <div className="sm:hidden bg-gray-100 border-b border-gray-200">
                     <div className="flex justify-center py-2 px-4">
                         <Link
                             href="/"
@@ -57,8 +57,8 @@ export const HeroHeaderFBLP = () => {
 
                 {/* Desktop: Logo and CTA Button with scroll effects */}
                 <div className={cn(
-                    'hidden sm:block mx-auto px-2',
-                    isScrolled && 'bg-background/50 backdrop-blur-lg border-b border-gray-200'
+                    'hidden sm:block mx-auto px-2 bg-gray-100',
+                    isScrolled && 'bg-gray-100/95 backdrop-blur-lg border-b border-gray-200'
                 )}>
                     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12">
                         <div className="flex items-center justify-between py-3 lg:py-4">
