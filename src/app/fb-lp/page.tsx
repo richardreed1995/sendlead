@@ -6,7 +6,7 @@ import Features4 from "@/components/features-4";
 import Methodology from "@/components/methodology";
 import CallToAction from "@/components/call-to-action";
 import Faqs3 from "@/components/faqs-3";
-import Footer from "@/components/footer";
+import FooterFBLP from "@/components/footer-fb-lp";
 import AutomationFlowsHomepage from "@/components/automation-flows-homepage";
 import CompetitiveAdvantages from "@/components/competitive-advantages";
 import { HeroHeaderFBLP } from "@/components/header-fb-lp";
@@ -63,7 +63,7 @@ export default function FBLandingPage() {
         <Faqs3 />
         <CallToAction />
       </main>
-      <Footer />
+      <FooterFBLP />
     </div>
   );
 }
