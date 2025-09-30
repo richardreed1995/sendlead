@@ -12,6 +12,7 @@ interface VerticalData {
   repeatBusinessRate: number;
   clientLifetimeYears: number;
   referralsPerClient: number;
+  costPerLead: number;
 }
 
 interface ROIResults {
@@ -34,7 +35,8 @@ const LeadROICalculator = () => {
     commissionRate: 10,
     repeatBusinessRate: 30,
     clientLifetimeYears: 5,
-    referralsPerClient: 0.5
+    referralsPerClient: 0.5,
+    costPerLead: 100
   });
 
   const [results, setResults] = useState<ROIResults>({
@@ -58,7 +60,8 @@ const LeadROICalculator = () => {
       commissionRate: 0.35,
       repeatBusinessRate: 40,
       clientLifetimeYears: 7,
-      referralsPerClient: 0.5
+      referralsPerClient: 0.5,
+      costPerLead: 100
     },
     carInsurance: {
       name: 'Car Finance',
@@ -67,7 +70,8 @@ const LeadROICalculator = () => {
       commissionRate: 2,
       repeatBusinessRate: 25,
       clientLifetimeYears: 4,
-      referralsPerClient: 0.4
+      referralsPerClient: 0.4,
+      costPerLead: 100
     },
     businessLoans: {
       name: 'Business Loans',
@@ -76,7 +80,8 @@ const LeadROICalculator = () => {
       commissionRate: 3,
       repeatBusinessRate: 25,
       clientLifetimeYears: 4,
-      referralsPerClient: 0.3
+      referralsPerClient: 0.3,
+      costPerLead: 100
     },
     lifeInsurance: {
       name: 'Life Insurance',
@@ -85,7 +90,8 @@ const LeadROICalculator = () => {
       commissionRate: 50,
       repeatBusinessRate: 15,
       clientLifetimeYears: 15,
-      referralsPerClient: 0.4
+      referralsPerClient: 0.4,
+      costPerLead: 100
     },
     securedLoans: {
       name: 'Secured Loans',
@@ -94,7 +100,8 @@ const LeadROICalculator = () => {
       commissionRate: 2.5,
       repeatBusinessRate: 20,
       clientLifetimeYears: 3,
-      referralsPerClient: 0.4
+      referralsPerClient: 0.4,
+      costPerLead: 100
     },
     businessGrants: {
       name: 'Business Grants',
@@ -103,7 +110,8 @@ const LeadROICalculator = () => {
       commissionRate: 12,
       repeatBusinessRate: 40,
       clientLifetimeYears: 5,
-      referralsPerClient: 0.6
+      referralsPerClient: 0.6,
+      costPerLead: 100
     },
     propertyInvestment: {
       name: 'Property Investment',
@@ -112,7 +120,8 @@ const LeadROICalculator = () => {
       commissionRate: 1.5,
       repeatBusinessRate: 60,
       clientLifetimeYears: 10,
-      referralsPerClient: 0.8
+      referralsPerClient: 0.8,
+      costPerLead: 100
     },
     custom: {
       name: 'Custom',
@@ -121,7 +130,8 @@ const LeadROICalculator = () => {
       commissionRate: 10,
       repeatBusinessRate: 30,
       clientLifetimeYears: 5,
-      referralsPerClient: 0.5
+      referralsPerClient: 0.5,
+      costPerLead: 100
     }
   };
 
@@ -135,7 +145,8 @@ const LeadROICalculator = () => {
         commissionRate: vertical.commissionRate,
         repeatBusinessRate: vertical.repeatBusinessRate,
         clientLifetimeYears: vertical.clientLifetimeYears,
-        referralsPerClient: vertical.referralsPerClient
+        referralsPerClient: vertical.referralsPerClient,
+        costPerLead: vertical.costPerLead
       }));
     }
   }, [selectedVertical]);
@@ -145,8 +156,7 @@ const LeadROICalculator = () => {
   }, [inputs]);
 
   const calculateROI = () => {
-    const costPerLead = 100;
-    const totalInvestment = inputs.numLeads * costPerLead;
+    const totalInvestment = inputs.numLeads * inputs.costPerLead;
     const leadsConverted = (inputs.numLeads * inputs.conversionRate) / 100;
     
     const initialCommission = (inputs.avgDealValue * inputs.commissionRate) / 100;
@@ -216,6 +226,19 @@ const LeadROICalculator = () => {
                   <option key={key} value={key}>{vertical.name}</option>
                 ))}
               </select>
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-foreground mb-2">
+                Cost per Lead (£)
+              </label>
+              <input
+                type="number"
+                value={inputs.costPerLead}
+                onChange={(e) => handleInputChange('costPerLead', e.target.value)}
+                className="w-full px-3 py-2 border border-input rounded-md shadow-sm focus:ring-2 focus:ring-[#2998FD] focus:border-[#2998FD] bg-background text-foreground"
+                min="1"
+              />
             </div>
 
             <div className="grid grid-cols-2 gap-4">
