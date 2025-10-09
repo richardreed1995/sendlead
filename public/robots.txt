@@ -2,10 +2,6 @@
 User-agent: *
 Allow: /
 
-# Block course access pages
-Disallow: /c/
-Disallow: /bootcamp/course
-
 # Host
 Host: https://www.sendlead.co
 
