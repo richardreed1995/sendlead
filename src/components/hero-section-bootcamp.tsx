@@ -3,94 +3,42 @@
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import Image from "next/image";
-import emailjs from '@emailjs/browser';
 
 export default function HeroSectionBootcamp() {
-  const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
-    email: "",
-    name: "",
-    companyWebsite: "",
-    currentRevenue: "",
-    biggestChallenge: ""
+    email: ""
   });
 
-  const handleEmailSubmit = (e: React.FormEvent) => {
+  const handleEmailSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (formData.email) {
-      setStep(2);
-    }
-  };
-
-  const handleFullFormSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Validate all required fields
-    if (!formData.email || !formData.name || !formData.companyWebsite || !formData.currentRevenue || !formData.biggestChallenge) {
-      alert('Please fill in all required fields.');
+    if (!formData.email) {
+      alert('Please enter your email address.');
       return;
     }
     
-    // Send email notification
+    // Trigger Make.com webhook
     try {
-      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
-      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
-      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
-      
-      if (serviceId && templateId && publicKey) {
-        const templateParams = {
-          to_email: 'richard@pushsend.co',
-          from_name: formData.name,
-          from_email: formData.email,
-          company_website: formData.companyWebsite,
-          current_revenue: formData.currentRevenue,
-          biggest_challenge: formData.biggestChallenge,
-          timestamp: new Date().toLocaleString('en-GB', { 
-            timeZone: 'Europe/London',
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric',
-            hour: '2-digit',
-            minute: '2-digit'
-          })
-        };
-        
-        await emailjs.send(serviceId, templateId, templateParams, publicKey);
-        console.log('Email sent successfully');
-      }
+      await fetch('https://hook.eu2.make.com/bxpia5ck9yc6jqo695nv4n4a1pk0i7dp', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: formData.email,
+          timestamp: new Date().toISOString(),
+          source: 'bootcamp_signup',
+          page: 'bootcamp'
+        })
+      });
+      console.log('Make.com webhook triggered successfully');
     } catch (error) {
-      console.error('Failed to send email:', error);
+      console.error('Failed to trigger Make.com webhook:', error);
     }
     
-    // Send Slack notification with complete form data
-    try {
-      const webhookUrl = process.env.NEXT_PUBLIC_SLACK_WEBHOOK_URL;
-      
-      if (webhookUrl) {
-        await fetch(webhookUrl, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            text: `🎉 New Bootcamp Signup!\n\nName: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.companyWebsite}\nRevenue: ${formData.currentRevenue}\nChallenge: ${formData.biggestChallenge}\n\nTime: ${new Date().toLocaleString('en-GB', { 
-              timeZone: 'Europe/London',
-              year: 'numeric',
-              month: 'long',
-              day: 'numeric',
-              hour: '2-digit',
-              minute: '2-digit'
-            })}`
-          })
-        });
-      }
-    } catch (error) {
-      console.error('Failed to send Slack notification:', error);
-    }
-    
-    // Redirect to thank you page
-    window.location.href = '/bootcamp/thank-you';
+    // Redirect to course page
+    window.location.href = '/bootcamp/course';
   };
+
 
   const handleInputChange = (field: string, value: string) => {
     setFormData(prev => ({
@@ -119,103 +67,39 @@ export default function HeroSectionBootcamp() {
             Learn the system top brokers use to turn marketing spend into consistent, high-quality customers that scale finance businesses.
           </p>
           
-          {/* Two-Step Form */}
+          {/* Email Form */}
           <div className="max-w-md mx-auto mb-8">
-            {step === 1 ? (
-              <form onSubmit={handleEmailSubmit} className="space-y-4">
-                <div>
-                  <input
-                    type="email"
-                    placeholder="Enter your email address"
-                    value={formData.email}
-                    onChange={(e) => handleInputChange("email", e.target.value)}
-                    className="w-full px-4 py-3 text-lg border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#2998FD] focus:border-transparent outline-none"
-                    required
-                  />
-                </div>
-                <Button 
-                  type="submit" 
-                  size="lg" 
-                  className="w-full bg-[#2998FD] hover:bg-[#1f7fd9] text-white px-12 py-6 text-xl font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300"
-                >
-                  Get Instant Access Now
-                </Button>
-                <p className="text-sm text-gray-600">
-                  Start immediately and complete at your own pace.
-                </p>
-              </form>
-            ) : (
-              <form onSubmit={handleFullFormSubmit} className="space-y-4">
-                <div>
-                  <input
-                    type="text"
-                    placeholder="Your name"
-                    value={formData.name}
-                    onChange={(e) => handleInputChange("name", e.target.value)}
-                    className="w-full px-4 py-3 text-lg border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#2998FD] focus:border-transparent outline-none"
-                    required
-                  />
-                </div>
-                <div>
-                  <input
-                    type="text"
-                    placeholder="Company website"
-                    value={formData.companyWebsite}
-                    onChange={(e) => handleInputChange("companyWebsite", e.target.value)}
-                    className="w-full px-4 py-3 text-lg border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#2998FD] focus:border-transparent outline-none"
-                    required
-                  />
-                </div>
-                <div>
-                  <select
-                    value={formData.currentRevenue}
-                    onChange={(e) => handleInputChange("currentRevenue", e.target.value)}
-                    className="w-full px-4 py-3 text-lg border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#2998FD] focus:border-transparent outline-none"
-                    required
-                  >
-                    <option value="">Current annual revenue</option>
-                    <option value="under-150k">Under £150,000</option>
-                    <option value="150k-500k">£150,000-£500,000</option>
-                    <option value="500k-2m">£500,000 - £2 million</option>
-                    <option value="2m-10m">£2 million - £10 million</option>
-                    <option value="over-10m">Over £10 million</option>
-                  </select>
-                </div>
-                <div>
-                  <textarea
-                    placeholder="What's your biggest challenge?"
-                    value={formData.biggestChallenge}
-                    onChange={(e) => handleInputChange("biggestChallenge", e.target.value)}
-                    rows={2}
-                    className="w-full px-4 py-3 text-base border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#2998FD] focus:border-transparent outline-none resize-none"
-                    required
-                  />
-                </div>
-                <Button 
-                  type="submit" 
-                  size="lg" 
-                  className="w-full bg-[#2998FD] hover:bg-[#1f7fd9] text-white px-12 py-6 text-xl font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300"
-                >
-                  Get Started
-                </Button>
-                <button
-                  type="button"
-                  onClick={() => setStep(1)}
-                  className="text-sm text-gray-600 hover:text-gray-800 underline"
-                >
-                  Back to email step
-                </button>
-              </form>
-            )}
+            <form onSubmit={handleEmailSubmit} className="space-y-4">
+              <div>
+                <input
+                  type="email"
+                  placeholder="Enter your email address"
+                  value={formData.email}
+                  onChange={(e) => handleInputChange("email", e.target.value)}
+                  className="w-full px-4 py-3 text-lg border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#2998FD] focus:border-transparent outline-none"
+                  required
+                />
+              </div>
+              <Button 
+                type="submit" 
+                size="lg" 
+                className="w-full bg-[#2998FD] hover:bg-[#1f7fd9] text-white px-12 py-6 text-xl font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300"
+              >
+                Get Instant Access Now
+              </Button>
+              <p className="text-sm text-gray-600">
+                Start immediately and complete at your own pace.
+              </p>
+            </form>
           </div>
           
-          {/* Dashboard Image - Mobile and Desktop */}
+          {/* Course Image - Mobile and Desktop */}
           <div className="relative mx-auto max-w-4xl mb-8">
             <div className="bg-white rounded-2xl shadow-2xl p-2 border border-gray-200">
               <Image
                 className="w-full h-auto rounded-xl object-cover object-left-top"
-                src="/Dashboard1.jpg"
-                alt="Sendlead dashboard screenshot showing lead generation system"
+                src="/course.jpg"
+                alt="7-Day Lead Generation Bootcamp Course Preview"
                 width={1200}
                 height={750}
                 priority

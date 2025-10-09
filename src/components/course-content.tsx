@@ -33,8 +33,8 @@ export default function CourseContent() {
       id: 1,
       title: "Nail Your ICP & Dream Scenario",
       description: "Define the exact customers most likely to convert and map your perfect lead journey from first contact to completion.",
-      duration: "45 minutes",
-      videoId: "dQw4w9WgXcQ",
+      duration: "7:32",
+      videoId: "ee5bZC_By1g",
       downloads: [
         { name: "Data analyst GPT", type: "Link", url: "https://chatgpt.com/g/g-68ca8174e44c8191a23c5b77fd045b69-broker-customer-data-analyst-avatar-creator" }
       ],
@@ -44,8 +44,8 @@ export default function CourseContent() {
       id: 2,
       title: "The ROI Formula",
       description: "Calculate the true cost of leads vs. lifetime value, and discover why most brokers lose money on cheap leads that seem like bargains.",
-      duration: "38 minutes",
-      videoId: "dQw4w9WgXcQ",
+      duration: "3:35",
+      videoId: "jF4cmUmjdt0",
       downloads: [
         { name: "ROI calculator", type: "Link", url: "https://www.sendlead.co/roi" }
       ],
@@ -55,8 +55,8 @@ export default function CourseContent() {
       id: 3,
       title: "Client Attraction Methods",
       description: "Rank lead generation methods that actually work at scale and why most brokers choose the wrong approach for their business stage.",
-      duration: "52 minutes",
-      videoId: "dQw4w9WgXcQ",
+      duration: "6:11",
+      videoId: "jUYQ0GCqqnE",
       downloads: [
         { name: "Client Attraction GPT", type: "Link", url: "https://chatgpt.com/g/g-68ca8678ae588191b3e91b4256eeeea2-broker-lead-roi-calculator" }
       ],
@@ -66,8 +66,8 @@ export default function CourseContent() {
       id: 4,
       title: "Master Lead Qualification",
       description: "Build your personal lead scoring system that filters out time-wasters and identifies serious buyers with verified budgets.",
-      duration: "41 minutes",
-      videoId: "dQw4w9WgXcQ",
+      duration: "4:05",
+      videoId: "ECNRWwwlFvU",
       downloads: [
         { name: "Broker Quiz Builder GPT", type: "Link", url: "https://chatgpt.com/g/g-68ca88a3913481918e8fc22fa694b041-broker-quiz-builder" }
       ],
@@ -77,8 +77,8 @@ export default function CourseContent() {
       id: 5,
       title: "Landing Pages That Convert",
       description: "Create interactive lead magnets that qualify prospects whilst building trust, plus the psychology behind forms that actually convert.",
-      duration: "48 minutes",
-      videoId: "dQw4w9WgXcQ",
+      duration: "10:50",
+      videoId: "g8j-SiZpP1g",
       downloads: [
         { name: "Landing Page Format", type: "Link", url: "https://pbs.twimg.com/media/Ge9XdF6XIAAutBF?format=png&name=medium" }
       ],
@@ -88,8 +88,8 @@ export default function CourseContent() {
       id: 6,
       title: "Build Your Follow-Up Factory",
       description: "Develop systematic nurture sequences that convert leads between multiple touches, plus CRM automation that works whilst you sleep.",
-      duration: "55 minutes",
-      videoId: "dQw4w9WgXcQ",
+      duration: "6:25",
+      videoId: "oeKlp4HGMXA",
       downloads: [
         { name: "Newsletter Format", type: "Link", url: "https://pbs.twimg.com/media/GLN8FW5WUAAkZ14?format=png&name=4096x4096" }
       ],
@@ -99,8 +99,8 @@ export default function CourseContent() {
       id: 7,
       title: "Scale-Ready Systems",
       description: "Prepare your business infrastructure to handle high-volume lead flow without burning out, plus when to partner with proven lead providers.",
-      duration: "43 minutes",
-      videoId: "dQw4w9WgXcQ",
+      duration: "4:26",
+      videoId: "maLEZQe-v0g",
       downloads: [
         { name: "Business Coach GPT", type: "Link", url: "https://chatgpt.com/g/g-68ca912036e88191857edf49e052bca1-business-constraint-coach-for-brokers" }
       ],
@@ -406,11 +406,6 @@ export default function CourseContent() {
                         text: "Share with a friend",
                         completed: completedChecklist.has(4)
                       },
-                      {
-                        id: 5,
-                        text: "Complete bonus actions for extra content",
-                        completed: completedChecklist.has(5)
-                      }
                     ].map((item) => (
                       <div key={item.id} className="flex items-center space-x-3">
                         <button
@@ -441,21 +436,6 @@ export default function CourseContent() {
                   </div>
                 </div>
 
-                {/* Bonus Actions Link */}
-                <div className="bg-green-50 rounded-xl p-6 mb-8">
-                  <h4 className="text-lg font-semibold text-gray-900 mb-3">Bonus Content</h4>
-                  <p className="text-sm text-gray-600 mb-4">
-                    Complete social actions to unlock exclusive bonus training materials.
-                  </p>
-                  <Link 
-                    href="/bootcamp/thank-you#social-actions" 
-                    target="_blank"
-                    className="inline-flex items-center text-[#2998FD] hover:text-[#1f7fd9] font-medium"
-                  >
-                    View Bonus Actions
-                    <ArrowRight className="w-4 h-4 ml-1" />
-                  </Link>
-                </div>
 
                 <div className="text-center">
                   <Button

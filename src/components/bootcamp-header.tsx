@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import Image from "next/image";
+import { Logo } from "@/components/logo";
 
 export default function BootcampHeader() {
   return (
@@ -9,13 +9,7 @@ export default function BootcampHeader() {
         <div className="flex justify-center sm:justify-between items-center py-2 sm:py-4">
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
-              <Image
-                src="/Group 28 (1).png"
-                alt="Sendlead Logo"
-                width={80}
-                height={27}
-                className="h-5 w-auto sm:h-8"
-              />
+              <Logo />
             </Link>
           </div>
           <div className="hidden sm:block">

@@ -12,9 +12,11 @@ import CompetitiveAdvantages from "@/components/competitive-advantages";
 import { HeroHeaderFBLP } from "@/components/header-fb-lp";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function FBLandingPage() {
+  const [isMobile, setIsMobile] = useState(false);
+
   useEffect(() => {
     // Load Calendly script
     const script = document.createElement('script');
@@ -22,11 +24,20 @@ export default function FBLandingPage() {
     script.async = true;
     document.body.appendChild(script);
 
+    // Check if mobile view
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
     return () => {
       // Cleanup script on unmount
       if (document.body.contains(script)) {
         document.body.removeChild(script);
       }
+      window.removeEventListener('resize', checkMobile);
     };
   }, []);
 
@@ -78,7 +89,10 @@ export default function FBLandingPage() {
             </div>
             
             <div className="calendly-inline-widget w-full" 
-                 data-url="https://calendly.com/richard-sendlead/sendlead-intro?hide_gdpr_banner=1" 
+                 data-url={isMobile 
+                   ? "https://calendly.com/richard-sendlead/sendlead-intro?hide_event_type_details=1&hide_gdpr_banner=1"
+                   : "https://calendly.com/richard-sendlead/sendlead-intro?hide_gdpr_banner=1"
+                 } 
                  style={{
                    minWidth: '320px', 
                    height: '700px',
