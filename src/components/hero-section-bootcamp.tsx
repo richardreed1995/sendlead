@@ -1,60 +1,18 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function HeroSectionBootcamp() {
-  const [formData, setFormData] = useState({
-    email: ""
-  });
-
-  const handleEmailSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!formData.email) {
-      alert('Please enter your email address.');
-      return;
-    }
-    
-    // Trigger Make.com webhook
-    try {
-      await fetch('https://hook.eu2.make.com/bxpia5ck9yc6jqo695nv4n4a1pk0i7dp', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          email: formData.email,
-          timestamp: new Date().toISOString(),
-          source: 'bootcamp_signup',
-          page: 'bootcamp'
-        })
-      });
-      console.log('Make.com webhook triggered successfully');
-    } catch (error) {
-      console.error('Failed to trigger Make.com webhook:', error);
-    }
-    
-    // Redirect to course page
-    window.location.href = '/bootcamp/course';
-  };
-
-
-  const handleInputChange = (field: string, value: string) => {
-    setFormData(prev => ({
-      ...prev,
-      [field]: value
-    }));
-  };
-
   return (
     <section id="hero" className="relative overflow-hidden bg-background py-8 sm:py-16 lg:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
           {/* Trust Indicator Tab */}
           <div className="mb-3 sm:mb-4 lg:mb-5">
-            <div className="inline-flex items-center gap-1 sm:gap-2 bg-gray-100 px-2 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm text-gray-700">
-              <span>🎟️ Free 7-Day Bootcamp for Finance Brokers 🎟️</span>
+            <div className="inline-flex items-center gap-1 sm:gap-2 bg-blue-50 border border-blue-200 px-2 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm text-blue-700 font-medium">
+              <span>🎓 7-Day Lead Generation Bootcamp</span>
             </div>
           </div>
           
@@ -67,30 +25,21 @@ export default function HeroSectionBootcamp() {
             Learn the system top brokers use to turn marketing spend into consistent, high-quality customers that scale finance businesses.
           </p>
           
-          {/* Email Form */}
+          {/* CTA Button */}
           <div className="max-w-md mx-auto mb-8">
-            <form onSubmit={handleEmailSubmit} className="space-y-4">
-              <div>
-                <input
-                  type="email"
-                  placeholder="Enter your email address"
-                  value={formData.email}
-                  onChange={(e) => handleInputChange("email", e.target.value)}
-                  className="w-full px-4 py-3 text-lg border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#2998FD] focus:border-transparent outline-none"
-                  required
-                />
-              </div>
-              <Button 
-                type="submit" 
-                size="lg" 
-                className="w-full bg-[#2998FD] hover:bg-[#1f7fd9] text-white px-12 py-6 text-xl font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300"
-              >
-                Get Instant Access Now
-              </Button>
+            <div className="space-y-4">
+              <Link href="https://buy.stripe.com/9B628k3ubgwS4WKd8qcbC00" target="_blank">
+                <Button 
+                  size="lg" 
+                  className="w-full bg-[#2998FD] hover:bg-[#1f7fd9] text-white px-12 py-6 text-xl font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300"
+                >
+                  Get Instant Access
+                </Button>
+              </Link>
               <p className="text-sm text-gray-600">
-                Start immediately and complete at your own pace.
+                Secure payment • Start immediately • Complete at your own pace
               </p>
-            </form>
+            </div>
           </div>
           
           {/* Course Image - Mobile and Desktop */}

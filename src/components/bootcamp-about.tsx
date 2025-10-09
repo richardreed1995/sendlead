@@ -17,9 +17,6 @@ export default function BootcampAbout() {
             <p className="text-lg text-muted-foreground">
               In this bootcamp you will find the tactics and strategies we used to scale our partners. You can skip the guesswork and expensive mistakes, simply apply these lessons and your brokerage will grow.
             </p>
-            <p className="text-lg text-muted-foreground">
-              To be transparent, we also supply this course to help qualify leads who would be a good fit to work with us. If you are interested in working with us to supply you leads without having to implement all of this for yourself, simply fill in our get started form and we will reach out to you.
-            </p>
           </div>
         </div>
       </div>

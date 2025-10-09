@@ -28,8 +28,8 @@ export default function BootcampValueStack() {
       icon: Users
     },
     {
-      title: "Lifetime Access & Updates",
-      description: "Keep access to all materials and receive updates as we improve the system",
+      title: "Instant Access & Updates",
+      description: "Get immediate access to all materials and receive updates as we improve the system",
       icon: CheckCircle
     }
   ];
@@ -39,7 +39,7 @@ export default function BootcampValueStack() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="relative z-10 mx-auto max-w-xl space-y-4 text-center md:space-y-8 mb-12">
           <h2 className="text-balance text-4xl font-medium lg:text-5xl">Everything You Get in This Bootcamp</h2>
-          <p className="text-muted-foreground text-base md:text-lg">A complete system delivered absolutely FREE</p>
+          <p className="text-muted-foreground text-base md:text-lg">A complete system for just £28</p>
         </div>
         
         <div className="max-w-6xl mx-auto">

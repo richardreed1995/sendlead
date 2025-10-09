@@ -7,12 +7,12 @@ import Link from "next/link";
 
 const faqs = [
   {
-    question: "Is this bootcamp really free?",
-    answer: "Yes, this bootcamp is completely free with no hidden costs, upsells, or constant sales pitches. We believe in providing genuine value first. You'll get access to all materials, templates, and strategies at no cost."
+    question: "What do I get for £28?",
+    answer: "You get complete access to all 7 video modules, downloadable templates, custom GPTs, and resources. No hidden costs, no upsells. Just a one-time payment of £28 for the entire bootcamp system."
   },
   {
     question: "How long does the bootcamp take to complete?",
-    answer: "The bootcamp is designed to be completed over 7 days, but you can work at your own pace. Most brokers spend 30-60 minutes per day. You'll have lifetime access to all materials, so you can revisit any day's content whenever you need."
+    answer: "The bootcamp is designed to be completed over 7 days, but you can work at your own pace. Most brokers spend 30-60 minutes per day. You can revisit any day's content whenever you need."
   },
   {
     question: "What exactly will I learn in the 7 days?",
@@ -33,6 +33,10 @@ const faqs = [
   {
     question: "How quickly will I see results?",
     answer: "Most brokers start seeing improved lead quality within the first week of implementing the strategies. The exact timeline depends on how quickly you can implement the systems, but we provide step-by-step guidance to accelerate your results."
+  },
+  {
+    question: "Is there a money-back guarantee?",
+    answer: "Yes! If you're not satisfied with the bootcamp content, contact us within 30 days for a full refund. We're confident this system will transform your lead generation, but if it's not right for you, we'll refund your £28 investment."
   }
 ];
 
@@ -70,9 +74,9 @@ export default function BootcampFAQs() {
         </div>
         
         <div className="text-center">
-          <Link href="#hero">
+          <Link href="https://buy.stripe.com/9B628k3ubgwS4WKd8qcbC00" target="_blank">
             <Button size="lg" className="bg-[#2998FD] hover:bg-[#1f7fd9] text-white px-12 py-6 text-xl font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300">
-              Get Started
+              Enroll Now - £28
             </Button>
           </Link>
         </div>

@@ -25,10 +25,22 @@ export default function BootcampAccess() {
                 <p className="text-muted-foreground">Online (instant access portal)</p>
               </div>
               <div className="text-center">
-                <div className="text-4xl mb-2">🎟️</div>
-                <h4 className="font-semibold text-foreground mb-2">Access</h4>
-                <p className="text-muted-foreground">100% Free — available now</p>
+                <div className="text-4xl mb-2">💷</div>
+                <h4 className="font-semibold text-foreground mb-2">Investment</h4>
+                <p className="text-muted-foreground">Just £28 — instant access</p>
               </div>
+            </div>
+            
+            {/* CTA Button */}
+            <div className="text-center">
+              <Link href="https://buy.stripe.com/9B628k3ubgwS4WKd8qcbC00" target="_blank">
+                <Button 
+                  size="lg" 
+                  className="bg-[#2998FD] hover:bg-[#1f7fd9] text-white px-12 py-4 text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                >
+                  Enroll Now - £28
+                </Button>
+              </Link>
             </div>
           </div>
           

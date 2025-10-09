@@ -1,7 +1,6 @@
 import HeroSectionBootcamp from "@/components/hero-section-bootcamp";
 import BootcampReasons from "@/components/bootcamp-reasons";
 import BootcampCurriculum from "@/components/bootcamp-curriculum";
-import BootcampBenefits from "@/components/bootcamp-benefits";
 import BootcampValueStack from "@/components/bootcamp-value-stack";
 import BootcampAccess from "@/components/bootcamp-access";
 import BootcampAbout from "@/components/bootcamp-about";
@@ -11,12 +10,12 @@ import BootcampHeader from "@/components/bootcamp-header";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Free 7-Day On-Demand Bootcamp for Finance Brokers | Sendlead",
-  description: "Fill your calendar with qualified leads every week. Learn the system top brokers use to turn marketing spend into consistent, high-quality leads that scale finance businesses to new profit levels.",
+  title: "7-Day Lead Generation Bootcamp for Finance Brokers | Sendlead",
+  description: "Fill your calendar with qualified leads every week. Learn the system top brokers use to turn marketing spend into consistent, high-quality leads that scale finance businesses to new profit levels. Just £28.",
   keywords: "finance broker bootcamp, lead generation training, mortgage broker training, business loan broker course, finance marketing bootcamp, lead generation system, broker training course, finance lead generation training",
   openGraph: {
-    title: "Free 7-Day On-Demand Bootcamp for Finance Brokers | Sendlead",
-    description: "Fill your calendar with qualified leads every week. Learn the system top brokers use to turn marketing spend into consistent, high-quality leads that scale finance businesses to new profit levels.",
+    title: "7-Day Lead Generation Bootcamp for Finance Brokers | Sendlead",
+    description: "Fill your calendar with qualified leads every week. Learn the system top brokers use to turn marketing spend into consistent, high-quality leads that scale finance businesses to new profit levels. Just £28.",
     type: "website",
     url: "https://sendlead.co.uk/bootcamp",
     siteName: "Sendlead",
@@ -25,14 +24,14 @@ export const metadata: Metadata = {
         url: "https://sendlead.co.uk/og-bootcamp.jpg",
         width: 1200,
         height: 630,
-        alt: "Free 7-Day On-Demand Bootcamp for Finance Brokers - Sendlead",
+        alt: "7-Day Lead Generation Bootcamp for Finance Brokers - Sendlead",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Free 7-Day On-Demand Bootcamp for Finance Brokers | Sendlead",
-    description: "Fill your calendar with qualified leads every week. Learn the system top brokers use to turn marketing spend into consistent, high-quality leads.",
+    title: "7-Day Lead Generation Bootcamp for Finance Brokers | Sendlead",
+    description: "Fill your calendar with qualified leads every week. Learn the system top brokers use to turn marketing spend into consistent, high-quality leads. Just £28.",
     images: ["https://sendlead.co.uk/og-bootcamp.jpg"],
   },
   alternates: {
@@ -55,7 +54,7 @@ export default function BootcampPage() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Course",
-    "name": "Free 7-Day On-Demand Bootcamp for Finance Brokers",
+    "name": "7-Day Lead Generation Bootcamp for Finance Brokers",
     "description": "Fill your calendar with qualified leads every week. Learn the system top brokers use to turn marketing spend into consistent, high-quality leads that scale finance businesses to new profit levels.",
     "provider": {
       "@type": "Organization",
@@ -71,9 +70,10 @@ export default function BootcampPage() {
     },
     "offers": {
       "@type": "Offer",
-      "price": "0",
+      "price": "28",
       "priceCurrency": "GBP",
-      "description": "Free 7-day bootcamp"
+      "description": "7-day lead generation bootcamp",
+      "availability": "https://schema.org/InStock"
     },
     "duration": "P7D",
     "inLanguage": "en-GB"
@@ -90,7 +90,6 @@ export default function BootcampPage() {
         <HeroSectionBootcamp />
         <BootcampReasons />
         <BootcampCurriculum />
-        <BootcampBenefits />
         <BootcampValueStack />
         <BootcampAccess />
         <BootcampAbout />

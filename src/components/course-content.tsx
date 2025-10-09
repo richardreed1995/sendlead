@@ -284,11 +284,12 @@ export default function CourseContent() {
                 <div className="aspect-video bg-gray-900">
                   <iframe
                     className="w-full h-full"
-                    src={`https://www.youtube.com/embed/${modules[currentModule - 1].videoId}`}
+                    src={`https://www.youtube-nocookie.com/embed/${modules[currentModule - 1].videoId}?rel=0&modestbranding=1`}
                     title={modules[currentModule - 1].title}
                     frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowFullScreen
+                    referrerPolicy="strict-origin-when-cross-origin"
                   ></iframe>
                 </div>
 

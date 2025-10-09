@@ -13,8 +13,8 @@ export default function BootcampReasons() {
       icon: Settings
     },
     {
-      title: "Get Everything Free",
-      description: "Access the same insider strategies that successful brokers typically guard closely, delivered at no cost with no hidden fees or upsells.",
+      title: "Scale Your Business",
+      description: "Access the same insider strategies that successful brokers typically guard closely. Learn the exact system for predictable, qualified lead generation.",
       icon: TrendingUp
     }
   ];

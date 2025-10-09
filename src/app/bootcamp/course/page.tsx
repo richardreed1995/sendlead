@@ -1,18 +1,13 @@
-import CourseContent from "@/components/course-content";
-import type { Metadata } from "next";
+import { redirect } from 'next/navigation';
 
-export const metadata: Metadata = {
-  title: "7-Day Lead Generation Bootcamp Course | Sendlead",
-  description: "Access your complete 7-day bootcamp course with video lessons, downloads, and step-by-step modules to master lead generation.",
+export const metadata = {
   robots: {
     index: false,
     follow: false,
-    noarchive: true,
-    nosnippet: true,
-    noimageindex: true,
   },
 };
 
-export default function CoursePage() {
-  return <CourseContent />;
+export default function OldCoursePage() {
+  // Redirect to bootcamp landing page
+  redirect('/bootcamp');
 }
