@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 
-type VerticalKey = 'mortgages' | 'carInsurance' | 'businessLoans' | 'lifeInsurance' | 'securedLoans' | 'businessGrants' | 'propertyInvestment' | 'custom';
+type VerticalKey = 'mortgages' | 'carInsurance' | 'businessLoans' | 'lifeInsurance' | 'securedLoans' | 'businessGrants' | 'propertyInvestment' | 'bridgingLoan' | 'homeSelling' | 'custom';
 
 interface VerticalData {
   name: string;
@@ -61,7 +61,7 @@ const LeadROICalculator = () => {
       repeatBusinessRate: 40,
       clientLifetimeYears: 7,
       referralsPerClient: 0.5,
-      costPerLead: 100
+      costPerLead: 75
     },
     carInsurance: {
       name: 'Car Finance',
@@ -71,7 +71,7 @@ const LeadROICalculator = () => {
       repeatBusinessRate: 25,
       clientLifetimeYears: 4,
       referralsPerClient: 0.4,
-      costPerLead: 100
+      costPerLead: 45
     },
     businessLoans: {
       name: 'Business Loans',
@@ -81,7 +81,7 @@ const LeadROICalculator = () => {
       repeatBusinessRate: 25,
       clientLifetimeYears: 4,
       referralsPerClient: 0.3,
-      costPerLead: 100
+      costPerLead: 90
     },
     lifeInsurance: {
       name: 'Life Insurance',
@@ -91,7 +91,7 @@ const LeadROICalculator = () => {
       repeatBusinessRate: 15,
       clientLifetimeYears: 15,
       referralsPerClient: 0.4,
-      costPerLead: 100
+      costPerLead: 45
     },
     securedLoans: {
       name: 'Secured Loans',
@@ -101,7 +101,7 @@ const LeadROICalculator = () => {
       repeatBusinessRate: 20,
       clientLifetimeYears: 3,
       referralsPerClient: 0.4,
-      costPerLead: 100
+      costPerLead: 65
     },
     businessGrants: {
       name: 'Business Grants',
@@ -111,7 +111,7 @@ const LeadROICalculator = () => {
       repeatBusinessRate: 40,
       clientLifetimeYears: 5,
       referralsPerClient: 0.6,
-      costPerLead: 100
+      costPerLead: 70
     },
     propertyInvestment: {
       name: 'Property Investment',
@@ -121,7 +121,27 @@ const LeadROICalculator = () => {
       repeatBusinessRate: 60,
       clientLifetimeYears: 10,
       referralsPerClient: 0.8,
-      costPerLead: 100
+      costPerLead: 120
+    },
+    bridgingLoan: {
+      name: 'Bridging Loan',
+      conversionRate: 12,
+      avgDealValue: 200000,
+      commissionRate: 1,
+      repeatBusinessRate: 30,
+      clientLifetimeYears: 2,
+      referralsPerClient: 0.3,
+      costPerLead: 90
+    },
+    homeSelling: {
+      name: 'Home Selling',
+      conversionRate: 18,
+      avgDealValue: 300000,
+      commissionRate: 1.5,
+      repeatBusinessRate: 25,
+      clientLifetimeYears: 5,
+      referralsPerClient: 0.6,
+      costPerLead: 65
     },
     custom: {
       name: 'Custom',
