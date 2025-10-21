@@ -320,7 +320,6 @@ export default function ROIQQuizFunnel() {
                   onChange={e => setCustomMetrics({ ...customMetrics, conversionRate: parseFloat(e.target.value) || 0 })} 
                   className="text-lg"
                 />
-                <p className="text-xs text-gray-500 mt-1">Industry standard: {selectedVertical.conversionRate}%</p>
               </div>
             </div>
             
@@ -352,7 +351,6 @@ export default function ROIQQuizFunnel() {
                   onChange={e => setCustomMetrics({ ...customMetrics, avgDealValue: parseFloat(e.target.value) || 0 })} 
                   className="text-lg"
                 />
-                <p className="text-xs text-gray-500 mt-1">Industry standard: {formatCurrency(selectedVertical.avgDealValue)}</p>
               </div>
             </div>
             
@@ -385,7 +383,6 @@ export default function ROIQQuizFunnel() {
                   onChange={e => setCustomMetrics({ ...customMetrics, commissionRate: parseFloat(e.target.value) || 0 })} 
                   className="text-lg"
                 />
-                <p className="text-xs text-gray-500 mt-1">Industry standard: {selectedVertical.commissionRate}%</p>
               </div>
             </div>
             
@@ -417,7 +414,6 @@ export default function ROIQQuizFunnel() {
                   onChange={e => setCustomMetrics({ ...customMetrics, repeatBusinessRate: parseFloat(e.target.value) || 0 })} 
                   className="text-lg"
                 />
-                <p className="text-xs text-gray-500 mt-1">Industry standard: {selectedVertical.repeatBusinessRate}%</p>
               </div>
               
               <div>
@@ -432,7 +428,6 @@ export default function ROIQQuizFunnel() {
                   onChange={e => setCustomMetrics({ ...customMetrics, referralsPerClient: parseFloat(e.target.value) || 0 })} 
                   className="text-lg"
                 />
-                <p className="text-xs text-gray-500 mt-1">Industry standard: {selectedVertical.referralsPerClient}</p>
               </div>
             </div>
             
@@ -577,7 +572,6 @@ export default function ROIQQuizFunnel() {
                     onChange={e => setCustomMetrics({ ...customMetrics, conversionRate: parseFloat(e.target.value) || 0 })} 
                     className="text-lg"
                   />
-                  <p className="text-xs text-gray-500 mt-1">Industry standard: {selectedVertical.conversionRate}%</p>
                 </div>
               </div>
               
@@ -611,7 +605,6 @@ export default function ROIQQuizFunnel() {
                     onChange={e => setCustomMetrics({ ...customMetrics, avgDealValue: parseFloat(e.target.value) || 0 })} 
                     className="text-lg"
                   />
-                  <p className="text-xs text-gray-500 mt-1">Industry standard: {formatCurrency(selectedVertical.avgDealValue)}</p>
                 </div>
               </div>
               
@@ -646,7 +639,6 @@ export default function ROIQQuizFunnel() {
                     onChange={e => setCustomMetrics({ ...customMetrics, commissionRate: parseFloat(e.target.value) || 0 })} 
                     className="text-lg"
                   />
-                  <p className="text-xs text-gray-500 mt-1">Industry standard: {selectedVertical.commissionRate}%</p>
                 </div>
               </div>
               
@@ -680,7 +672,6 @@ export default function ROIQQuizFunnel() {
                     onChange={e => setCustomMetrics({ ...customMetrics, repeatBusinessRate: parseFloat(e.target.value) || 0 })} 
                     className="text-lg"
                   />
-                  <p className="text-xs text-gray-500 mt-1">Industry standard: {selectedVertical.repeatBusinessRate}%</p>
                 </div>
                 
                 <div>
@@ -695,7 +686,6 @@ export default function ROIQQuizFunnel() {
                     onChange={e => setCustomMetrics({ ...customMetrics, referralsPerClient: parseFloat(e.target.value) || 0 })} 
                     className="text-lg"
                   />
-                  <p className="text-xs text-gray-500 mt-1">Industry standard: {selectedVertical.referralsPerClient}</p>
                 </div>
               </div>
               
