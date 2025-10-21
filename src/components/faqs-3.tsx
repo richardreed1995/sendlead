@@ -46,13 +46,13 @@ export default function FAQsThree() {
             id: 'item-6',
             icon: 'pound-sterling',
             question: 'How is pricing structured?',
-            answer: 'We charge a flat rate of £100 per lead.',
+            answer: 'We charge a flat rate per lead.',
         },
         {
             id: 'item-7',
             icon: 'alert-triangle',
             question: 'Is there a minimum purchase requirement?',
-            answer: 'We require a minimum order of £5,000 worth of leads. After that, you can adjust volume, modify targeting criteria, or pause campaigns at any time.',
+            answer: 'We require a minimum of 25 leads as a one-time test order so you can see the quality of leads we provide. After that, you can buy as many leads as you want.',
         },
         {
             id: 'item-8',

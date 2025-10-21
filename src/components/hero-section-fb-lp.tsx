@@ -57,9 +57,6 @@ export default function HeroSectionFBLP() {
             >
               Get Started
             </Button>
-            <p className="text-xs sm:text-sm text-gray-600 mt-2 text-center">
-              New customer offer: 50% off first lead order
-            </p>
           </div>
         </div>
       </div>
