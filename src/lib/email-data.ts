@@ -33,7 +33,7 @@ export interface EmailData {
 
 export const commercialFinanceEmail: EmailData = {
   from: 'noreply@sendlead.co',
-  to: 'broker@example.com',
+  to: 'team@fundingpartners.co.uk',
   subject: 'New Lead - John Smith - Pre-approved for £150,000',
   date: '29 October 2025 at 13:20',
   headerTitle: 'New Lead Notification',
@@ -104,7 +104,7 @@ export const commercialFinanceEmail: EmailData = {
 
 export const wealthManagementEmail: EmailData = {
   from: 'noreply@sendlead.co',
-  to: 'broker@example.com',
+  to: 'advisors@wealthadvisory.com',
   subject: 'New Lead - High Net Worth Prospect',
   date: '29 October 2025 at 14:35',
   headerTitle: 'New Lead Notification',
@@ -130,8 +130,8 @@ export const wealthManagementEmail: EmailData = {
     { label: 'Investment Performance', value: 'Holdings in 2 currencies/regions' },
   ],
   contactInfo: {
-    fullName: 'Lead Name',
-    emailAddress: 'lead@example.com',
+    fullName: 'Sarah Thompson',
+    emailAddress: 'sarah.thompson@example.com',
     phoneNumber: '+44 7123 456790',
     submissionId: 'xyz789-abc123-def456',
   },

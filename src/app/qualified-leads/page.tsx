@@ -15,9 +15,9 @@ export default function ExampleBrokerEmailsPage() {
       <main className="flex-1 flex flex-col">
         <div className="bg-gradient-to-b from-primary/5 to-background pt-32 pb-12 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <h1 className="text-4xl font-bold text-foreground mb-4">Example Broker Emails</h1>
+            <h1 className="text-4xl font-bold text-foreground mb-4">Qualified Leads Examples</h1>
             <p className="text-lg text-muted-foreground max-w-3xl">
-              Explore example emails sent to brokers with complete lead details captured through our qualification process.
+              Here's an overview of the qualified leads we generate for our different verticals. Each lead has verified emails and phone numbers, and we can adjust our funnels to suit your qualification process.
             </p>
           </div>
         </div>
