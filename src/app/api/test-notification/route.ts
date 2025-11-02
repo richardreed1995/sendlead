@@ -234,9 +234,21 @@ export async function GET() {
       html: emailHtml,
     })
 
+    if (result.error) {
+      console.error('Resend API error:', result.error)
+      return NextResponse.json(
+        { 
+          success: false, 
+          error: result.error.message || 'Failed to send email',
+          apiKeyConfigured: !!apiKey
+        },
+        { status: 500 }
+      )
+    }
+
     return NextResponse.json({ 
       success: true, 
-      messageId: result.id,
+      messageId: result.data?.id,
       message: 'Test email sent successfully',
       apiKeyConfigured: !!apiKey,
       from: 'noreply@notification.sendlead.co',

@@ -221,8 +221,16 @@ export async function POST(request: NextRequest) {
       html: emailHtml,
     })
 
-    console.log('Notification email sent successfully:', result.id)
-    return NextResponse.json({ success: true, messageId: result.id }, { status: 200 })
+    if (result.error) {
+      console.error('Resend API error:', result.error)
+      return NextResponse.json(
+        { success: false, error: result.error.message || 'Failed to send email' },
+        { status: 500 }
+      )
+    }
+
+    console.log('Notification email sent successfully:', result.data?.id)
+    return NextResponse.json({ success: true, messageId: result.data?.id }, { status: 200 })
   } catch (error: any) {
     console.error('Failed to send notification email:', error)
     return NextResponse.json(

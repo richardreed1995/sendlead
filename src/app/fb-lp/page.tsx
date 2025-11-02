@@ -1,10 +1,8 @@
 "use client"
 
 import HeroSectionFBLP from "@/components/hero-section-fb-lp";
-import LogoCloud from "@/components/logo-cloud";
 import Features4 from "@/components/features-4";
 import Methodology from "@/components/methodology";
-import CallToAction from "@/components/call-to-action";
 import Faqs3 from "@/components/faqs-3";
 import FooterFBLP from "@/components/footer-fb-lp";
 import AutomationFlowsHomepage from "@/components/automation-flows-homepage";
@@ -46,6 +44,10 @@ export default function FBLandingPage() {
       <HeroHeaderFBLP />
       <main className="flex-1 flex flex-col">
         <HeroSectionFBLP />
+        <CompetitiveAdvantages />
+        <Features4 />
+        <AutomationFlowsHomepage />
+        <Methodology />
         {/* Get Started Section - Mobile Optimized */}
         <section id="calendly-embed" className="py-12 sm:py-16 bg-white">
           <div className="w-full px-4 sm:px-6 lg:px-8">
@@ -67,7 +69,7 @@ export default function FBLandingPage() {
                 >
                   <Button 
                     size="lg" 
-                    className="bg-[#25D366] hover:bg-[#20BA5A] text-white w-full px-8 py-8 sm:px-10 sm:py-7 flex items-center justify-center gap-3 text-lg sm:text-xl font-semibold"
+                    className="bg-[#25D366] hover:bg-[#20BA5A] text-white w-full px-8 py-6 sm:px-10 sm:py-7 flex items-center justify-center gap-3 text-base sm:text-xl font-semibold"
                   >
                     <svg 
                       xmlns="http://www.w3.org/2000/svg" 
@@ -101,14 +103,7 @@ export default function FBLandingPage() {
             </div>
           </div>
         </section>
-
-        <LogoCloud />
-        <AutomationFlowsHomepage />
-        <CompetitiveAdvantages />
-        <Methodology />
-        <Features4 />
         <Faqs3 />
-        <CallToAction />
       </main>
       <FooterFBLP />
     </div>

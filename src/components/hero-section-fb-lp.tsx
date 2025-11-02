@@ -39,7 +39,7 @@ export default function HeroSectionFBLP() {
           <div className="flex flex-col items-center mt-8 sm:mt-8">
             <Button 
               size="lg" 
-              className="bg-[#2998FD] hover:bg-[#1f7fd9] text-white w-full max-w-sm sm:w-auto sm:max-w-none py-4 sm:py-2"
+              className="bg-[#2998FD] hover:bg-[#1f7fd9] text-white w-full max-w-sm sm:w-auto sm:max-w-none py-7 sm:py-2 text-lg sm:text-base font-bold"
               onClick={() => {
                 const calendlySection = document.getElementById('calendly-embed');
                 if (calendlySection) {
