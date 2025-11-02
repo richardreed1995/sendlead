@@ -27,18 +27,26 @@ const salesRepsOptions = [
   { id: "11+", label: "11+" },
 ];
 
+const leadCapacityOptions = [
+  { id: "0-49", label: "0 - 49" },
+  { id: "50-99", label: "50 - 99" },
+  { id: "100-149", label: "100 - 149" },
+  { id: "150+", label: "150+" },
+];
+
 export default function QuizFunnel() {
   const [step, setStep] = useState(0);
   const [leadType, setLeadType] = useState<string | null>(null);
   const [buyingLeads, setBuyingLeads] = useState<null | boolean>(null);
   const [salesReps, setSalesReps] = useState<string | null>(null);
+  const [leadCapacity, setLeadCapacity] = useState<string | null>(null);
   const [contact, setContact] = useState({ name: "", email: "", phone: "", website: "" });
   const [agree, setAgree] = useState(false);
   const [error, setError] = useState("");
   const [isTransitioning, setIsTransitioning] = useState(false);
   const router = useRouter();
 
-  const totalSteps = 4;
+  const totalSteps = 5;
   const progress = ((step + 1) / totalSteps) * 100;
 
   function validateEmail(email: string) {
@@ -77,11 +85,21 @@ export default function QuizFunnel() {
     }, 300);
   };
 
+  const handleLeadCapacitySelect = (value: string) => {
+    setLeadCapacity(value);
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setStep(4);
+      setIsTransitioning(false);
+    }, 300);
+  };
+
   // New flow:
   // 0: What type of leads are you looking for? *
   // 1: Have you bought leads before? *
   // 2: How many sales reps do you have? *
-  // 3: Contact details *
+  // 3: How many leads can you handle a month? *
+  // 4: Contact details *
 
   async function handleSubmit() {
     setError("");
@@ -96,6 +114,8 @@ export default function QuizFunnel() {
     }
     if (!agree) return setError("You must agree to the privacy policy and terms & conditions");
     
+    const completedAt = new Date().toISOString();
+    
     // Send data to Make.com webhook
     try {
       const webhookUrl = process.env.NEXT_PUBLIC_MAKE_WEBHOOK || process.env.MAKE_WEBHOOK;
@@ -108,9 +128,10 @@ export default function QuizFunnel() {
             leadType,
             buyingLeads,
             salesReps,
+            leadCapacity,
             contact,
             agree,
-            completedAt: new Date().toISOString(),
+            completedAt,
           }),
         });
         
@@ -125,8 +146,32 @@ export default function QuizFunnel() {
     } catch (error) {
       console.error('Failed to send data to Make.com:', error);
     }
+
+    // Send internal notification email
+    try {
+      const response = await fetch('/api/notify-get-started', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          leadType,
+          buyingLeads,
+          salesReps,
+          leadCapacity,
+          contact,
+          completedAt,
+        }),
+      });
+
+      if (!response.ok) {
+        console.error('Notification email failed:', response.status, response.statusText);
+      } else {
+        console.log('Notification email sent successfully');
+      }
+    } catch (error) {
+      console.error('Failed to send notification email:', error);
+    }
     
-    router.push("/success");
+    router.push("/success-get-started");
   }
 
   return (
@@ -199,6 +244,33 @@ export default function QuizFunnel() {
           </div>
         )}
         {step === 3 && (
+          <div className={`transition-opacity duration-300 ${isTransitioning ? 'opacity-50' : 'opacity-100'}`}>
+            <h3 className="text-xl font-bold mb-6 text-center">How many leads can you handle a month? <span className="text-red-500">*</span></h3>
+            <div className="mb-4 w-full max-w-md mx-auto">
+              <div className="grid grid-cols-3 gap-3 mb-3">
+                {leadCapacityOptions.slice(0, 3).map(option => (
+                  <button
+                    key={option.id}
+                    className={`rounded-xl px-4 py-6 text-lg font-semibold border-2 transition-all ${leadCapacity === option.id ? "border-blue-600 bg-blue-50 text-blue-700" : "border-gray-200 bg-white hover:bg-gray-50"}`}
+                    onClick={() => handleLeadCapacitySelect(option.id)}
+                  >
+                    {option.label}
+                  </button>
+                ))}
+              </div>
+              <div className="flex justify-center">
+                <button
+                  className={`rounded-xl px-4 py-6 text-lg font-semibold border-2 transition-all w-full max-w-[200px] ${leadCapacity === leadCapacityOptions[3].id ? "border-blue-600 bg-blue-50 text-blue-700" : "border-gray-200 bg-white hover:bg-gray-50"}`}
+                  onClick={() => handleLeadCapacitySelect(leadCapacityOptions[3].id)}
+                >
+                  {leadCapacityOptions[3].label}
+                </button>
+              </div>
+            </div>
+            {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
+          </div>
+        )}
+        {step === 4 && (
           <div>
             <h3 className="text-xl font-bold mb-6 text-center">Contact details</h3>
             <div className="space-y-4 mb-6">
@@ -332,6 +404,33 @@ export default function QuizFunnel() {
             </div>
           )}
           {step === 3 && (
+            <div className={`transition-opacity duration-300 ${isTransitioning ? 'opacity-50' : 'opacity-100'}`}>
+              <h3 className="text-xl font-bold mb-6 text-center">How many leads can you handle a month? <span className="text-red-500">*</span></h3>
+              <div className="mb-4 w-full max-w-md mx-auto">
+                <div className="grid grid-cols-3 gap-3 mb-3">
+                  {leadCapacityOptions.slice(0, 3).map(option => (
+                    <button
+                      key={option.id}
+                      className={`rounded-xl px-4 py-6 text-lg font-semibold border-2 transition-all ${leadCapacity === option.id ? "border-blue-600 bg-blue-50 text-blue-700" : "border-gray-200 bg-white hover:bg-gray-50"}`}
+                      onClick={() => handleLeadCapacitySelect(option.id)}
+                    >
+                      {option.label}
+                    </button>
+                  ))}
+                </div>
+                <div className="flex justify-center">
+                  <button
+                    className={`rounded-xl px-4 py-6 text-lg font-semibold border-2 transition-all w-full max-w-[200px] ${leadCapacity === leadCapacityOptions[3].id ? "border-blue-600 bg-blue-50 text-blue-700" : "border-gray-200 bg-white hover:bg-gray-50"}`}
+                    onClick={() => handleLeadCapacitySelect(leadCapacityOptions[3].id)}
+                  >
+                    {leadCapacityOptions[3].label}
+                  </button>
+                </div>
+              </div>
+              {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
+            </div>
+          )}
+          {step === 4 && (
             <div>
               <h3 className="text-xl font-bold mb-6 text-center">Contact details</h3>
               <div className="space-y-4 mb-6">
