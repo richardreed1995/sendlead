@@ -10,14 +10,14 @@ const costItems = [
   { item: "Ad spend (minimum viable)", cost: "£3,000+", time: "Ongoing risk" }
 ];
 
-export default function CostComparisonMortgage() {
+export default function CostComparisonFinancialAdvisor() {
   return (
     <section className="py-16 bg-gray-50">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
           <div className="relative z-10 mx-auto max-w-xl space-y-4 text-center md:space-y-8 mb-12">
-            <h2 className="text-balance text-4xl font-medium lg:text-5xl">The Real Cost of DIY Mortgage Lead Generation</h2>
-            <p className="text-muted-foreground text-base md:text-lg">See what it actually costs to build your own lead generation system</p>
+            <h2 className="text-balance text-4xl font-medium lg:text-5xl">The Real Cost of DIY Financial Advisor Lead Generation</h2>
+            <p className="text-muted-foreground text-base md:text-lg">See what it actually costs to build your own client acquisition system</p>
           </div>
           
           <div className="bg-white rounded-lg overflow-hidden shadow-sm mb-8">
@@ -54,3 +54,4 @@ export default function CostComparisonMortgage() {
     </section>
   );
 }
+

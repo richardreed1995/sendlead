@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 
-type VerticalKey = 'mortgages' | 'carInsurance' | 'businessLoans' | 'lifeInsurance' | 'securedLoans' | 'businessGrants' | 'propertyInvestment' | 'bridgingLoan' | 'homeSelling' | 'custom';
+type VerticalKey = 'mortgages' | 'businessLoans' | 'lifeInsurance' | 'securedLoans' | 'financialAdvisor' | 'bridgingLoan' | 'homeSelling' | 'custom';
 
 interface VerticalData {
   name: string;
@@ -63,16 +63,6 @@ const LeadROICalculator = () => {
       referralsPerClient: 0.5,
       costPerLead: 75
     },
-    carInsurance: {
-      name: 'Car Finance',
-      conversionRate: 22,
-      avgDealValue: 25000,
-      commissionRate: 2,
-      repeatBusinessRate: 25,
-      clientLifetimeYears: 4,
-      referralsPerClient: 0.4,
-      costPerLead: 45
-    },
     businessLoans: {
       name: 'Business Loans',
       conversionRate: 12,
@@ -103,25 +93,15 @@ const LeadROICalculator = () => {
       referralsPerClient: 0.4,
       costPerLead: 65
     },
-    businessGrants: {
-      name: 'Business Grants',
-      conversionRate: 8,
-      avgDealValue: 15000,
-      commissionRate: 12,
-      repeatBusinessRate: 40,
-      clientLifetimeYears: 5,
-      referralsPerClient: 0.6,
-      costPerLead: 70
-    },
-    propertyInvestment: {
-      name: 'Property Investment',
-      conversionRate: 10,
-      avgDealValue: 180000,
-      commissionRate: 1.5,
-      repeatBusinessRate: 60,
-      clientLifetimeYears: 10,
+    financialAdvisor: {
+      name: 'Financial Advisor',
+      conversionRate: 20,
+      avgDealValue: 150000,
+      commissionRate: 1.0,
+      repeatBusinessRate: 90,
+      clientLifetimeYears: 15,
       referralsPerClient: 0.8,
-      costPerLead: 120
+      costPerLead: 100
     },
     bridgingLoan: {
       name: 'Bridging Loan',

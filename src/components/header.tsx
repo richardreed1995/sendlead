@@ -16,12 +16,10 @@ const menuItems = [
 
 const sectorItems = [
     { name: 'Mortgages', href: '/mortgage' },
-    { name: 'Car Finance', href: '/car-finance' },
     { name: 'Business Loans', href: '/business-loans' },
     { name: 'Life Insurance', href: '/life-insurance' },
     { name: 'Secured Loans', href: '/secured-loans' },
-    { name: 'Business Grants', href: '/business-grants' },
-    { name: 'Property Investment', href: '/property-investment' },
+    { name: 'Financial Advisor', href: '/financial-advisor' },
 ]
 
 export const HeroHeader = () => {

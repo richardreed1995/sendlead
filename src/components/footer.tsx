@@ -15,10 +15,6 @@ const links = [
                 href: '/mortgage',
             },
             {
-                title: 'Car Finance',
-                href: '/car-finance',
-            },
-            {
                 title: 'Business Loans',
                 href: '/business-loans',
             },
@@ -31,12 +27,8 @@ const links = [
                 href: '/secured-loans',
             },
             {
-                title: 'Business Grants',
-                href: '/business-grants',
-            },
-            {
-                title: 'Property Investment',
-                href: '/property-investment',
+                title: 'Financial Advisor',
+                href: '/financial-advisor',
             },
         ],
     },

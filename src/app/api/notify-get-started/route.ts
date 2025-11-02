@@ -22,6 +22,28 @@ export async function POST(request: NextRequest) {
     
     const { leadType, buyingLeads, salesReps, leadCapacity, contact, completedAt } = data
 
+    // Format lead type: "business-loans" -> "Business Loans"
+    const formatLeadType = (type: string | null) => {
+      if (!type) return 'Not specified'
+      return type
+        .split('-')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ')
+    }
+
+    // Format sales reps: "none" -> "None", "1-3" -> "1-3", etc.
+    const formatSalesReps = (reps: string | null) => {
+      if (!reps) return 'Not specified'
+      if (reps === 'none') return 'None'
+      return reps.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('-')
+    }
+
+    // Format lead capacity: "50-99" -> "50 - 99"
+    const formatLeadCapacity = (capacity: string | null) => {
+      if (!capacity) return 'Not specified'
+      return capacity.replace(/-/g, ' - ')
+    }
+
     // Format the email content
     const emailHtml = `
       <!DOCTYPE html>
@@ -154,11 +176,11 @@ export async function POST(request: NextRequest) {
                     <td class="column" style="width: 50%; padding-right: 12px; vertical-align: top;">
                       <div class="field">
                         <span class="label">Type of Leads</span>
-                        <div class="value">${leadType || 'Not specified'}</div>
+                        <div class="value">${formatLeadType(leadType)}</div>
                       </div>
                       <div class="field">
                         <span class="label">Number of Sales Reps</span>
-                        <div class="value">${salesReps || 'Not specified'}</div>
+                        <div class="value">${formatSalesReps(salesReps)}</div>
                       </div>
                     </td>
                     <td class="column" style="width: 50%; padding-left: 12px; vertical-align: top;">
@@ -168,7 +190,7 @@ export async function POST(request: NextRequest) {
                       </div>
                       <div class="field">
                         <span class="label">Leads Per Month</span>
-                        <div class="value">${leadCapacity ? leadCapacity.replace('-', ' - ') : 'Not specified'}</div>
+                        <div class="value">${formatLeadCapacity(leadCapacity)}</div>
                       </div>
                     </td>
                   </tr>

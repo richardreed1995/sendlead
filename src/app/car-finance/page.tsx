@@ -40,11 +40,11 @@ export const metadata: Metadata = {
     canonical: "https://sendlead.co.uk/car-finance",
   },
   robots: {
-    index: true,
-    follow: true,
+    index: false,
+    follow: false,
     googleBot: {
-      index: true,
-      follow: true,
+      index: false,
+      follow: false,
       "max-video-preview": -1,
       "max-image-preview": "large",
       "max-snippet": -1,

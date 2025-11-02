@@ -7,16 +7,14 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { Home, Car, Building2, Gift, Shield, Lock, TrendingUp, MoreHorizontal } from "lucide-react";
+import { Home, Building2, Shield, Lock, Briefcase, MoreHorizontal, User, Mail, Phone, Globe } from "lucide-react";
 
 const leadTypes = [
   { id: "mortgages", label: "Mortgages", icon: <Home className="h-6 w-6 text-gray-700" /> },
-  { id: "car-insurance", label: "Car Finance", icon: <Car className="h-6 w-6 text-gray-700" /> },
   { id: "business-loans", label: "Business Loans", icon: <Building2 className="h-6 w-6 text-gray-700" /> },
   { id: "life-insurance", label: "Life Insurance", icon: <Shield className="h-6 w-6 text-gray-700" /> },
   { id: "secured-loans", label: "Secured Loans", icon: <Lock className="h-6 w-6 text-gray-700" /> },
-  { id: "business-grants", label: "Business Grants", icon: <Gift className="h-6 w-6 text-gray-700" /> },
-  { id: "property-investment", label: "Property Investment", icon: <TrendingUp className="h-6 w-6 text-gray-700" /> },
+  { id: "financial-advisor", label: "Financial Advisor", icon: <Briefcase className="h-6 w-6 text-gray-700" /> },
   { id: "other", label: "Other", icon: <MoreHorizontal className="h-6 w-6 text-gray-700" /> },
 ];
 
@@ -190,8 +188,10 @@ export default function QuizFunnel() {
       <div className="block md:hidden">
         {step === 0 && (
           <div className={`transition-opacity duration-300 ${isTransitioning ? 'opacity-50' : 'opacity-100'}`}>
-            <h3 className="text-xl font-bold mb-6 text-center">What type of leads are you looking for? <span className="text-red-500">*</span></h3>
-            <div className="grid grid-cols-2 gap-2 mb-4">
+            <div className="flex flex-col items-center justify-center mb-6 w-full">
+              <h3 className="text-xl font-bold text-center w-full">What type of leads are you looking for? <span className="text-red-500">*</span></h3>
+            </div>
+            <div className="grid grid-cols-3 gap-2 mb-4">
               {leadTypes.map(type => (
                 <button
                   key={type.id}
@@ -276,40 +276,56 @@ export default function QuizFunnel() {
             <div className="space-y-4 mb-6">
               <div>
                 <Label htmlFor="fullName" className="text-sm font-medium text-gray-700 mb-2 block">Full Name</Label>
-                <Input 
-                  id="fullName"
-                  placeholder="James Smith" 
-                  value={contact.name} 
-                  onChange={e => setContact({ ...contact, name: e.target.value })} 
-                />
+                <div className="relative">
+                  <User className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+                  <Input 
+                    id="fullName"
+                    placeholder="Your full name" 
+                    value={contact.name} 
+                    onChange={e => setContact({ ...contact, name: e.target.value })} 
+                    className="pl-10"
+                  />
+                </div>
               </div>
               <div>
                 <Label htmlFor="email" className="text-sm font-medium text-gray-700 mb-2 block">Email Address</Label>
-                <Input 
-                  id="email"
-                  placeholder="james.smith@acme.com" 
-                  type="email" 
-                  value={contact.email} 
-                  onChange={e => setContact({ ...contact, email: e.target.value })} 
-                />
+                <div className="relative">
+                  <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+                  <Input 
+                    id="email"
+                    placeholder="Your work email" 
+                    type="email" 
+                    value={contact.email} 
+                    onChange={e => setContact({ ...contact, email: e.target.value })} 
+                    className="pl-10"
+                  />
+                </div>
               </div>
               <div>
                 <Label htmlFor="phone" className="text-sm font-medium text-gray-700 mb-2 block">Phone Number</Label>
-                <Input 
-                  id="phone"
-                  placeholder="07362342247" 
-                  value={contact.phone} 
-                  onChange={e => setContact({ ...contact, phone: e.target.value })} 
-                />
+                <div className="relative">
+                  <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+                  <Input 
+                    id="phone"
+                    placeholder="Your phone number" 
+                    value={contact.phone} 
+                    onChange={e => setContact({ ...contact, phone: e.target.value })} 
+                    className="pl-10"
+                  />
+                </div>
               </div>
               <div>
                 <Label htmlFor="website" className="text-sm font-medium text-gray-700 mb-2 block">Website</Label>
-                <Input 
-                  id="website"
-                  placeholder="www.acme.com" 
-                  value={contact.website} 
-                  onChange={e => setContact({ ...contact, website: e.target.value })} 
-                />
+                <div className="relative">
+                  <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+                  <Input 
+                    id="website"
+                    placeholder="Your website" 
+                    value={contact.website} 
+                    onChange={e => setContact({ ...contact, website: e.target.value })} 
+                    className="pl-10"
+                  />
+                </div>
               </div>
             </div>
             <div className="mb-6">
@@ -350,8 +366,10 @@ export default function QuizFunnel() {
         <Card className="border border-gray-200 shadow-sm p-6">
           {step === 0 && (
             <div className={`transition-opacity duration-300 ${isTransitioning ? 'opacity-50' : 'opacity-100'}`}>
-              <h3 className="text-xl font-bold mb-6 text-center">What type of leads are you looking for? <span className="text-red-500">*</span></h3>
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
+              <div className="flex flex-col items-center justify-center mb-6 w-full">
+                <h3 className="text-xl font-bold text-center w-full">What type of leads are you looking for? <span className="text-red-500">*</span></h3>
+              </div>
+              <div className="grid grid-cols-3 gap-3 mb-4">
                 {leadTypes.map(type => (
                   <button
                     key={type.id}
@@ -436,40 +454,56 @@ export default function QuizFunnel() {
               <div className="space-y-4 mb-6">
                 <div>
                   <Label htmlFor="fullName-desktop" className="text-sm font-medium text-gray-700 mb-2 block">Full Name</Label>
-                  <Input 
-                    id="fullName-desktop"
-                    placeholder="James Smith" 
-                    value={contact.name} 
-                    onChange={e => setContact({ ...contact, name: e.target.value })} 
-                  />
+                  <div className="relative">
+                    <User className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+                    <Input 
+                      id="fullName-desktop"
+                      placeholder="Your full name" 
+                      value={contact.name} 
+                      onChange={e => setContact({ ...contact, name: e.target.value })} 
+                      className="pl-10"
+                    />
+                  </div>
                 </div>
                 <div>
                   <Label htmlFor="email-desktop" className="text-sm font-medium text-gray-700 mb-2 block">Email Address</Label>
-                  <Input 
-                    id="email-desktop"
-                    placeholder="james.smith@acme.com" 
-                    type="email" 
-                    value={contact.email} 
-                    onChange={e => setContact({ ...contact, email: e.target.value })} 
-                  />
+                  <div className="relative">
+                    <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+                    <Input 
+                      id="email-desktop"
+                      placeholder="Your work email" 
+                      type="email" 
+                      value={contact.email} 
+                      onChange={e => setContact({ ...contact, email: e.target.value })} 
+                      className="pl-10"
+                    />
+                  </div>
                 </div>
                 <div>
                   <Label htmlFor="phone-desktop" className="text-sm font-medium text-gray-700 mb-2 block">Phone Number</Label>
-                  <Input 
-                    id="phone-desktop"
-                    placeholder="07362342247" 
-                    value={contact.phone} 
-                    onChange={e => setContact({ ...contact, phone: e.target.value })} 
-                  />
+                  <div className="relative">
+                    <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+                    <Input 
+                      id="phone-desktop"
+                      placeholder="Your phone number" 
+                      value={contact.phone} 
+                      onChange={e => setContact({ ...contact, phone: e.target.value })} 
+                      className="pl-10"
+                    />
+                  </div>
                 </div>
                 <div>
                   <Label htmlFor="website-desktop" className="text-sm font-medium text-gray-700 mb-2 block">Website</Label>
-                  <Input 
-                    id="website-desktop"
-                    placeholder="www.acme.com" 
-                    value={contact.website} 
-                    onChange={e => setContact({ ...contact, website: e.target.value })} 
-                  />
+                  <div className="relative">
+                    <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+                    <Input 
+                      id="website-desktop"
+                      placeholder="Your website" 
+                      value={contact.website} 
+                      onChange={e => setContact({ ...contact, website: e.target.value })} 
+                      className="pl-10"
+                    />
+                  </div>
                 </div>
               </div>
               <div className="mb-6">

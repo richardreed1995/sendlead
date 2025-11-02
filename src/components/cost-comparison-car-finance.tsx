@@ -40,7 +40,6 @@ export default function CostComparisonCarFinance() {
           
           <div className="text-center bg-green-100 p-6 rounded-lg mb-8">
             <h3 className="text-2xl font-bold text-green-800 mb-2">Total: £10,200+ monthly plus 400+ hours of work</h3>
-            <p className="text-lg text-green-700">Or get better results with Sendlead for £100 per qualified lead</p>
           </div>
 
           <div className="text-center">

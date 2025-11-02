@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/button";
 import { Card } from "../../card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Home, Car, Building2, Gift, Shield, Lock, TrendingUp, MoreHorizontal, Landmark, HousePlus } from "lucide-react";
+import { Home, Building2, Shield, Lock, Briefcase, MoreHorizontal, Landmark, HousePlus } from "lucide-react";
 
-type VerticalKey = 'mortgages' | 'carInsurance' | 'businessLoans' | 'lifeInsurance' | 'securedLoans' | 'businessGrants' | 'propertyInvestment' | 'bridgingLoan' | 'homeSelling' | 'custom';
+type VerticalKey = 'mortgages' | 'businessLoans' | 'lifeInsurance' | 'securedLoans' | 'financialAdvisor' | 'bridgingLoan' | 'homeSelling' | 'custom';
 
 interface VerticalData {
   id: string;
@@ -48,18 +48,6 @@ const leadTypes: VerticalData[] = [
     costPerLead: 75
   },
   { 
-    id: "carInsurance", 
-    name: "Car Finance", 
-    icon: <Car className="h-8 w-8 text-purple-600" />,
-    conversionRate: 22,
-    avgDealValue: 25000,
-    commissionRate: 2,
-    repeatBusinessRate: 25,
-    clientLifetimeYears: 4,
-    referralsPerClient: 0.4,
-    costPerLead: 45
-  },
-  { 
     id: "businessLoans", 
     name: "Business Loans", 
     icon: <Building2 className="h-8 w-8 text-green-600" />,
@@ -96,28 +84,16 @@ const leadTypes: VerticalData[] = [
     costPerLead: 65
   },
   { 
-    id: "businessGrants", 
-    name: "Business Grants", 
-    icon: <Gift className="h-8 w-8 text-pink-600" />,
-    conversionRate: 8,
-    avgDealValue: 15000,
-    commissionRate: 12,
-    repeatBusinessRate: 40,
-    clientLifetimeYears: 5,
-    referralsPerClient: 0.6,
-    costPerLead: 70
-  },
-  { 
-    id: "propertyInvestment", 
-    name: "Property Investment", 
-    icon: <TrendingUp className="h-8 w-8 text-indigo-600" />,
-    conversionRate: 10,
-    avgDealValue: 180000,
-    commissionRate: 1.5,
-    repeatBusinessRate: 60,
-    clientLifetimeYears: 10,
+    id: "financialAdvisor", 
+    name: "Financial Advisor", 
+    icon: <Briefcase className="h-8 w-8 text-purple-600" />,
+    conversionRate: 20,
+    avgDealValue: 150000,
+    commissionRate: 1.0,
+    repeatBusinessRate: 90,
+    clientLifetimeYears: 15,
     referralsPerClient: 0.8,
-    costPerLead: 120
+    costPerLead: 100
   },
   { 
     id: "bridgingLoan", 
