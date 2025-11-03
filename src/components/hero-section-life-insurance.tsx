@@ -17,11 +17,11 @@ export default function HeroSectionLifeInsurance() {
           
           <div className="mb-3 sm:mb-4 lg:mb-5">
             <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-5xl leading-tight">
-              Get Qualified Life Insurance Leads Delivered To Your CRM
+              Get Qualified Life Insurance Leads<br />Delivered To Your CRM
             </h1>
           </div>
           <p className="text-base leading-6 sm:leading-8 text-muted-foreground mb-3 sm:mb-4 lg:mb-5 sm:text-lg lg:text-xl">
-            We'll generate qualified life insurance leads from your perfect fit prospects with proven systems. All delivered directly to your CRM.
+            Grow your business with qualified life insurance leads delivered in real-time at a fixed cost.
           </p>
           
           {/* CTA Button - Desktop Above Image */}

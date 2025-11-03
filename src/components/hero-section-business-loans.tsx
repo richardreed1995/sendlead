@@ -17,11 +17,11 @@ export default function HeroSectionBusinessLoans() {
           
           <div className="mb-3 sm:mb-4 lg:mb-5">
             <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-5xl leading-tight">
-              Get Qualified Business Loan Leads Delivered To Your CRM
+              Get Qualified Business Loan Leads<br />Delivered To Your CRM
             </h1>
           </div>
           <p className="text-base leading-6 sm:leading-8 text-muted-foreground mb-3 sm:mb-4 lg:mb-5 sm:text-lg lg:text-xl">
-            We'll generate qualified business loan leads from your perfect fit prospects with proven systems. All delivered directly to your CRM.
+            Grow your business with qualified business loan leads delivered in real-time at a fixed cost.
           </p>
           
           {/* CTA Button - Desktop Above Image */}
