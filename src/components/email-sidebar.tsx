@@ -1,25 +1,45 @@
 'use client'
 
-import { Building2, TrendingUp } from 'lucide-react'
+import { Building2, TrendingUp, User, Home, FileText } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
+export type VerticalType = 'business-loans' | 'wealth-management' | 'financial-advisor' | 'bridging-loans' | 'invoice-finance'
+
 interface EmailSidebarProps {
-  selectedVertical: 'commercial-finance' | 'wealth-management'
-  onVerticalChange: (vertical: 'commercial-finance' | 'wealth-management') => void
+  selectedVertical: VerticalType
+  onVerticalChange: (vertical: VerticalType) => void
 }
 
 const verticals = [
   {
-    id: 'commercial-finance' as const,
-    name: 'Commercial Finance',
+    id: 'business-loans' as const,
+    name: 'Business Loans',
     icon: Building2,
-    description: 'Business loans and commercial financing',
+    description: 'Commercial financing for businesses',
   },
   {
     id: 'wealth-management' as const,
     name: 'Wealth Management',
     icon: TrendingUp,
     description: 'Financial advisory and investment services',
+  },
+  {
+    id: 'financial-advisor' as const,
+    name: 'Financial Advisor',
+    icon: User,
+    description: 'Personal financial planning and advice',
+  },
+  {
+    id: 'bridging-loans' as const,
+    name: 'Bridging Loans',
+    icon: Home,
+    description: 'Short-term property finance',
+  },
+  {
+    id: 'invoice-finance' as const,
+    name: 'Invoice Finance',
+    icon: FileText,
+    description: 'Invoice financing and factoring',
   },
 ]
 

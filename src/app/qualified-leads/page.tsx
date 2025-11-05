@@ -4,10 +4,11 @@ import { useState } from 'react'
 import { HeroHeader } from '@/components/header'
 import FooterSection from '@/components/footer'
 import { EmailSidebar } from '@/components/email-sidebar'
+import type { VerticalType } from '@/components/email-sidebar'
 import { EmailDisplay } from '@/components/email-display'
 
 export default function ExampleBrokerEmailsPage() {
-  const [selectedVertical, setSelectedVertical] = useState<'commercial-finance' | 'wealth-management'>('commercial-finance')
+  const [selectedVertical, setSelectedVertical] = useState<VerticalType>('business-loans')
 
   return (
     <div className="flex flex-col min-h-screen bg-background">
@@ -29,7 +30,7 @@ export default function ExampleBrokerEmailsPage() {
                 onVerticalChange={setSelectedVertical}
               />
             </div>
-            <div className="lg:col-span-3">
+            <div className="lg:col-span-3 max-w-4xl">
               <EmailDisplay vertical={selectedVertical} />
             </div>
           </div>
