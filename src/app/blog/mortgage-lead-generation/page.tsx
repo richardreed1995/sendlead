@@ -1,7 +1,6 @@
 import { HeroHeader } from '@/components/header';
 import Image from 'next/image';
 import FooterSection from '@/components/footer';
-import BlogTableOfContents from '@/components/blog-table-of-contents';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -11,63 +10,10 @@ export const metadata: Metadata = {
 
 const today = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 
-const headings = [
-  { id: 'four-pillars', title: 'The Four Pillars of Mortgage Lead Generation Success', level: 2 },
-  { id: 'attract', title: 'Attract: Becoming Visible When Prospects Search', level: 3 },
-  { id: 'content-marketing', title: 'Content Marketing That Converts', level: 4 },
-  { id: 'seo-strategy', title: 'Search Engine Optimisation Strategy', level: 4 },
-  { id: 'social-media', title: 'Social Media and Digital Presence', level: 4 },
-  { id: 'convert', title: 'Convert: Transforming Visitors into Qualified Leads', level: 3 },
-  { id: 'lead-magnets', title: 'Lead Magnets That Generate Results', level: 4 },
-  { id: 'landing-page', title: 'Landing Page Optimisation', level: 4 },
-  { id: 'lead-qualification', title: 'Lead Qualification Systems', level: 4 },
-  { id: 'close', title: 'Close: Converting Qualified Leads into Clients', level: 3 },
-  { id: 'consultative-selling', title: 'Consultative Selling Approach', level: 4 },
-  { id: 'technology-enhancement', title: 'Technology Enhancement', level: 4 },
-  { id: 'creating-urgency', title: 'Creating Appropriate Urgency', level: 4 },
-  { id: 'delight', title: 'Delight: Building Long-Term Advocates', level: 3 },
-  { id: 'service-delivery', title: 'Exceptional Service Delivery', level: 4 },
-  { id: 'referral-generation', title: 'Systematic Referral Generation', level: 4 },
-  { id: 'lead-channels', title: 'Lead Generation Channels That Deliver Results', level: 2 },
-  { id: 'digital-channels', title: 'Digital Channels', level: 3 },
-  { id: 'search-marketing', title: 'Search Engine Marketing', level: 4 },
-  { id: 'content-roi', title: 'Content Marketing ROI', level: 4 },
-  { id: 'email-marketing', title: 'Email Marketing Automation', level: 4 },
-  { id: 'traditional-channels', title: 'Traditional Channels', level: 3 },
-  { id: 'estate-agents', title: 'Estate Agent Partnerships', level: 4 },
-  { id: 'professional-networks', title: 'Professional Networks', level: 4 },
-  { id: 'networking-events', title: 'Networking Events', level: 4 },
-  { id: 'professional-partners', title: 'The Case for Professional Lead Generation Partners', level: 2 },
-  { id: 'primary-constraint', title: 'Why Lead Generation Becomes the Primary Constraint', level: 3 },
-  { id: 'partnership-benefits', title: 'Benefits of Professional Partnerships', level: 3 },
-  { id: 'integration-strategy', title: 'Integration Strategy', level: 3 },
-  { id: 'measuring-success', title: 'Measuring Success: Essential KPIs', level: 2 },
-  { id: 'lead-metrics', title: 'Lead Generation Metrics', level: 3 },
-  { id: 'cost-per-lead', title: 'Cost Per Lead Analysis', level: 4 },
-  { id: 'source-tracking', title: 'Source Performance Tracking', level: 4 },
-  { id: 'response-time', title: 'Response Time Measurement', level: 4 },
-  { id: 'conversion-metrics', title: 'Conversion Metrics', level: 3 },
-  { id: 'conversion-rates', title: 'Lead-to-Client Conversion Rates', level: 4 },
-  { id: 'sales-cycle', title: 'Sales Cycle Analysis', level: 4 },
-  { id: 'revenue-impact', title: 'Revenue Impact', level: 3 },
-  { id: 'lifetime-value', title: 'Customer Lifetime Value', level: 4 },
-  { id: 'marketing-roi', title: 'Return on Marketing Investment', level: 4 },
-  { id: 'common-pitfalls', title: 'Common Pitfalls to Avoid', level: 2 },
-  { id: 'lead-quality', title: 'Lead Quality Issues', level: 3 },
-  { id: 'follow-up-failures', title: 'Follow-Up Failures', level: 3 },
-  { id: 'technology-problems', title: 'Technology Problems', level: 3 },
-  { id: 'future-proofing', title: 'Future-Proofing Your Strategy', level: 2 },
-  { id: 'tech-trends', title: 'Technology Trends', level: 3 },
-  { id: 'regulatory-evolution', title: 'Regulatory Evolution', level: 3 },
-  { id: 'market-changes', title: 'Market Changes', level: 3 },
-  { id: 'conclusion', title: 'Conclusion', level: 2 }
-];
-
 export default function MortgageLeadGenerationBlog() {
   return (
     <div className="min-h-screen bg-white text-black flex flex-col">
       <HeroHeader />
-      <BlogTableOfContents headings={headings} />
       <main className="flex-1 w-full max-w-2xl mx-auto px-4 pt-32 pb-20">
         <article className="prose prose-lg mx-auto text-center [&_h2]:font-bold [&_h2]:text-2xl [&_h2]:text-gray-900 [&_h2]:mb-6 [&_h2]:mt-12 [&_h2]:border-b [&_h2]:border-gray-200 [&_h2]:pb-3 [&_h3]:font-semibold [&_h3]:text-xl [&_h3]:text-gray-800 [&_h3]:mb-4 [&_h3]:mt-8 [&_h4]:font-medium [&_h4]:text-lg [&_h4]:text-gray-700 [&_h4]:mb-3 [&_h4]:mt-6">
           <div className="mb-16 flex flex-col items-center gap-6">

@@ -44,7 +44,6 @@ export default function ROIPage() {
                 <p><strong>Immediate ROI (90 Days):</strong> Based on your conversion rate, we calculate how many leads will convert within the first 90 days. This gives you the immediate return on your lead investment.</p>
                 <p><strong>Repeat Customers Drive Profit:</strong> The cost to acquire the customer is paid only once. Any repeat business is huge margin - this is where the real profit lies.</p>
                 <p><strong>No Revenue Share:</strong> You are not paying us revenue share. You are buying the leads once and keeping all future revenue from each customer.</p>
-                <p><strong>Cost per Lead:</strong> You can adjust this value to match your actual lead costs. Our standard pricing for exclusive, qualified, phone and email verified leads starts at £100 per lead.</p>
               </div>
             </div>
           </div>

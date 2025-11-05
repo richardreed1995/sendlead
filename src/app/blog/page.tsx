@@ -24,7 +24,7 @@ const posts = [
     slug: 'parlance-ai-agent',
     title: 'Sendlead Launches Parlance: The AI Agent That Triples Your Appointment Bookings',
     category: 'Product',
-    date: 'August 15, 2024',
+    date: 'January 15, 2025',
     image: '/parlance.png',
     excerpt: 'Meet Parlance, the AI agent that books 3x more appointments by automating lead nurturing, qualification, and scheduling for your business.'
   },

@@ -1,7 +1,6 @@
 import { HeroHeader } from '@/components/header';
 import Image from 'next/image';
 import FooterSection from '@/components/footer';
-import BlogTableOfContents from '@/components/blog-table-of-contents';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -9,21 +8,12 @@ export const metadata: Metadata = {
   description: "Discover how Sendlead's Parlance AI agent triples your appointment bookings through intelligent lead nurturing and automated scheduling.",
 };
 
-const today = 'August 15, 2024';
-
-const headings = [
-  { id: 'problem', title: 'The Problem Every Business Faces', level: 2 },
-  { id: 'introducing-parlance', title: 'Introducing Parlance: Your AI-Powered Conversion System', level: 2 },
-  { id: 'what-makes-different', title: 'What Makes Parlance Different?', level: 3 },
-  { id: 'how-parlance-works', title: 'How Parlance Works', level: 2 },
-  { id: 'future-of-lead-nurturing', title: 'The Future of Lead Nurturing is Here', level: 2 }
-];
+const today = 'January 15, 2025';
 
 export default function ParlanceBlog() {
   return (
     <div className="min-h-screen bg-white text-black flex flex-col">
       <HeroHeader />
-      <BlogTableOfContents headings={headings} />
       <main className="flex-1 w-full max-w-2xl mx-auto px-4 pt-32 pb-20">
         <article className="prose prose-lg mx-auto text-center [&_h2]:font-bold [&_h2]:text-2xl [&_h2]:text-gray-900 [&_h2]:mb-6 [&_h2]:mt-12 [&_h2]:border-b [&_h2]:border-gray-200 [&_h2]:pb-3 [&_h3]:font-semibold [&_h3]:text-xl [&_h3]:text-gray-800 [&_h3]:mb-4 [&_h3]:mt-8">
           <div className="mb-16 flex flex-col items-center gap-6">
