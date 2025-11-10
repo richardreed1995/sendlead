@@ -1,10 +1,10 @@
-import LeadROICalculator from '@/components/LeadROICalculator';
-import { HeroHeader } from '@/components/header';
-import Footer from '@/components/footer';
-import CallToAction from '@/components/call-to-action';
-import ROIHeroSection from '@/components/roi-hero-section';
-import { Logo } from '@/components/logo';
-import CompetitiveAdvantages from '@/components/competitive-advantages';
+import LeadROICalculator from "@/components/LeadROICalculator";
+import { HeroHeader } from "@/components/header";
+import Footer from "@/components/footer";
+import CallToAction from "@/components/call-to-action";
+import ROIHeroSection from "@/components/roi-hero-section";
+import CompetitiveAdvantages from "@/components/competitive-advantages";
+import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -19,6 +19,43 @@ export default function ROIPage() {
       <main className="flex-1 flex flex-col">
         {/* Hero Section */}
         <ROIHeroSection />
+
+        <section className="py-16 md:py-20 bg-white">
+          <div className="mx-auto max-w-6xl px-6 md:px-8">
+            <div className="text-center max-w-2xl mx-auto mb-10 space-y-3">
+              <h2 className="text-3xl font-semibold text-foreground">ROI playbooks for your sector</h2>
+              <p className="text-muted-foreground text-base md:text-lg">
+                Explore tailored ROI guidance for the verticals where Sendlead performs best.
+              </p>
+            </div>
+            <div className="grid gap-6 md:grid-cols-2">
+              <Link
+                href="/financial-advisor"
+                className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+              >
+                <div className="mb-3 text-sm font-medium text-[#2998FD]">Financial Advisors</div>
+                <h3 className="text-xl font-semibold text-foreground mb-2 group-hover:text-[#2998FD] transition">
+                  Model AUM Growth & ROI
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  See how exclusive advisor leads convert into recurring fee income and long-term portfolio growth.
+                </p>
+              </Link>
+              <Link
+                href="/wealth-management"
+                className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+              >
+                <div className="mb-3 text-sm font-medium text-[#2998FD]">Wealth Management</div>
+                <h3 className="text-xl font-semibold text-foreground mb-2 group-hover:text-[#2998FD] transition">
+                  Forecast High-Net-Worth ROI
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  Project the lifetime value of affluent investors captured through Sendlead&apos;s wealth funnels.
+                </p>
+              </Link>
+            </div>
+          </div>
+        </section>
 
         {/* Calculator Section */}
         <section id="roi-calculator" className="py-20 md:py-24 bg-zinc-900 text-white">

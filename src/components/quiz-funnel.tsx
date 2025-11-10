@@ -7,14 +7,14 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { Home, Building2, Shield, Lock, Briefcase, MoreHorizontal, User, Mail, Phone, Globe } from "lucide-react";
+import { Home, Building2, Lock, Briefcase, MoreHorizontal, User, Mail, Phone, Globe, LineChart } from "lucide-react";
 
 const leadTypes = [
   { id: "mortgages", label: "Mortgages", icon: <Home className="h-6 w-6 text-gray-700" /> },
   { id: "business-loans", label: "Business Loans", icon: <Building2 className="h-6 w-6 text-gray-700" /> },
-  { id: "life-insurance", label: "Life Insurance", icon: <Shield className="h-6 w-6 text-gray-700" /> },
   { id: "secured-loans", label: "Secured Loans", icon: <Lock className="h-6 w-6 text-gray-700" /> },
   { id: "financial-advisor", label: "Financial Advisor", icon: <Briefcase className="h-6 w-6 text-gray-700" /> },
+  { id: "wealth-management", label: "Wealth Management", icon: <LineChart className="h-6 w-6 text-gray-700" /> },
   { id: "other", label: "Other", icon: <MoreHorizontal className="h-6 w-6 text-gray-700" /> },
 ];
 

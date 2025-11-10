@@ -37,8 +37,8 @@ module.exports = {
       '/business-grants',
       '/business-loans', 
       '/car-finance',
-      '/life-insurance',
       '/mortgage',
+      '/wealth-management',
       '/property-investment',
       '/secured-loans',
       '/get-started'

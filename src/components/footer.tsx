@@ -19,16 +19,16 @@ const links = [
                 href: '/business-loans',
             },
             {
-                title: 'Life Insurance',
-                href: '/life-insurance',
-            },
-            {
                 title: 'Secured Loans',
                 href: '/secured-loans',
             },
             {
                 title: 'Financial Advisor',
                 href: '/financial-advisor',
+            },
+            {
+                title: 'Wealth Management',
+                href: '/wealth-management',
             },
         ],
     },
