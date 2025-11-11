@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 
-type VerticalKey = 'mortgages' | 'businessLoans' | 'lifeInsurance' | 'securedLoans' | 'financialAdvisor' | 'bridgingLoan' | 'homeSelling' | 'custom';
+type VerticalKey = 'mortgages' | 'businessLoans' | 'securedLoans' | 'financialAdvisor' | 'wealthManagement' | 'bridgingLoan' | 'homeSelling' | 'custom';
 
 interface VerticalData {
   name: string;
@@ -73,16 +73,6 @@ const LeadROICalculator = () => {
       referralsPerClient: 0.3,
       costPerLead: 90
     },
-    lifeInsurance: {
-      name: 'Life Insurance',
-      conversionRate: 20,
-      avgDealValue: 2400,
-      commissionRate: 50,
-      repeatBusinessRate: 15,
-      clientLifetimeYears: 15,
-      referralsPerClient: 0.4,
-      costPerLead: 45
-    },
     securedLoans: {
       name: 'Secured Loans',
       conversionRate: 14,
@@ -102,6 +92,16 @@ const LeadROICalculator = () => {
       clientLifetimeYears: 15,
       referralsPerClient: 0.8,
       costPerLead: 100
+    },
+    wealthManagement: {
+      name: 'Wealth Management',
+      conversionRate: 18,
+      avgDealValue: 250000,
+      commissionRate: 1.1,
+      repeatBusinessRate: 92,
+      clientLifetimeYears: 12,
+      referralsPerClient: 0.6,
+      costPerLead: 120
     },
     bridgingLoan: {
       name: 'Bridging Loan',
