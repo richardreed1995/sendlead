@@ -65,7 +65,7 @@ export default function FAQsFinancialAdvisor() {
               </button>
               {openIndex === index && (
                 <div className="px-6 pb-4">
-                  <p className="text-gray-600">{faq.answer}</p>
+                  <p className="text-gray-600 text-sm leading-relaxed">{faq.answer}</p>
                 </div>
               )}
             </div>
