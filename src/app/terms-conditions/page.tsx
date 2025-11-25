@@ -28,7 +28,7 @@ export default function TermsConditions() {
 
             <h3>1. Introduction</h3>
             <p>These Terms of Service govern your access to and use of our website and services. By using this website, you agree to these terms. If you do not agree, please do not use the site.</p>
-            <p>This website is operated by Sendlead Ltd. We may update these terms at any time. Continued use of the site means you accept any changes.</p>
+            <p>This website is operated by Surf Marketing Ltd T/A Sendlead. We may update these terms at any time. Continued use of the site means you accept any changes.</p>
 
             <h3>2. Who We Are (and What We're Not)</h3>
             <p>We are a lead generation company, not a lender, credit broker, or financial adviser. Our role is to connect you with third-party service providers based on the information you provide.</p>
@@ -158,7 +158,7 @@ export default function TermsConditions() {
             </ul>
 
             <h3>10. Intellectual Property</h3>
-            <p>All content on this site — including logos, text, graphics, forms, design, and layout — is owned by Sendlead Ltd or our licensors.</p>
+            <p>All content on this site — including logos, text, graphics, forms, design, and layout — is owned by Surf Marketing Ltd T/A Sendlead or our licensors.</p>
             
             <div className="my-4">
               <p><strong>You may:</strong></p>
@@ -207,7 +207,7 @@ export default function TermsConditions() {
             <p className="my-4"><strong>Nothing in these terms excludes liability for death or injury caused by negligence, fraud, or any liability that cannot be excluded by law.</strong></p>
 
             <h3>13. Indemnification</h3>
-            <p>You agree to indemnify and hold harmless Sendlead Ltd, its directors, employees, and agents from any claims, damages, or expenses arising from:</p>
+            <p>You agree to indemnify and hold harmless Surf Marketing Ltd T/A Sendlead, its directors, employees, and agents from any claims, damages, or expenses arising from:</p>
             <ul className="list-disc pl-6 space-y-1">
               <li>Your use of our website or services</li>
               <li>Your breach of these Terms of Service</li>
@@ -262,17 +262,17 @@ export default function TermsConditions() {
             <p>If we don't enforce a part of these Terms, that doesn't mean we're waiving our right to enforce it later.</p>
 
             <h3>19. Entire Agreement</h3>
-            <p>These Terms, together with our <a href="/privacy-policy" className="text-blue-600 hover:underline">Privacy Policy</a> and <a href="/cookies" className="text-blue-600 hover:underline">Cookie Policy</a>, constitute the entire agreement between you and Sendlead Ltd regarding your use of our services.</p>
+            <p>These Terms, together with our <a href="/privacy-policy" className="text-blue-600 hover:underline">Privacy Policy</a> and <a href="/cookies" className="text-blue-600 hover:underline">Cookie Policy</a>, constitute the entire agreement between you and Surf Marketing Ltd T/A Sendlead regarding your use of our services.</p>
 
             <h3>20. Contact Information</h3>
             <p>For any questions about these Terms of Service, please contact us:</p>
             <div className="my-4">
               <p><strong>Email:</strong> richard@sendlead.co</p>
-              <p><strong>Address:</strong> Sendlead Ltd, 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ, United Kingdom</p>
+              <p><strong>Address:</strong> Surf Marketing Ltd T/A Sendlead, Suite 5, 5th Floor, City Reach, 5 Greenwich View Place, London, United Kingdom, E14 9NN</p>
             </div>
             
             <div className="text-center text-sm text-gray-600 mt-8">
-              <p><em>Sendlead Ltd is a company registered in England and Wales. Registered at 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ, United Kingdom.</em></p>
+              <p><em>Surf Marketing Ltd T/A Sendlead is a company registered in England and Wales. Registered at Suite 5, 5th Floor, City Reach, 5 Greenwich View Place, London, United Kingdom, E14 9NN. ICO Registration: ZC046410.</em></p>
             </div>
           </div>
         </article>

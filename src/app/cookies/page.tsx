@@ -154,11 +154,11 @@ export default function Cookies() {
             <p>If you have any questions about our use of cookies, please contact us:</p>
             <div className="my-4">
               <p><strong>Email:</strong> richard@sendlead.co</p>
-              <p><strong>Address:</strong> Sendlead Ltd, 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ, United Kingdom</p>
+              <p><strong>Address:</strong> Surf Marketing Ltd T/A Sendlead, Suite 5, 5th Floor, City Reach, 5 Greenwich View Place, London, United Kingdom, E14 9NN</p>
             </div>
             
             <div className="text-center text-sm text-gray-600 mt-8">
-              <p><em>Sendlead Ltd is a company registered in England and Wales. Registered at 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ, United Kingdom.</em></p>
+              <p><em>Surf Marketing Ltd T/A Sendlead is a company registered in England and Wales. Registered at Suite 5, 5th Floor, City Reach, 5 Greenwich View Place, London, United Kingdom, E14 9NN. ICO Registration: ZC046410.</em></p>
             </div>
           </div>
         </article>

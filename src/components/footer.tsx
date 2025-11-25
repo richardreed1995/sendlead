@@ -177,8 +177,13 @@ export default function FooterSection() {
                         </div>
                     </form>
                 </div>
-                <div className="mt-12 flex flex-wrap items-end justify-between gap-6 border-t py-6">
-                    <small className="text-muted-foreground order-last block text-center text-sm md:order-first">© {new Date().getFullYear()} Sendlead, All rights reserved</small>
+                <div className="mt-12 flex flex-col gap-4 border-t py-6">
+                    <div className="text-muted-foreground text-xs leading-relaxed">
+                        <p className="font-medium">Surf Marketing Ltd T/A Sendlead</p>
+                        <p>Suite 5, 5th Floor, City Reach, 5 Greenwich View Place, London, United Kingdom, E14 9NN</p>
+                        <p>ICO Registration: ZC046410</p>
+                    </div>
+                    <small className="text-muted-foreground block text-sm">© {new Date().getFullYear()} Surf Marketing Ltd T/A Sendlead. All rights reserved.</small>
                 </div>
             </div>
         </footer>
