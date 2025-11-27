@@ -85,7 +85,7 @@ export const businessLoanEmail: EmailData = {
       'Loan Amount: £10,000+',
       'Trading Status: Trading for 12+ months',
       'Annual Turnover: £250,000+',
-      'Business Type: Limited Company or LLP',
+      'Business Type: Limited Company',
       'Verified Contact: Email and phone verified via OTP',
     ],
     unqualified: [
