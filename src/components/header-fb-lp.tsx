@@ -30,13 +30,6 @@ export const HeroHeaderFBLP = () => {
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
 
-    const scrollToCalendly = () => {
-        const calendlySection = document.getElementById('calendly-embed');
-        if (calendlySection) {
-            calendlySection.scrollIntoView({ behavior: 'smooth' });
-        }
-    }
-
     return (
         <header>
             <nav className={cn(
@@ -69,12 +62,13 @@ export const HeroHeaderFBLP = () => {
                                 <Logo />
                             </Link>
 
-                            <Button
-                                size="sm"
-                                className="bg-[#2998FD] hover:bg-[#1f7fd9] text-white"
-                                onClick={scrollToCalendly}>
-                                Get Started
-                            </Button>
+                            <Link href="/get-started">
+                                <Button
+                                    size="sm"
+                                    className="bg-[#2998FD] hover:bg-[#1f7fd9] text-white">
+                                    Get Started
+                                </Button>
+                            </Link>
                         </div>
                     </div>
                 </div>

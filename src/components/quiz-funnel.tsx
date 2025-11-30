@@ -169,7 +169,16 @@ export default function QuizFunnel() {
       console.error('Failed to send notification email:', error);
     }
     
-    router.push("/success-get-started");
+    // Check if qualified: 50+ leads AND 4+ sales reps
+    const isQualifiedLeadCapacity = leadCapacity === "50-99" || leadCapacity === "100-149" || leadCapacity === "150+";
+    const isQualifiedSalesReps = salesReps === "4-10" || salesReps === "11+";
+    const isQualified = isQualifiedLeadCapacity && isQualifiedSalesReps;
+    
+    if (isQualified) {
+      router.push("/success-get-started");
+    } else {
+      router.push("/success-get-started-unqualified");
+    }
   }
 
   return (

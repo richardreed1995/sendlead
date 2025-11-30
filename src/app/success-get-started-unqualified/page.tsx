@@ -2,20 +2,16 @@
 
 import { useEffect, useState } from "react"
 import { Logo } from "@/components/logo"
-import { trackEvent } from "@/components/meta-pixel-events"
 import Link from "next/link"
 import { ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
-export default function SuccessGetStartedPage() {
+export default function SuccessGetStartedUnqualifiedPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
   const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
-    // Track successful application submission
-    trackEvent("SubmitApplication")
-
-    // Load Calendly script
+    // Load Calendly script (NO Meta SubmitApplication event for unqualified leads)
     const script = document.createElement('script')
     script.src = 'https://assets.calendly.com/assets/external/widget.js'
     script.async = true
@@ -309,3 +305,4 @@ export default function SuccessGetStartedPage() {
     </div>
   )
 }
+
