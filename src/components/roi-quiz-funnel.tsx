@@ -5,9 +5,10 @@ import { Button } from "@/components/ui/button";
 import { Card } from "../../card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Home, Building2, Shield, Lock, Briefcase, MoreHorizontal, Landmark, HousePlus } from "lucide-react";
+import { Home, Building2, Lock, Briefcase, MoreHorizontal, LineChart, User, Mail, Phone, Globe } from "lucide-react";
+import Link from "next/link";
 
-type VerticalKey = 'mortgages' | 'businessLoans' | 'lifeInsurance' | 'securedLoans' | 'financialAdvisor' | 'bridgingLoan' | 'homeSelling' | 'custom';
+type VerticalKey = 'mortgages' | 'businessLoans' | 'securedLoans' | 'financialAdvisor' | 'wealthManagement' | 'other';
 
 interface VerticalData {
   id: string;
@@ -38,7 +39,7 @@ const leadTypes: VerticalData[] = [
   { 
     id: "mortgages", 
     name: "Mortgages", 
-    icon: <Home className="h-8 w-8 text-gray-700" />,
+    icon: <Home className="h-6 w-6 text-gray-700" />,
     conversionRate: 15,
     avgDealValue: 250000,
     commissionRate: 0.35,
@@ -48,9 +49,9 @@ const leadTypes: VerticalData[] = [
     costPerLead: 75
   },
   { 
-    id: "businessLoans", 
+    id: "business-loans", 
     name: "Business Loans", 
-    icon: <Building2 className="h-8 w-8 text-gray-700" />,
+    icon: <Building2 className="h-6 w-6 text-gray-700" />,
     conversionRate: 12,
     avgDealValue: 75000,
     commissionRate: 3,
@@ -60,21 +61,9 @@ const leadTypes: VerticalData[] = [
     costPerLead: 90
   },
   { 
-    id: "lifeInsurance", 
-    name: "Life Insurance", 
-    icon: <Shield className="h-8 w-8 text-gray-700" />,
-    conversionRate: 20,
-    avgDealValue: 2400,
-    commissionRate: 50,
-    repeatBusinessRate: 15,
-    clientLifetimeYears: 15,
-    referralsPerClient: 0.4,
-    costPerLead: 45
-  },
-  { 
-    id: "securedLoans", 
+    id: "secured-loans", 
     name: "Secured Loans", 
-    icon: <Lock className="h-8 w-8 text-gray-700" />,
+    icon: <Lock className="h-6 w-6 text-gray-700" />,
     conversionRate: 14,
     avgDealValue: 35000,
     commissionRate: 2.5,
@@ -84,9 +73,9 @@ const leadTypes: VerticalData[] = [
     costPerLead: 65
   },
   { 
-    id: "financialAdvisor", 
+    id: "financial-advisor", 
     name: "Financial Advisor", 
-    icon: <Briefcase className="h-8 w-8 text-gray-700" />,
+    icon: <Briefcase className="h-6 w-6 text-gray-700" />,
     conversionRate: 20,
     avgDealValue: 150000,
     commissionRate: 1.0,
@@ -96,33 +85,21 @@ const leadTypes: VerticalData[] = [
     costPerLead: 100
   },
   { 
-    id: "bridgingLoan", 
-    name: "Bridging Loan", 
-    icon: <Landmark className="h-8 w-8 text-gray-700" />,
-    conversionRate: 12,
-    avgDealValue: 200000,
-    commissionRate: 1,
-    repeatBusinessRate: 30,
-    clientLifetimeYears: 2,
-    referralsPerClient: 0.3,
-    costPerLead: 90
-  },
-  { 
-    id: "homeSelling", 
-    name: "Home Selling", 
-    icon: <HousePlus className="h-8 w-8 text-gray-700" />,
+    id: "wealth-management", 
+    name: "Wealth Management", 
+    icon: <LineChart className="h-6 w-6 text-gray-700" />,
     conversionRate: 18,
-    avgDealValue: 300000,
-    commissionRate: 1.5,
-    repeatBusinessRate: 25,
-    clientLifetimeYears: 5,
+    avgDealValue: 500000,
+    commissionRate: 1.0,
+    repeatBusinessRate: 85,
+    clientLifetimeYears: 12,
     referralsPerClient: 0.6,
-    costPerLead: 65
+    costPerLead: 120
   },
   { 
     id: "other", 
     name: "Other", 
-    icon: <MoreHorizontal className="h-8 w-8 text-gray-700" />,
+    icon: <MoreHorizontal className="h-6 w-6 text-gray-700" />,
     conversionRate: 20,
     avgDealValue: 50000,
     commissionRate: 10,
@@ -144,15 +121,19 @@ export default function ROIQQuizFunnel() {
     referralsPerClient: 0
   });
   const [numLeads, setNumLeads] = useState(50);
+  const [contact, setContact] = useState({ name: "", email: "", phone: "", website: "" });
+  const [agree, setAgree] = useState(false);
+  const [error, setError] = useState("");
   const [results, setResults] = useState<ROIResults | null>(null);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const totalSteps = 7; // Industry, Leads Per Month, Conversion Rate, Deal Value, Commission Rate, Repeat Business, Results
+  const totalSteps = 8; // Industry, Leads Per Month, Conversion Rate, Deal Value, Commission Rate, Repeat Business, Contact Details, Results
   const progress = ((step + 1) / totalSteps) * 100;
 
   // Load Calendly script
   useEffect(() => {
-    if (step === 6) {
+    if (step === 7) {
       const script = document.createElement('script');
       script.src = 'https://assets.calendly.com/assets/external/widget.js';
       script.async = true;
@@ -165,6 +146,13 @@ export default function ROIQQuizFunnel() {
       };
     }
   }, [step]);
+
+  function validateEmail(email: string) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+  function validatePhone(phone: string) {
+    return /^[+]?[(]?[0-9]{1,4}[)]?[-\s0-9]{7,15}$/.test(phone);
+  }
 
   // Auto-advance functions
   const handleVerticalSelect = (vertical: VerticalData) => {
@@ -187,15 +175,12 @@ export default function ROIQQuizFunnel() {
     setIsTransitioning(true);
     setTimeout(() => {
       setStep(step + 1);
-      if (step === 5) {
-        calculateROI();
-      }
       setIsTransitioning(false);
     }, 300);
   };
 
   const calculateROI = () => {
-    if (!selectedVertical) return;
+    if (!selectedVertical) return null;
 
     const costPerLead = selectedVertical.costPerLead;
     const conversionRate = customMetrics.conversionRate || selectedVertical.conversionRate;
@@ -220,7 +205,7 @@ export default function ROIQQuizFunnel() {
     const totalLifetimeProfit = totalLifetimeRevenue - totalInvestment;
     const lifetimeROI = totalInvestment > 0 ? (totalLifetimeProfit / totalInvestment) * 100 : 0;
     
-    setResults({
+    return {
       totalInvestment,
       leadsConverted: Math.ceil(leadsConverted),
       immediateRevenue,
@@ -230,7 +215,62 @@ export default function ROIQQuizFunnel() {
       totalLifetimeRevenue,
       totalLifetimeProfit,
       lifetimeROI
-    });
+    };
+  };
+
+  const handleContactSubmit = async () => {
+    setError("");
+    if (!contact.name || !contact.email || !contact.phone || !contact.website) {
+      return setError("Please fill in all required fields");
+    }
+    if (!validateEmail(contact.email)) {
+      return setError("Please enter a valid email address");
+    }
+    if (!validatePhone(contact.phone)) {
+      return setError("Please enter a valid phone number");
+    }
+    if (!agree) return setError("You must agree to the privacy policy and terms & conditions");
+
+    setIsSubmitting(true);
+    
+    // Calculate ROI before submission
+    const roiResults = calculateROI();
+    setResults(roiResults);
+
+    const completedAt = new Date().toISOString();
+
+    // Send internal notification email
+    try {
+      const response = await fetch('/api/notify-roi-quiz', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          leadType: selectedVertical?.id,
+          numLeads,
+          customMetrics,
+          roiResults,
+          contact,
+          completedAt,
+        }),
+      });
+
+      if (!response.ok) {
+        console.error('Notification email failed:', response.status, response.statusText);
+      } else {
+        console.log('ROI quiz notification email sent successfully');
+      }
+    } catch (error) {
+      console.error('Failed to send notification email:', error);
+    }
+
+    setIsSubmitting(false);
+    
+    // Move to results step
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setStep(7);
+      setIsTransitioning(false);
+    }, 300);
   };
 
   const formatCurrency = (amount: number) => {
@@ -261,15 +301,17 @@ export default function ROIQQuizFunnel() {
       <div className="block md:hidden">
         {step === 0 && (
           <div className={`transition-opacity duration-300 ${isTransitioning ? 'opacity-50' : 'opacity-100'}`}>
-            <h3 className="text-xl font-bold mb-6 text-center">What type of leads are you looking for?</h3>
-            <div className="grid grid-cols-2 gap-3 mb-4">
+            <div className="flex flex-col items-center justify-center mb-6 w-full">
+              <h3 className="text-xl font-bold text-center w-full">What type of leads are you looking for? <span className="text-red-500">*</span></h3>
+            </div>
+            <div className="grid grid-cols-3 gap-2 mb-4">
               {leadTypes.map(type => (
                 <button
                   key={type.id}
-                  className={`rounded-xl border-2 flex flex-col items-center py-8 px-2 font-semibold text-sm transition-all hover:shadow-lg ${selectedVertical?.id === type.id ? "border-blue-600 bg-blue-50 text-blue-700" : "border-gray-200 bg-white hover:bg-gray-50"}`}
+                  className={`rounded-xl border-2 flex flex-col items-center py-6 px-2 font-semibold text-sm transition-all ${selectedVertical?.id === type.id ? "border-blue-600 bg-blue-50 text-blue-700" : "border-gray-200 bg-white hover:bg-gray-50"}`}
                   onClick={() => handleVerticalSelect(type)}
                 >
-                  <span className="mb-3">{type.icon}</span>
+                  <span className="mb-2">{type.icon}</span>
                   <span className="text-center leading-tight">{type.name}</span>
                 </button>
               ))}
@@ -444,12 +486,103 @@ export default function ROIQQuizFunnel() {
               onClick={handleNext} 
               className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-lg font-semibold"
             >
-              Calculate My ROI
+              Continue
             </Button>
           </div>
         )}
 
-        {step === 6 && results && selectedVertical && (
+        {step === 6 && selectedVertical && (
+          <div className={`transition-opacity duration-300 ${isTransitioning ? 'opacity-50' : 'opacity-100'}`}>
+            <h3 className="text-xl font-bold mb-6 text-center">Contact details</h3>
+            <div className="space-y-4 mb-6">
+              <div>
+                <Label htmlFor="fullName" className="text-sm font-medium text-gray-700 mb-2 block">Full Name</Label>
+                <div className="relative">
+                  <User className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+                  <Input 
+                    id="fullName"
+                    placeholder="Your full name" 
+                    value={contact.name} 
+                    onChange={e => setContact({ ...contact, name: e.target.value })} 
+                    className="pl-10"
+                  />
+                </div>
+              </div>
+              <div>
+                <Label htmlFor="email" className="text-sm font-medium text-gray-700 mb-2 block">Email Address</Label>
+                <div className="relative">
+                  <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+                  <Input 
+                    id="email"
+                    placeholder="Your work email" 
+                    type="email" 
+                    value={contact.email} 
+                    onChange={e => setContact({ ...contact, email: e.target.value })} 
+                    className="pl-10"
+                  />
+                </div>
+              </div>
+              <div>
+                <Label htmlFor="phone" className="text-sm font-medium text-gray-700 mb-2 block">Phone Number</Label>
+                <div className="relative">
+                  <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+                  <Input 
+                    id="phone"
+                    placeholder="Your phone number" 
+                    value={contact.phone} 
+                    onChange={e => setContact({ ...contact, phone: e.target.value })} 
+                    className="pl-10"
+                  />
+                </div>
+              </div>
+              <div>
+                <Label htmlFor="website" className="text-sm font-medium text-gray-700 mb-2 block">Website</Label>
+                <div className="relative">
+                  <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+                  <Input 
+                    id="website"
+                    placeholder="Your website" 
+                    value={contact.website} 
+                    onChange={e => setContact({ ...contact, website: e.target.value })} 
+                    className="pl-10"
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="mb-6">
+              <button
+                onClick={() => setAgree(!agree)}
+                className={`w-full p-4 rounded-xl border-2 transition-all text-left ${agree ? "border-blue-600 bg-blue-50" : "border-gray-200 bg-white hover:bg-gray-50"}`}
+              >
+                <div className="flex items-center">
+                  <div className={`w-6 h-6 rounded border-2 flex items-center justify-center mr-3 transition-all ${agree ? "border-blue-600 bg-blue-600" : "border-gray-300"}`}>
+                    {agree && <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>}
+                  </div>
+                    <span className="text-[10px] font-medium">
+                      I agree to the{" "}
+                      <Link href="/privacy-policy" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
+                        privacy policy
+                      </Link>
+                      {" "}and{" "}
+                      <Link href="/terms-conditions" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
+                        terms & conditions
+                      </Link>
+                    </span>
+                </div>
+              </button>
+            </div>
+            {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
+            <Button 
+              onClick={handleContactSubmit} 
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-lg font-semibold"
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? 'Calculating...' : 'See My ROI Results'}
+            </Button>
+          </div>
+        )}
+
+        {step === 7 && results && selectedVertical && (
           <div className={`transition-opacity duration-300 ${isTransitioning ? 'opacity-50' : 'opacity-100'}`}>
             <h3 className="text-2xl font-bold mb-6 text-center">Your Monthly ROI Calculation</h3>
             
@@ -556,15 +689,17 @@ export default function ROIQQuizFunnel() {
         <Card className="border border-gray-200 shadow-sm p-6">
           {step === 0 && (
             <div className={`transition-opacity duration-300 ${isTransitioning ? 'opacity-50' : 'opacity-100'}`}>
-              <h3 className="text-2xl font-bold mb-6 text-center">What type of leads are you looking for?</h3>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-4">
+              <div className="flex flex-col items-center justify-center mb-6 w-full">
+                <h3 className="text-xl font-bold text-center w-full">What type of leads are you looking for? <span className="text-red-500">*</span></h3>
+              </div>
+              <div className="grid grid-cols-3 gap-3 mb-4">
                 {leadTypes.map(type => (
                   <button
                     key={type.id}
-                    className={`rounded-xl border-2 flex flex-col items-center py-8 px-4 font-semibold text-base transition-all hover:shadow-lg ${selectedVertical?.id === type.id ? "border-blue-600 bg-blue-50 text-blue-700" : "border-gray-200 bg-white hover:bg-gray-50"}`}
+                    className={`rounded-xl border-2 flex flex-col items-center py-6 px-2 font-semibold text-sm sm:text-base transition-all ${selectedVertical?.id === type.id ? "border-blue-600 bg-blue-50 text-blue-700" : "border-gray-200 bg-white hover:bg-gray-50"}`}
                     onClick={() => handleVerticalSelect(type)}
                   >
-                    <span className="mb-3">{type.icon}</span>
+                    <span className="mb-2">{type.icon}</span>
                     <span className="text-center leading-tight">{type.name}</span>
                   </button>
                 ))}
@@ -748,13 +883,104 @@ export default function ROIQQuizFunnel() {
                   onClick={handleNext} 
                   className="bg-blue-600 hover:bg-blue-700 text-white py-3 px-8 text-lg font-semibold"
                 >
-                  Calculate My ROI
+                  Continue
                 </Button>
               </div>
             </div>
           )}
 
-          {step === 6 && results && selectedVertical && (
+          {step === 6 && selectedVertical && (
+            <div className={`transition-opacity duration-300 ${isTransitioning ? 'opacity-50' : 'opacity-100'}`}>
+              <h3 className="text-xl font-bold mb-6 text-center">Contact details</h3>
+              <div className="space-y-4 mb-6">
+                <div>
+                  <Label htmlFor="fullName-desktop" className="text-sm font-medium text-gray-700 mb-2 block">Full Name</Label>
+                  <div className="relative">
+                    <User className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+                    <Input 
+                      id="fullName-desktop"
+                      placeholder="Your full name" 
+                      value={contact.name} 
+                      onChange={e => setContact({ ...contact, name: e.target.value })} 
+                      className="pl-10"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <Label htmlFor="email-desktop" className="text-sm font-medium text-gray-700 mb-2 block">Email Address</Label>
+                  <div className="relative">
+                    <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+                    <Input 
+                      id="email-desktop"
+                      placeholder="Your work email" 
+                      type="email" 
+                      value={contact.email} 
+                      onChange={e => setContact({ ...contact, email: e.target.value })} 
+                      className="pl-10"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <Label htmlFor="phone-desktop" className="text-sm font-medium text-gray-700 mb-2 block">Phone Number</Label>
+                  <div className="relative">
+                    <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+                    <Input 
+                      id="phone-desktop"
+                      placeholder="Your phone number" 
+                      value={contact.phone} 
+                      onChange={e => setContact({ ...contact, phone: e.target.value })} 
+                      className="pl-10"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <Label htmlFor="website-desktop" className="text-sm font-medium text-gray-700 mb-2 block">Website</Label>
+                  <div className="relative">
+                    <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+                    <Input 
+                      id="website-desktop"
+                      placeholder="Your website" 
+                      value={contact.website} 
+                      onChange={e => setContact({ ...contact, website: e.target.value })} 
+                      className="pl-10"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="mb-6">
+                <button
+                  onClick={() => setAgree(!agree)}
+                  className={`w-full p-4 rounded-xl border-2 transition-all text-left ${agree ? "border-blue-600 bg-blue-50" : "border-gray-200 bg-white hover:bg-gray-50"}`}
+                >
+                  <div className="flex items-center">
+                    <div className={`w-6 h-6 rounded border-2 flex items-center justify-center mr-3 transition-all ${agree ? "border-blue-600 bg-blue-600" : "border-gray-300"}`}>
+                      {agree && <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>}
+                    </div>
+                    <span className="text-[10px] font-medium">
+                      I agree to the{" "}
+                      <Link href="/privacy-policy" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
+                        privacy policy
+                      </Link>
+                      {" "}and{" "}
+                      <Link href="/terms-conditions" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
+                        terms & conditions
+                      </Link>
+                    </span>
+                  </div>
+                </button>
+              </div>
+              {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
+              <Button 
+                onClick={handleContactSubmit} 
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-lg font-semibold"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? 'Calculating...' : 'See My ROI Results'}
+              </Button>
+            </div>
+          )}
+
+          {step === 7 && results && selectedVertical && (
             <div className={`transition-opacity duration-300 ${isTransitioning ? 'opacity-50' : 'opacity-100'}`}>
               <h3 className="text-3xl font-bold mb-8 text-center">Your Monthly ROI Calculation</h3>
               
