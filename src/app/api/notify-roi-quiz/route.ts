@@ -143,8 +143,8 @@ export async function POST(request: NextRequest) {
               border-bottom-color: #1a1a1a;
             }
             .highlight-box {
-              background-color: #f0fdf4;
-              border: 1px solid #bbf7d0;
+              background-color: #f5f5f5;
+              border: 1px solid #e0e0e0;
               border-radius: 6px;
               padding: 12px;
               margin-top: 8px;
@@ -152,7 +152,7 @@ export async function POST(request: NextRequest) {
             .highlight-value {
               font-size: 18px;
               font-weight: 700;
-              color: #166534;
+              color: #1a1a1a;
             }
             .footer { 
               margin-top: 12px; 
@@ -264,19 +264,11 @@ export async function POST(request: NextRequest) {
                         <span class="label">Name</span>
                         <div class="value">${contact?.name || 'Not provided'}</div>
                       </div>
-                      <div class="field">
-                        <span class="label">Email</span>
-                        <div class="value"><a href="mailto:${contact?.email || ''}">${contact?.email || 'Not provided'}</a></div>
-                      </div>
                     </td>
                     <td class="column" style="width: 50%; padding-left: 12px; vertical-align: top;">
                       <div class="field">
-                        <span class="label">Phone</span>
-                        <div class="value"><a href="tel:${contact?.phone || ''}">${contact?.phone || 'Not provided'}</a></div>
-                      </div>
-                      <div class="field">
-                        <span class="label">Website</span>
-                        <div class="value"><a href="${contact?.website || ''}" target="_blank">${contact?.website || 'Not provided'}</a></div>
+                        <span class="label">Email</span>
+                        <div class="value"><a href="mailto:${contact?.email || ''}">${contact?.email || 'Not provided'}</a></div>
                       </div>
                     </td>
                   </tr>

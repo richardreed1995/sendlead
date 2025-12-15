@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "../../card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Home, Building2, Lock, Briefcase, MoreHorizontal, LineChart, User, Mail, Phone, Globe } from "lucide-react";
+import { Home, Building2, Lock, Briefcase, MoreHorizontal, LineChart, User, Mail } from "lucide-react";
 import Link from "next/link";
 
 type VerticalKey = 'mortgages' | 'businessLoans' | 'securedLoans' | 'financialAdvisor' | 'wealthManagement' | 'other';
@@ -121,7 +121,7 @@ export default function ROIQQuizFunnel() {
     referralsPerClient: 0
   });
   const [numLeads, setNumLeads] = useState(50);
-  const [contact, setContact] = useState({ name: "", email: "", phone: "", website: "" });
+  const [contact, setContact] = useState({ name: "", email: "" });
   const [agree, setAgree] = useState(false);
   const [error, setError] = useState("");
   const [results, setResults] = useState<ROIResults | null>(null);
@@ -149,9 +149,6 @@ export default function ROIQQuizFunnel() {
 
   function validateEmail(email: string) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  }
-  function validatePhone(phone: string) {
-    return /^[+]?[(]?[0-9]{1,4}[)]?[-\s0-9]{7,15}$/.test(phone);
   }
 
   // Auto-advance functions
@@ -220,14 +217,11 @@ export default function ROIQQuizFunnel() {
 
   const handleContactSubmit = async () => {
     setError("");
-    if (!contact.name || !contact.email || !contact.phone || !contact.website) {
+    if (!contact.name || !contact.email) {
       return setError("Please fill in all required fields");
     }
     if (!validateEmail(contact.email)) {
       return setError("Please enter a valid email address");
-    }
-    if (!validatePhone(contact.phone)) {
-      return setError("Please enter a valid phone number");
     }
     if (!agree) return setError("You must agree to the privacy policy and terms & conditions");
 
@@ -518,32 +512,6 @@ export default function ROIQQuizFunnel() {
                     type="email" 
                     value={contact.email} 
                     onChange={e => setContact({ ...contact, email: e.target.value })} 
-                    className="pl-10"
-                  />
-                </div>
-              </div>
-              <div>
-                <Label htmlFor="phone" className="text-sm font-medium text-gray-700 mb-2 block">Phone Number</Label>
-                <div className="relative">
-                  <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
-                  <Input 
-                    id="phone"
-                    placeholder="Your phone number" 
-                    value={contact.phone} 
-                    onChange={e => setContact({ ...contact, phone: e.target.value })} 
-                    className="pl-10"
-                  />
-                </div>
-              </div>
-              <div>
-                <Label htmlFor="website" className="text-sm font-medium text-gray-700 mb-2 block">Website</Label>
-                <div className="relative">
-                  <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
-                  <Input 
-                    id="website"
-                    placeholder="Your website" 
-                    value={contact.website} 
-                    onChange={e => setContact({ ...contact, website: e.target.value })} 
                     className="pl-10"
                   />
                 </div>
@@ -916,32 +884,6 @@ export default function ROIQQuizFunnel() {
                       type="email" 
                       value={contact.email} 
                       onChange={e => setContact({ ...contact, email: e.target.value })} 
-                      className="pl-10"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <Label htmlFor="phone-desktop" className="text-sm font-medium text-gray-700 mb-2 block">Phone Number</Label>
-                  <div className="relative">
-                    <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
-                    <Input 
-                      id="phone-desktop"
-                      placeholder="Your phone number" 
-                      value={contact.phone} 
-                      onChange={e => setContact({ ...contact, phone: e.target.value })} 
-                      className="pl-10"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <Label htmlFor="website-desktop" className="text-sm font-medium text-gray-700 mb-2 block">Website</Label>
-                  <div className="relative">
-                    <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
-                    <Input 
-                      id="website-desktop"
-                      placeholder="Your website" 
-                      value={contact.website} 
-                      onChange={e => setContact({ ...contact, website: e.target.value })} 
                       className="pl-10"
                     />
                   </div>
