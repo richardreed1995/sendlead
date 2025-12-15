@@ -38,7 +38,7 @@ const leadTypes: VerticalData[] = [
   { 
     id: "mortgages", 
     name: "Mortgages", 
-    icon: <Home className="h-8 w-8 text-blue-600" />,
+    icon: <Home className="h-8 w-8 text-gray-700" />,
     conversionRate: 15,
     avgDealValue: 250000,
     commissionRate: 0.35,
@@ -50,7 +50,7 @@ const leadTypes: VerticalData[] = [
   { 
     id: "businessLoans", 
     name: "Business Loans", 
-    icon: <Building2 className="h-8 w-8 text-green-600" />,
+    icon: <Building2 className="h-8 w-8 text-gray-700" />,
     conversionRate: 12,
     avgDealValue: 75000,
     commissionRate: 3,
@@ -62,7 +62,7 @@ const leadTypes: VerticalData[] = [
   { 
     id: "lifeInsurance", 
     name: "Life Insurance", 
-    icon: <Shield className="h-8 w-8 text-red-600" />,
+    icon: <Shield className="h-8 w-8 text-gray-700" />,
     conversionRate: 20,
     avgDealValue: 2400,
     commissionRate: 50,
@@ -74,7 +74,7 @@ const leadTypes: VerticalData[] = [
   { 
     id: "securedLoans", 
     name: "Secured Loans", 
-    icon: <Lock className="h-8 w-8 text-yellow-600" />,
+    icon: <Lock className="h-8 w-8 text-gray-700" />,
     conversionRate: 14,
     avgDealValue: 35000,
     commissionRate: 2.5,
@@ -86,7 +86,7 @@ const leadTypes: VerticalData[] = [
   { 
     id: "financialAdvisor", 
     name: "Financial Advisor", 
-    icon: <Briefcase className="h-8 w-8 text-purple-600" />,
+    icon: <Briefcase className="h-8 w-8 text-gray-700" />,
     conversionRate: 20,
     avgDealValue: 150000,
     commissionRate: 1.0,
@@ -98,7 +98,7 @@ const leadTypes: VerticalData[] = [
   { 
     id: "bridgingLoan", 
     name: "Bridging Loan", 
-    icon: <Landmark className="h-8 w-8 text-orange-600" />,
+    icon: <Landmark className="h-8 w-8 text-gray-700" />,
     conversionRate: 12,
     avgDealValue: 200000,
     commissionRate: 1,
@@ -110,7 +110,7 @@ const leadTypes: VerticalData[] = [
   { 
     id: "homeSelling", 
     name: "Home Selling", 
-    icon: <HousePlus className="h-8 w-8 text-teal-600" />,
+    icon: <HousePlus className="h-8 w-8 text-gray-700" />,
     conversionRate: 18,
     avgDealValue: 300000,
     commissionRate: 1.5,
@@ -122,7 +122,7 @@ const leadTypes: VerticalData[] = [
   { 
     id: "other", 
     name: "Other", 
-    icon: <MoreHorizontal className="h-8 w-8 text-gray-600" />,
+    icon: <MoreHorizontal className="h-8 w-8 text-gray-700" />,
     conversionRate: 20,
     avgDealValue: 50000,
     commissionRate: 10,
@@ -143,16 +143,16 @@ export default function ROIQQuizFunnel() {
     repeatBusinessRate: 0,
     referralsPerClient: 0
   });
+  const [numLeads, setNumLeads] = useState(50);
   const [results, setResults] = useState<ROIResults | null>(null);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
-  const numLeads = 50; // Fixed at 50 leads
-  const totalSteps = 6; // Industry, Conversion Rate, Deal Value, Commission Rate, Repeat Business, Results
+  const totalSteps = 7; // Industry, Leads Per Month, Conversion Rate, Deal Value, Commission Rate, Repeat Business, Results
   const progress = ((step + 1) / totalSteps) * 100;
 
   // Load Calendly script
   useEffect(() => {
-    if (step === 5) {
+    if (step === 6) {
       const script = document.createElement('script');
       script.src = 'https://assets.calendly.com/assets/external/widget.js';
       script.async = true;
@@ -187,7 +187,7 @@ export default function ROIQQuizFunnel() {
     setIsTransitioning(true);
     setTimeout(() => {
       setStep(step + 1);
-      if (step === 4) {
+      if (step === 5) {
         calculateROI();
       }
       setIsTransitioning(false);
@@ -279,6 +279,39 @@ export default function ROIQQuizFunnel() {
 
         {step === 1 && selectedVertical && (
           <div className={`transition-opacity duration-300 ${isTransitioning ? 'opacity-50' : 'opacity-100'}`}>
+            <h3 className="text-xl font-bold mb-4 text-center">How many leads can you handle per month?</h3>
+            <p className="text-sm text-gray-600 mb-6 text-center">
+              Tell us your capacity and we'll calculate your monthly investment and potential ROI.
+            </p>
+            
+            <div className="space-y-4 mb-6">
+              <div>
+                <Label htmlFor="numLeads" className="text-sm font-medium text-gray-700 mb-2 block">
+                  Leads Per Month
+                </Label>
+                <Input 
+                  id="numLeads"
+                  type="number"
+                  value={numLeads || ''}
+                  onChange={e => setNumLeads(parseInt(e.target.value) || 0)} 
+                  className="text-lg"
+                  placeholder="e.g. 50"
+                />
+              </div>
+            </div>
+            
+            <Button 
+              onClick={handleNext} 
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-lg font-semibold"
+              disabled={numLeads < 1}
+            >
+              Continue
+            </Button>
+          </div>
+        )}
+
+        {step === 2 && selectedVertical && (
+          <div className={`transition-opacity duration-300 ${isTransitioning ? 'opacity-50' : 'opacity-100'}`}>
             <h3 className="text-xl font-bold mb-4 text-center">What's your conversion rate?</h3>
             <p className="text-sm text-gray-600 mb-6 text-center">
               This is the percentage of leads that become paying customers. Industry average for {selectedVertical.name.toLowerCase()} is {selectedVertical.conversionRate}%.
@@ -308,7 +341,7 @@ export default function ROIQQuizFunnel() {
           </div>
         )}
 
-        {step === 2 && selectedVertical && (
+        {step === 3 && selectedVertical && (
           <div className={`transition-opacity duration-300 ${isTransitioning ? 'opacity-50' : 'opacity-100'}`}>
             <h3 className="text-xl font-bold mb-4 text-center">What's your average deal value?</h3>
             <p className="text-sm text-gray-600 mb-6 text-center">
@@ -339,7 +372,7 @@ export default function ROIQQuizFunnel() {
           </div>
         )}
 
-        {step === 3 && selectedVertical && (
+        {step === 4 && selectedVertical && (
           <div className={`transition-opacity duration-300 ${isTransitioning ? 'opacity-50' : 'opacity-100'}`}>
             <h3 className="text-xl font-bold mb-4 text-center">What's your commission rate?</h3>
             <p className="text-sm text-gray-600 mb-6 text-center">
@@ -371,7 +404,7 @@ export default function ROIQQuizFunnel() {
           </div>
         )}
 
-        {step === 4 && selectedVertical && (
+        {step === 5 && selectedVertical && (
           <div className={`transition-opacity duration-300 ${isTransitioning ? 'opacity-50' : 'opacity-100'}`}>
             <h3 className="text-xl font-bold mb-4 text-center">What's your repeat business rate?</h3>
             <p className="text-sm text-gray-600 mb-6 text-center">
@@ -416,41 +449,46 @@ export default function ROIQQuizFunnel() {
           </div>
         )}
 
-        {step === 5 && results && selectedVertical && (
+        {step === 6 && results && selectedVertical && (
           <div className={`transition-opacity duration-300 ${isTransitioning ? 'opacity-50' : 'opacity-100'}`}>
-            <h3 className="text-2xl font-bold mb-6 text-center">Your ROI Calculation</h3>
+            <h3 className="text-2xl font-bold mb-6 text-center">Your Monthly ROI Calculation</h3>
             
             <div className="space-y-4 mb-6">
               <div className="bg-gray-100 p-4 rounded-lg">
                 <div className="flex justify-between items-center mb-2">
-                  <span className="text-sm font-medium text-gray-600">Total Investment</span>
+                  <span className="text-sm font-medium text-gray-600">Monthly Investment</span>
                   <span className="text-lg font-semibold text-gray-900">
-                    {formatCurrency(results.totalInvestment)}
+                    {formatCurrency(results.totalInvestment)}/month
                   </span>
                 </div>
                 <div className="flex justify-between items-center mb-1">
-                  <span className="text-sm text-gray-600">Number of Leads</span>
+                  <span className="text-sm text-gray-600">Leads Per Month</span>
                   <span className="text-sm text-gray-900">{numLeads}</span>
                 </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-sm text-gray-600">Leads Converted</span>
-                  <span className="text-sm text-gray-900">{results.leadsConverted}</span>
+                <div className="flex justify-between items-center mb-1">
+                  <span className="text-sm text-gray-600">Cost Per Lead</span>
+                  <span className="text-sm text-gray-900">{formatCurrency(selectedVertical.costPerLead)}</span>
+                </div>
+                <p className="text-xs text-gray-500 mt-2 italic">*Lead cost based on industry benchmark pricing</p>
+                <div className="flex justify-between items-center mt-2 pt-2 border-t border-gray-200">
+                  <span className="text-sm text-gray-600">Expected Conversions</span>
+                  <span className="text-sm text-gray-900">{results.leadsConverted} clients/month</span>
                 </div>
               </div>
 
               <div className="bg-green-50 p-5 rounded-lg border-2 border-green-200">
                 <div className="mb-3">
-                  <span className="text-base font-bold text-green-800">Immediate ROI (90 Days)</span>
+                  <span className="text-base font-bold text-green-800">Monthly ROI (90 Day Pipeline)</span>
                 </div>
                 <div className="space-y-2">
                   <div className="flex justify-between">
-                    <span className="text-sm text-green-700">Revenue</span>
+                    <span className="text-sm text-green-700">Monthly Revenue</span>
                     <span className="text-sm font-medium text-green-800">
                       {formatCurrency(results.immediateRevenue)}
                     </span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-sm text-green-700">Profit</span>
+                    <span className="text-sm text-green-700">Monthly Profit</span>
                     <span className="text-sm font-medium text-green-800">
                       {formatCurrency(results.immediateProfit)}
                     </span>
@@ -466,7 +504,7 @@ export default function ROIQQuizFunnel() {
 
               <div className="bg-blue-50 p-5 rounded-lg border-2 border-blue-200">
                 <div className="mb-3">
-                  <span className="text-base font-bold text-blue-800">Lifetime Value</span>
+                  <span className="text-base font-bold text-blue-800">Lifetime Value (Per Month of Leads)</span>
                 </div>
                 <div className="space-y-2">
                   <div className="flex justify-between">
@@ -492,8 +530,13 @@ export default function ROIQQuizFunnel() {
             </div>
             
             <div className="bg-white rounded-lg border-2 border-gray-200 p-4 mb-6">
-              <h4 className="text-lg font-bold mb-2 text-center">Ready to get started?</h4>
-              <p className="text-sm text-gray-600 text-center mb-4">Book a call to discuss your lead generation needs</p>
+              <h4 className="text-lg font-bold mb-2 text-center">📞 Book a Call to Get Started</h4>
+              <p className="text-sm text-gray-600 text-center mb-2">
+                Most of our partners start with a <strong>one-time lead order</strong> to test quality before committing to a monthly subscription.
+              </p>
+              <p className="text-sm text-gray-600 text-center mb-4">
+                Book a call below to discuss your needs and get your first leads.
+              </p>
               
               <div className="calendly-inline-widget w-full" 
                    data-url="https://calendly.com/richard-sendlead/sendlead-intro?hide_gdpr_banner=1" 
@@ -531,6 +574,41 @@ export default function ROIQQuizFunnel() {
 
           {step === 1 && selectedVertical && (
             <div className={`transition-opacity duration-300 ${isTransitioning ? 'opacity-50' : 'opacity-100'}`}>
+              <h3 className="text-2xl font-bold mb-4 text-center">How many leads can you handle per month?</h3>
+              <p className="text-base text-gray-600 mb-6 text-center max-w-xl mx-auto">
+                Tell us your capacity and we'll calculate your monthly investment and potential ROI.
+              </p>
+              
+              <div className="space-y-4 mb-6 max-w-md mx-auto">
+                <div>
+                  <Label htmlFor="numLeads-desktop" className="text-sm font-medium text-gray-700 mb-2 block">
+                    Leads Per Month
+                  </Label>
+                  <Input 
+                    id="numLeads-desktop"
+                    type="number"
+                    value={numLeads || ''}
+                    onChange={e => setNumLeads(parseInt(e.target.value) || 0)} 
+                    className="text-lg"
+                    placeholder="e.g. 50"
+                  />
+                </div>
+              </div>
+              
+              <div className="text-center">
+                <Button 
+                  onClick={handleNext} 
+                  className="bg-blue-600 hover:bg-blue-700 text-white py-3 px-8 text-lg font-semibold"
+                  disabled={numLeads < 1}
+                >
+                  Continue
+                </Button>
+              </div>
+            </div>
+          )}
+
+          {step === 2 && selectedVertical && (
+            <div className={`transition-opacity duration-300 ${isTransitioning ? 'opacity-50' : 'opacity-100'}`}>
               <h3 className="text-2xl font-bold mb-4 text-center">What's your conversion rate?</h3>
               <p className="text-base text-gray-600 mb-6 text-center max-w-xl mx-auto">
                 This is the percentage of leads that become paying customers. Industry average for {selectedVertical.name.toLowerCase()} is {selectedVertical.conversionRate}%.
@@ -562,7 +640,7 @@ export default function ROIQQuizFunnel() {
             </div>
           )}
 
-          {step === 2 && selectedVertical && (
+          {step === 3 && selectedVertical && (
             <div className={`transition-opacity duration-300 ${isTransitioning ? 'opacity-50' : 'opacity-100'}`}>
               <h3 className="text-2xl font-bold mb-4 text-center">What's your average deal value?</h3>
               <p className="text-base text-gray-600 mb-6 text-center max-w-xl mx-auto">
@@ -595,7 +673,7 @@ export default function ROIQQuizFunnel() {
             </div>
           )}
 
-          {step === 3 && selectedVertical && (
+          {step === 4 && selectedVertical && (
             <div className={`transition-opacity duration-300 ${isTransitioning ? 'opacity-50' : 'opacity-100'}`}>
               <h3 className="text-2xl font-bold mb-4 text-center">What's your commission rate?</h3>
               <p className="text-base text-gray-600 mb-6 text-center max-w-xl mx-auto">
@@ -629,7 +707,7 @@ export default function ROIQQuizFunnel() {
             </div>
           )}
 
-          {step === 4 && selectedVertical && (
+          {step === 5 && selectedVertical && (
             <div className={`transition-opacity duration-300 ${isTransitioning ? 'opacity-50' : 'opacity-100'}`}>
               <h3 className="text-2xl font-bold mb-4 text-center">What's your repeat business rate?</h3>
               <p className="text-base text-gray-600 mb-6 text-center max-w-xl mx-auto">
@@ -676,41 +754,46 @@ export default function ROIQQuizFunnel() {
             </div>
           )}
 
-          {step === 5 && results && selectedVertical && (
+          {step === 6 && results && selectedVertical && (
             <div className={`transition-opacity duration-300 ${isTransitioning ? 'opacity-50' : 'opacity-100'}`}>
-              <h3 className="text-3xl font-bold mb-8 text-center">Your ROI Calculation</h3>
+              <h3 className="text-3xl font-bold mb-8 text-center">Your Monthly ROI Calculation</h3>
               
               <div className="space-y-4 mb-8 max-w-2xl mx-auto">
                 <div className="bg-gray-100 p-5 rounded-lg">
                   <div className="flex justify-between items-center mb-2">
-                    <span className="text-base font-medium text-gray-600">Total Investment</span>
+                    <span className="text-base font-medium text-gray-600">Monthly Investment</span>
                     <span className="text-xl font-semibold text-gray-900">
-                      {formatCurrency(results.totalInvestment)}
+                      {formatCurrency(results.totalInvestment)}/month
                     </span>
                   </div>
                   <div className="flex justify-between items-center mb-1">
-                    <span className="text-sm text-gray-600">Number of Leads</span>
+                    <span className="text-sm text-gray-600">Leads Per Month</span>
                     <span className="text-sm text-gray-900">{numLeads}</span>
                   </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm text-gray-600">Leads Converted</span>
-                    <span className="text-sm text-gray-900">{results.leadsConverted}</span>
+                  <div className="flex justify-between items-center mb-1">
+                    <span className="text-sm text-gray-600">Cost Per Lead</span>
+                    <span className="text-sm text-gray-900">{formatCurrency(selectedVertical.costPerLead)}</span>
+                  </div>
+                  <p className="text-xs text-gray-500 mt-2 italic">*Lead cost based on industry benchmark pricing</p>
+                  <div className="flex justify-between items-center mt-2 pt-2 border-t border-gray-200">
+                    <span className="text-sm text-gray-600">Expected Conversions</span>
+                    <span className="text-sm text-gray-900">{results.leadsConverted} clients/month</span>
                   </div>
                 </div>
 
                 <div className="bg-green-50 p-6 rounded-lg border-2 border-green-200">
                   <div className="mb-4">
-                    <span className="text-lg font-bold text-green-800">Immediate ROI (90 Days)</span>
+                    <span className="text-lg font-bold text-green-800">Monthly ROI (90 Day Pipeline)</span>
                   </div>
                   <div className="space-y-3">
                     <div className="flex justify-between">
-                      <span className="text-base text-green-700">Revenue</span>
+                      <span className="text-base text-green-700">Monthly Revenue</span>
                       <span className="text-base font-medium text-green-800">
                         {formatCurrency(results.immediateRevenue)}
                       </span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-base text-green-700">Profit</span>
+                      <span className="text-base text-green-700">Monthly Profit</span>
                       <span className="text-base font-medium text-green-800">
                         {formatCurrency(results.immediateProfit)}
                       </span>
@@ -726,7 +809,7 @@ export default function ROIQQuizFunnel() {
 
                 <div className="bg-blue-50 p-6 rounded-lg border-2 border-blue-200">
                   <div className="mb-4">
-                    <span className="text-lg font-bold text-blue-800">Lifetime Value</span>
+                    <span className="text-lg font-bold text-blue-800">Lifetime Value (Per Month of Leads)</span>
                   </div>
                   <div className="space-y-3">
                     <div className="flex justify-between">
@@ -752,8 +835,13 @@ export default function ROIQQuizFunnel() {
               </div>
               
               <div className="bg-white rounded-lg border-2 border-gray-200 p-6">
-                <h4 className="text-xl font-bold mb-3 text-center">Ready to get started?</h4>
-                <p className="text-base text-gray-600 text-center mb-6">Book a call to discuss your lead generation needs</p>
+                <h4 className="text-xl font-bold mb-3 text-center">📞 Book a Call to Get Started</h4>
+                <p className="text-base text-gray-600 text-center mb-2">
+                  Most of our partners start with a <strong>one-time lead order</strong> to test quality before committing to a monthly subscription.
+                </p>
+                <p className="text-base text-gray-600 text-center mb-6">
+                  Book a call below to discuss your needs and get your first leads.
+                </p>
                 
                 <div className="calendly-inline-widget w-full" 
                      data-url="https://calendly.com/richard-sendlead/sendlead-intro?hide_gdpr_banner=1" 
