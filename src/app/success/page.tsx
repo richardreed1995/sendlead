@@ -40,7 +40,7 @@ export default function SuccessPage() {
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Step 1: Review our presentation</h2>
             <div className="flex justify-center">
               <iframe 
-                src="https://docs.google.com/presentation/d/e/2PACX-1vQWhEL2ygPv69B7JCeyCW2enghcT7iN7ICFeWD5Bf7ZPnHIOuhN3an8nyVvprNfClbgOtyxjJWzQqkq/pubembed?start=false&loop=false&delayms=3000" 
+                src="https://docs.google.com/presentation/d/e/2PACX-1vT0iytBEzOi-IAyZ7w4OhexIDvX4g45yrD-SYEeZeHrPEuGV5iXmRMzN3wnW9gVPkxN2wLGwMT9udo1/pubembed?start=false&loop=false&delayms=3000" 
                 frameBorder="0" 
                 width="1200" 
                 height="500" 

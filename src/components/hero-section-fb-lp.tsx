@@ -17,11 +17,11 @@ export default function HeroSectionFBLP() {
             We generate qualified leads of your perfect fit prospects with proven systems. Pay only for the leads we generate as a one-time payment. 
           </p>
           
-          {/* Google Slides Embed - Mobile Optimised */}
+          {/* Google Slides Embed - Mobile Optimized */}
           <div className="mt-6 sm:mt-12">
             <div className="w-full overflow-hidden">
               <iframe 
-                src="https://docs.google.com/presentation/d/e/2PACX-1vQWhEL2ygPv69B7JCeyCW2enghcT7iN7ICFeWD5Bf7ZPnHIOuhN3an8nyVvprNfClbgOtyxjJWzQqkq/pubembed?start=false&loop=false&delayms=3000" 
+                src="https://docs.google.com/presentation/d/e/2PACX-1vT0iytBEzOi-IAyZ7w4OhexIDvX4g45yrD-SYEeZeHrPEuGV5iXmRMzN3wnW9gVPkxN2wLGwMT9udo1/pubembed?start=false&loop=false&delayms=3000" 
                 frameBorder="0" 
                 width="100%" 
                 height="400"
@@ -37,14 +37,18 @@ export default function HeroSectionFBLP() {
           </div>
 
           <div className="flex flex-col items-center mt-8 sm:mt-8">
-            <Link href="/get-started">
-              <Button 
-                size="lg" 
-                className="bg-[#2998FD] hover:bg-[#1f7fd9] text-white w-full max-w-sm sm:w-auto sm:max-w-none py-7 sm:py-2 text-lg sm:text-base font-bold"
-              >
-                Get Started
-              </Button>
-            </Link>
+            <Button 
+              size="lg" 
+              className="bg-[#2998FD] hover:bg-[#1f7fd9] text-white w-full max-w-sm sm:w-auto sm:max-w-none py-7 sm:py-2 text-lg sm:text-base font-bold"
+              onClick={() => {
+                const calendlySection = document.getElementById('calendly-embed');
+                if (calendlySection) {
+                  calendlySection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
+              Get Started
+            </Button>
           </div>
         </div>
       </div>

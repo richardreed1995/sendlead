@@ -27,10 +27,10 @@ const transitionVariants = {
     },
 }
 
-export default function HeroSection() {
+export default function HeroSection({ hasAnnouncementBar = false }: { hasAnnouncementBar?: boolean }) {
     return (
         <>
-            <HeroHeader />
+            <HeroHeader hasAnnouncementBar={hasAnnouncementBar} />
             <main className="overflow-hidden">
                 <div
                     aria-hidden
