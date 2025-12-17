@@ -25,7 +25,7 @@ export default function WhySendleadPage() {
                                 <Star key={i} className="w-3 h-3 sm:w-4 sm:h-4 fill-yellow-400 text-yellow-400" />
                             ))}
                         </div>
-                        <span>Trusted by brokers and sales teams across the UK</span>
+                        <span>Trusted by leading brokers and sales teams</span>
                     </div>
 
                     {/* Main Headline */}
@@ -70,16 +70,13 @@ export default function WhySendleadPage() {
                                 You Only Pay For Qualified, Exclusive Leads
                             </h2>
                             <p className="mt-4 text-gray-600 leading-relaxed">
-                                No ad spend. No retainers. No setup fees. No wasted budget on tyre-kickers.
+                                Get qualified leads without worrying about ad spend, retainers, setup fees, or budget wasted on unqualified prospects.
                             </p>
                             <p className="mt-4 text-gray-600 leading-relaxed">
-                                You pay a fixed price per lead, and every single one is yours alone. We legally guarantee exclusivity in our contract, so you'll never compete with another broker chasing the same prospect.
-                            </p>
-                            <p className="mt-4 text-gray-600 leading-relaxed">
-                                We're ruthless about quality. Our 15+ point qualification system filters out 87% of prospects before they ever reach you. We check for genuine intent, financial capacity, decision-making authority, and readiness to proceed. Only prospects who meet every criteria make it through.
+                                Our 15+ point qualification system filters out 87% of prospects before they reach you. We check for genuine intent, financial capacity, decision-making authority, and readiness to proceed. Only prospects who meet every criterion make it through.
                             </p>
                             <p className="mt-4 text-gray-600 leading-relaxed font-medium">
-                                You're not paying for clicks or impressions. You're paying for people who are ready to have a conversation.
+                                You pay for people who are ready to have a conversation, not for clicks or impressions.
                             </p>
                         </div>
                     </div>
@@ -97,19 +94,16 @@ export default function WhySendleadPage() {
                         <div className="order-1 md:order-1">
                             <ReasonBadge number={2} />
                             <h2 className="mt-4 text-xl md:text-3xl font-bold text-gray-900">
-                                Start With a Small Test Order, No Commitment Required
+                                Start With a Small Test Order With No Commitment Required
                             </h2>
                             <p className="mt-4 text-gray-600 leading-relaxed">
-                                We believe in earning your business, not locking you into it.
+                                We believe in earning your business rather than locking you into it.
                             </p>
                             <p className="mt-4 text-gray-600 leading-relaxed">
-                                That's why we start every partnership with a simple test order of 50 leads. See the quality for yourself. Judge us on results, not sales pitches.
+                                Every partnership starts with a test order of 50 leads. You can see the quality for yourself and judge us on results rather than sales pitches.
                             </p>
                             <p className="mt-4 text-gray-600 leading-relaxed">
-                                If it works, scale up. If you want to take a different direction, no problem. No contracts locking you in, no awkward conversations, no pressure.
-                            </p>
-                            <p className="mt-4 text-gray-600 leading-relaxed font-medium">
-                                This is how confident we are in what we deliver.
+                                If the leads work for you, you can scale up. If you want to take a different direction, that is your choice. There are no long-term contracts and no minimum ongoing commitments.
                             </p>
                         </div>
                     </div>
@@ -128,19 +122,16 @@ export default function WhySendleadPage() {
                         <div className="order-1 md:order-2">
                             <ReasonBadge number={3} />
                             <h2 className="mt-4 text-xl md:text-3xl font-bold text-gray-900">
-                                Your Team Will Be Receiving Leads Within 48 Hours
+                                Your Team Will Receive Leads Within 48 Hours
                             </h2>
                             <p className="mt-4 text-gray-600 leading-relaxed">
-                                Once you place your first order, we move fast.
+                                Once you place your first order, we get you set up quickly.
                             </p>
                             <p className="mt-4 text-gray-600 leading-relaxed">
-                                We'll build a branded funnel that looks and feels like your business. We'll integrate with your CRM, set up real-time notifications, and have everything ready to go within 48 hours.
-                            </p>
-                            <p className="mt-4 text-gray-600 leading-relaxed">
-                                Leads are delivered the moment they qualify. Straight to your email, a shared Google Sheet, and directly into your CRM if you have one. Your team can follow up while prospects are still engaged and in buying mode.
+                                We integrate with your CRM, set up real-time notifications, and have everything ready within 48 hours. Leads are delivered the moment they qualify.
                             </p>
                             <p className="mt-4 text-gray-600 leading-relaxed font-medium">
-                                No lengthy onboarding. No waiting weeks to see results. You'll be up and running before the week is out.
+                                There is no lengthy onboarding process. You will be up and running within two days of placing your order.
                             </p>
                         </div>
                     </div>
@@ -177,13 +168,13 @@ export default function WhySendleadPage() {
                                 We Help You Convert, Not Just Generate
                             </h2>
                             <p className="mt-4 text-gray-600 leading-relaxed">
-                                Most lead providers hand over a list and disappear. We don't.
+                                With your first order, you receive a free nurture sequence designed to warm up your leads before your team contacts them. You can plug it into your existing system and let it run alongside your sales process.
                             </p>
                             <p className="mt-4 text-gray-600 leading-relaxed">
-                                Included with your first order, you'll receive a free nurture sequence designed to warm up your leads before your team even picks up the phone. Plug it into your existing system and let it run alongside your sales process.
+                                Each prospect also sees a dedicated matching screen tailored to your business with clear next steps. This branded experience helps build trust from first contact and supports conversion rates before your brokers make a call.
                             </p>
-                            <p className="mt-4 text-gray-600 leading-relaxed">
-                                Every prospect also sees a dedicated matching screen tailored to your business, complete with clear next steps. This branded experience builds trust from first contact and improves conversion rates before your brokers make a single call.
+                            <p className="mt-4 text-gray-600 leading-relaxed font-medium">
+                                We focus on helping you close deals, not just filling your pipeline.
                             </p>
                         </div>
                     </div>
@@ -204,16 +195,16 @@ export default function WhySendleadPage() {
                                 Every Lead Is Verified Before It Reaches You
                             </h2>
                             <p className="mt-4 text-gray-600 leading-relaxed">
-                                Nothing kills momentum like chasing dead numbers and fake emails.
+                                Chasing incorrect phone numbers and invalid emails wastes your team's time.
                             </p>
                             <p className="mt-4 text-gray-600 leading-relaxed">
-                                That's why we verify every lead in real-time before it enters your system. We use OTP verification on both email and phone, so you know the contact details are genuine before your team picks up the phone.
+                                We verify every lead in real-time before it enters your system. We use OTP verification on both email and phone, so you know the contact details are accurate before your team picks up the phone.
                             </p>
                             <p className="mt-4 text-gray-600 leading-relaxed">
-                                This means fewer wasted calls, higher connect rates, and more meaningful conversations for your sales team.
+                                This results in fewer wasted calls, higher connect rates, and more productive conversations for your sales team.
                             </p>
                             <p className="mt-4 text-gray-600 leading-relaxed font-medium">
-                                If a lead does slip through that doesn't meet our standards, we replace it. No questions asked.
+                                If a lead does not meet our standards, we replace it without charge.
                             </p>
                         </div>
                     </div>
@@ -233,16 +224,16 @@ export default function WhySendleadPage() {
                                 Transparent Pricing With No Hidden Costs
                             </h2>
                             <p className="mt-4 text-gray-600 leading-relaxed font-medium">
-                                What you see is what you pay. Full stop.
+                                What you see is what you pay.
                             </p>
                             <p className="mt-4 text-gray-600 leading-relaxed">
-                                No setup fees. No platform costs. No minimum spend requirements beyond your test order. No surprise charges buried in the small print.
+                                There are no setup fees, no platform costs, no minimum spend requirements beyond your test order, and no additional charges.
                             </p>
                             <p className="mt-4 text-gray-600 leading-relaxed">
-                                You agree a price per lead upfront, and that's exactly what you pay. Scale up when business is good, scale down when it's quieter. We flex with your needs, not against them.
+                                You agree a price per lead upfront, and that is what you pay. You can scale up when business increases and scale down when it slows. We adjust to your needs.
                             </p>
                             <p className="mt-4 text-gray-600 leading-relaxed">
-                                This isn't a retainer relationship where you're paying whether leads come in or not. You only pay for what we deliver.
+                                This is not a retainer relationship where you pay regardless of results. You only pay for the leads we deliver.
                             </p>
                         </div>
                     </div>
@@ -253,17 +244,17 @@ export default function WhySendleadPage() {
                             <div className="grid grid-cols-2 gap-3 md:gap-4 h-full">
                                 <div className="bg-white rounded-xl shadow-sm p-3 md:p-4 flex flex-col items-center justify-center">
                                     <Users className="w-6 h-6 md:w-8 md:h-8 text-[#2998FD] mb-1 md:mb-2" />
-                                    <div className="text-xl md:text-2xl font-bold text-gray-900">500+</div>
+                                    <div className="text-xl md:text-2xl font-bold text-gray-900">50+</div>
                                     <div className="text-[10px] md:text-xs text-gray-500">Clients</div>
                                 </div>
                                 <div className="bg-white rounded-xl shadow-sm p-3 md:p-4 flex flex-col items-center justify-center">
                                     <TrendingUp className="w-6 h-6 md:w-8 md:h-8 text-[#2998FD] mb-1 md:mb-2" />
-                                    <div className="text-xl md:text-2xl font-bold text-gray-900">10M+</div>
+                                    <div className="text-lg md:text-xl font-bold text-gray-900">100,000+</div>
                                     <div className="text-[10px] md:text-xs text-gray-500">Leads</div>
                                 </div>
                                 <div className="bg-white rounded-xl shadow-sm p-3 md:p-4 flex flex-col items-center justify-center">
                                     <Star className="w-6 h-6 md:w-8 md:h-8 text-[#2998FD] mb-1 md:mb-2" />
-                                    <div className="text-xl md:text-2xl font-bold text-gray-900">4.9/5</div>
+                                    <div className="text-xl md:text-2xl font-bold text-gray-900">5/5</div>
                                     <div className="text-[10px] md:text-xs text-gray-500">Rating</div>
                                 </div>
                                 <div className="bg-white rounded-xl shadow-sm p-3 md:p-4 flex flex-col items-center justify-center">
@@ -279,16 +270,16 @@ export default function WhySendleadPage() {
                                 Built For Teams Who Are Ready To Scale
                             </h2>
                             <p className="mt-4 text-gray-600 leading-relaxed">
-                                If you've already got a solid sales process and a team who know how to convert, we're the missing piece.
+                                If you have a working sales process and a team who know how to convert, we provide the missing piece.
                             </p>
                             <p className="mt-4 text-gray-600 leading-relaxed">
-                                You don't need more leads. You need better leads. Exclusive prospects who've been qualified, verified, and pre-warmed before they hit your CRM.
+                                You need qualified leads, not more leads. We deliver exclusive prospects who have been qualified, verified, and pre-warmed before they reach your CRM.
                             </p>
                             <p className="mt-4 text-gray-600 leading-relaxed">
-                                We handle the top of the funnel so your team can focus on what they do best: turning conversations into customers.
+                                We handle the top of the funnel so your team can focus on what they do well: turning conversations into customers.
                             </p>
                             <p className="mt-4 text-gray-600 leading-relaxed">
-                                Whether you need 50 leads a month or 500, we scale with you. No penalties for slowing down, no pressure to overcommit. Just a reliable partner who delivers quality, month after month.
+                                Whether you need 50 leads a month or 500, we scale with you. There are no penalties for reducing volume and no pressure to overcommit. We aim to be a reliable partner who delivers consistent quality.
                             </p>
                         </div>
                     </div>
@@ -300,16 +291,6 @@ export default function WhySendleadPage() {
             <section className="py-16 px-4">
                 <div className="mx-auto max-w-3xl">
                     <div className="bg-gradient-to-br from-gray-50 to-white rounded-3xl border border-gray-200 p-8 md:p-12 text-center shadow-sm">
-                        {/* Trust indicators */}
-                        <div className="inline-flex items-center gap-2 text-sm text-gray-600 mb-4">
-                            <div className="flex">
-                                {[...Array(5)].map((_, i) => (
-                                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                                ))}
-                            </div>
-                            <span>Rated 4.9/5 based on 500+ reviews</span>
-                        </div>
-
                         <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-4">
                             Ready to see what qualified, exclusive leads look like?
                         </h2>
@@ -327,11 +308,6 @@ export default function WhySendleadPage() {
                                 <ArrowRight className="ml-2 w-5 h-5" />
                             </Button>
                         </Link>
-
-                        <p className="mt-4 text-xs text-gray-500 flex items-center justify-center gap-1">
-                            <Shield className="w-3 h-3" />
-                            100% Money-Back Guarantee
-                        </p>
                     </div>
                 </div>
             </section>
@@ -363,3 +339,4 @@ export default function WhySendleadPage() {
         </div>
     )
 }
+
