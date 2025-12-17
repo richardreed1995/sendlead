@@ -1,4 +1,7 @@
+"use client"
+
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
 
 const flows = [
   {
@@ -83,6 +86,21 @@ export default function AutomationFlowsHomepage() {
           ))}
         </div>
 
+        {/* Get Started Button */}
+        <div className="flex justify-center">
+          <Button 
+            size="lg" 
+            className="bg-[#2998FD] hover:bg-[#1f7fd9] text-white w-full sm:w-auto py-7 sm:py-2 text-lg sm:text-base font-bold"
+            onClick={() => {
+              const calendlySection = document.getElementById('calendly-embed');
+              if (calendlySection) {
+                calendlySection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+          >
+            Get Started
+          </Button>
+        </div>
       </div>
     </section>
   );

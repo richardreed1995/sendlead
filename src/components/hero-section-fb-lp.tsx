@@ -9,19 +9,19 @@ export default function HeroSectionFBLP() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
           <div className="mb-6 sm:mb-4 lg:mb-5">
-            <h1 className="text-2xl sm:text-5xl lg:text-5xl font-bold tracking-tight text-foreground leading-tight">
+            <h1 className="text-3xl sm:text-5xl lg:text-5xl font-bold tracking-tight text-foreground leading-tight">
               Get Qualified Leads Delivered To Your CRM
             </h1>
           </div>
           <p className="text-sm sm:text-lg lg:text-xl leading-6 sm:leading-8 text-muted-foreground mb-4 sm:mb-4 lg:mb-5">
-            We generate qualified leads of your perfect fit prospects with proven systems. Pay only for the leads we generate as a one-time payment. 
+            Grow your business with high-quality, exclusive leads delivered to you in real-time. Start with a small test order of 50 leads — no ongoing commitment, just pay per qualified lead.
           </p>
           
           {/* Google Slides Embed - Mobile Optimized */}
           <div className="mt-6 sm:mt-12">
             <div className="w-full overflow-hidden">
               <iframe 
-                src="https://docs.google.com/presentation/d/e/2PACX-1vT0iytBEzOi-IAyZ7w4OhexIDvX4g45yrD-SYEeZeHrPEuGV5iXmRMzN3wnW9gVPkxN2wLGwMT9udo1/pubembed?start=false&loop=false&delayms=3000" 
+                src="https://docs.google.com/presentation/d/e/2PACX-1vQWhEL2ygPv69B7JCeyCW2enghcT7iN7ICFeWD5Bf7ZPnHIOuhN3an8nyVvprNfClbgOtyxjJWzQqkq/pubembed?start=false&loop=false&delayms=3000" 
                 frameBorder="0" 
                 width="100%" 
                 height="400"
@@ -39,7 +39,7 @@ export default function HeroSectionFBLP() {
           <div className="flex flex-col items-center mt-8 sm:mt-8">
             <Button 
               size="lg" 
-              className="bg-[#2998FD] hover:bg-[#1f7fd9] text-white w-full max-w-sm sm:w-auto sm:max-w-none py-7 sm:py-2 text-lg sm:text-base font-bold"
+              className="bg-[#2998FD] hover:bg-[#1f7fd9] text-white w-full sm:w-auto py-7 sm:py-2 text-lg sm:text-base font-bold"
               onClick={() => {
                 const calendlySection = document.getElementById('calendly-embed');
                 if (calendlySection) {

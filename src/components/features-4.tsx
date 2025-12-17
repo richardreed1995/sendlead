@@ -1,4 +1,7 @@
+"use client"
+
 import { Users, Filter, Clock, Thermometer, Calculator, TrendingUp } from 'lucide-react';
+import { Button } from "@/components/ui/button";
 
 export default function Features() {
     return (
@@ -54,6 +57,22 @@ export default function Features() {
                         </div>
                         <p className="text-sm text-muted-foreground">Our partners see 67% average improvement in conversion rates and 85% connect rates within 24 hours.</p>
                     </div>
+                </div>
+
+                {/* Get Started Button */}
+                <div className="flex justify-center mt-8">
+                    <Button 
+                        size="lg" 
+                        className="bg-[#2998FD] hover:bg-[#1f7fd9] text-white w-full sm:w-auto py-7 sm:py-2 text-lg sm:text-base font-bold"
+                        onClick={() => {
+                            const calendlySection = document.getElementById('calendly-embed');
+                            if (calendlySection) {
+                                calendlySection.scrollIntoView({ behavior: 'smooth' });
+                            }
+                        }}
+                    >
+                        Get Started
+                    </Button>
                 </div>
             </div>
         </section>
