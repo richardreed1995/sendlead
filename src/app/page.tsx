@@ -8,7 +8,6 @@ import Footer from "@/components/footer";
 import AutomationFlowsHomepage from "@/components/automation-flows-homepage";
 import type { Metadata } from "next";
 import CompetitiveAdvantages from "@/components/competitive-advantages";
-import AnnouncementBar from "@/components/announcement-bar";
 
 export const metadata: Metadata = {
   title: "Sendlead | Lead Generation Agency",
@@ -18,9 +17,8 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
-      <AnnouncementBar />
       <header>
-        <HeroSection hasAnnouncementBar />
+        <HeroSection />
       </header>
       <main className="flex-1 flex flex-col gap-12">
         <LogoCloud />
