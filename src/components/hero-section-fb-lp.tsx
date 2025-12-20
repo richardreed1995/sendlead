@@ -37,10 +37,10 @@ export default function HeroSectionFBLP() {
           </div>
 
           <div className="flex flex-col items-center mt-8 sm:mt-8">
-            <Link href="/get-started">
+            <Link href="/get-started" className="w-full sm:w-auto">
               <Button
                 size="lg"
-                className="bg-[#2998FD] hover:bg-[#1f7fd9] text-white w-full sm:w-auto py-7 sm:py-2 text-lg sm:text-base font-bold"
+                className="bg-[#2998FD] hover:bg-[#1f7fd9] text-white w-full py-7 sm:py-2 text-lg sm:text-base font-bold"
               >
                 Get Started
               </Button>

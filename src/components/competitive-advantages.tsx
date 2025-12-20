@@ -1,6 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 interface CompetitiveAdvantagesProps {
   title?: string;
@@ -218,18 +219,14 @@ export default function CompetitiveAdvantages({
 
           {/* Get Started Button */}
           <div className="flex justify-center mt-8">
-            <Button 
-              size="lg" 
-              className="bg-[#2998FD] hover:bg-[#1f7fd9] text-white w-full sm:w-auto py-7 sm:py-2 text-lg sm:text-base font-bold"
-              onClick={() => {
-                const calendlySection = document.getElementById('calendly-embed');
-                if (calendlySection) {
-                  calendlySection.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-            >
-              Get Started
-            </Button>
+            <Link href="/get-started" className="w-full sm:w-auto">
+              <Button
+                size="lg"
+                className="bg-[#2998FD] hover:bg-[#1f7fd9] text-white w-full py-7 sm:py-2 text-lg sm:text-base font-bold"
+              >
+                Get Started
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
