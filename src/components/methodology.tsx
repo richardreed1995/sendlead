@@ -4,6 +4,7 @@ import { BarChart3, Target, ShieldCheck } from 'lucide-react';
 import React from 'react';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '../../card';
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const methodologyCards = [
   {
@@ -100,18 +101,14 @@ export default function Methodology() {
 
         {/* Get Started Button */}
         <div className="flex justify-center">
-          <Button 
-            size="lg" 
-            className="bg-[#2998FD] hover:bg-[#1f7fd9] text-white w-full sm:w-auto py-7 sm:py-2 text-lg sm:text-base font-bold"
-            onClick={() => {
-              const calendlySection = document.getElementById('calendly-embed');
-              if (calendlySection) {
-                calendlySection.scrollIntoView({ behavior: 'smooth' });
-              }
-            }}
-          >
-            Get Started
-          </Button>
+          <Link href="/get-started" className="w-full sm:w-auto">
+            <Button
+              size="lg"
+              className="bg-[#2998FD] hover:bg-[#1f7fd9] text-white w-full py-7 sm:py-2 text-lg sm:text-base font-bold"
+            >
+              Get Started
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
