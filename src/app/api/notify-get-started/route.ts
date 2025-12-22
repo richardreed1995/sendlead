@@ -236,23 +236,57 @@ export async function POST(request: NextRequest) {
     `
 
     // Send email using Resend
-    const result = await resend.emails.send({
+    const internalEmailPromise = resend.emails.send({
       from: 'Sendlead <noreply@notification.sendlead.co>',
       to: 'richard@sendlead.co',
       subject: `New Get Started Form Submission - ${contact?.name || 'Unknown'}`,
       html: emailHtml,
     })
 
-    if (result.error) {
-      console.error('Resend API error:', result.error)
-      return NextResponse.json(
-        { success: false, error: result.error.message || 'Failed to send email' },
-        { status: 500 }
-      )
+    // Push to Kit (formerly ConvertKit)
+    const kitApiKey = process.env.KIT_API_KEY
+    const kitFormId = process.env.KIT_FORM_ID
+    const kitTagId = process.env.KIT_TAG_ID
+    
+    let kitPromise = Promise.resolve(null)
+    
+    if (kitApiKey && contact?.email) {
+      if (kitFormId) {
+        kitPromise = fetch(`https://api.convertkit.com/v3/forms/${kitFormId}/subscribe`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ 
+            api_key: kitApiKey, 
+            email: contact.email,
+            first_name: contact.name?.split(' ')[0] || ''
+          }),
+        })
+      } else if (kitTagId) {
+        kitPromise = fetch(`https://api.convertkit.com/v3/tags/${kitTagId}/subscribe`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ 
+            api_key: kitApiKey, 
+            email: contact.email,
+            first_name: contact.name?.split(' ')[0] || ''
+          }),
+        })
+      }
+
+      if (kitPromise !== Promise.resolve(null)) {
+        kitPromise = kitPromise
+          .then(res => res.json())
+          .catch(err => {
+            console.error('Failed to push to Kit:', err)
+            return null
+          })
+      }
     }
 
-    console.log('Notification email sent successfully:', result.data?.id)
-    return NextResponse.json({ success: true, messageId: result.data?.id }, { status: 200 })
+    // Wait for both
+    await Promise.all([internalEmailPromise, kitPromise])
+
+    return NextResponse.json({ success: true }, { status: 200 })
   } catch (error: any) {
     console.error('Failed to send notification email:', error)
     return NextResponse.json(

@@ -384,23 +384,49 @@ export async function POST(request: NextRequest) {
     `
 
     // Send email using Resend
-    const result = await resend.emails.send({
+    const internalEmailPromise = resend.emails.send({
       from: 'Sendlead <noreply@notification.sendlead.co>',
       to: email,
       subject: '🔥 Sample Lead: A-Tier Business Loan - £50,000-£100,000',
       html: emailHtml,
     })
 
-    if (result.error) {
-      console.error('Resend API error:', result.error)
-      return NextResponse.json(
-        { success: false, error: result.error.message || 'Failed to send email' },
-        { status: 500 }
-      )
+    // Push to Kit (formerly ConvertKit)
+    const kitApiKey = process.env.KIT_API_KEY
+    const kitFormId = process.env.KIT_FORM_ID
+    const kitTagId = process.env.KIT_TAG_ID
+    
+    let kitPromise = Promise.resolve(null)
+    
+    if (kitApiKey && email) {
+      if (kitFormId) {
+        kitPromise = fetch(`https://api.convertkit.com/v3/forms/${kitFormId}/subscribe`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ api_key: kitApiKey, email }),
+        })
+      } else if (kitTagId) {
+        kitPromise = fetch(`https://api.convertkit.com/v3/tags/${kitTagId}/subscribe`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ api_key: kitApiKey, email }),
+        })
+      }
+
+      if (kitPromise !== Promise.resolve(null)) {
+        kitPromise = kitPromise
+          .then(res => res.json())
+          .catch(err => {
+            console.error('Failed to push to Kit:', err)
+            return null
+          })
+      }
     }
 
-    console.log('Sample lead email sent successfully:', result.data?.id)
-    return NextResponse.json({ success: true, messageId: result.data?.id }, { status: 200 })
+    // Wait for both
+    await Promise.all([internalEmailPromise, kitPromise])
+
+    return NextResponse.json({ success: true }, { status: 200 })
   } catch (error: unknown) {
     console.error('Failed to send sample lead email:', error)
     const errorMessage = error instanceof Error ? error.message : 'Failed to send notification'
