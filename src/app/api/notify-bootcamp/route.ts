@@ -63,11 +63,13 @@ export async function POST(request: NextRequest) {
     const kitFormId = process.env.KIT_FORM_ID
     const kitTagId = process.env.KIT_TAG_ID
     
-    let kitPromise = Promise.resolve(null)
+    let kitPromise: Promise<any> = Promise.resolve(null)
+    let kitIntegrationAttempted = false
     
     if (kitApiKey) {
       if (kitFormId) {
         // Subscribe to a Form
+        kitIntegrationAttempted = true
         kitPromise = fetch(`https://api.convertkit.com/v3/forms/${kitFormId}/subscribe`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -75,6 +77,7 @@ export async function POST(request: NextRequest) {
         })
       } else if (kitTagId) {
         // Subscribe to a Tag
+        kitIntegrationAttempted = true
         kitPromise = fetch(`https://api.convertkit.com/v3/tags/${kitTagId}/subscribe`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -82,7 +85,7 @@ export async function POST(request: NextRequest) {
         })
       }
 
-      if (kitPromise !== Promise.resolve(null)) {
+      if (kitIntegrationAttempted) {
         kitPromise = kitPromise
           .then(res => res.json())
           .catch(err => {
