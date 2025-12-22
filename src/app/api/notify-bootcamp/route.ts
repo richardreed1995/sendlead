@@ -23,6 +23,7 @@ export async function POST(request: NextRequest) {
       )
     }
 
+    // 1. Send internal notification via Resend
     const emailHtml = `
       <!DOCTYPE html>
       <html>
@@ -50,18 +51,59 @@ export async function POST(request: NextRequest) {
       </html>
     `
 
-    await resend.emails.send({
+    const internalEmailPromise = resend.emails.send({
       from: 'Sendlead <noreply@notification.sendlead.co>',
       to: 'richard@sendlead.co',
       subject: `New Bootcamp Lead: ${email}`,
       html: emailHtml,
     })
 
+    // 2. Push to Kit (formerly ConvertKit)
+    const kitApiKey = process.env.KIT_API_KEY
+    const kitFormId = process.env.KIT_FORM_ID
+    const kitTagId = process.env.KIT_TAG_ID
+    
+    let kitPromise = Promise.resolve(null)
+    
+    if (kitApiKey) {
+      if (kitFormId) {
+        // Subscribe to a Form
+        kitPromise = fetch(`https://api.convertkit.com/v3/forms/${kitFormId}/subscribe`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ api_key: kitApiKey, email }),
+        })
+      } else if (kitTagId) {
+        // Subscribe to a Tag
+        kitPromise = fetch(`https://api.convertkit.com/v3/tags/${kitTagId}/subscribe`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ api_key: kitApiKey, email }),
+        })
+      }
+
+      if (kitPromise !== Promise.resolve(null)) {
+        kitPromise = kitPromise
+          .then(res => res.json())
+          .catch(err => {
+            console.error('Failed to push to Kit:', err)
+            return null
+          })
+      } else {
+        console.warn('Kit integration skipped: Neither KIT_FORM_ID nor KIT_TAG_ID configured')
+      }
+    } else {
+      console.warn('Kit integration skipped: KIT_API_KEY not configured')
+    }
+
+    // Wait for both to complete
+    await Promise.all([internalEmailPromise, kitPromise])
+
     return NextResponse.json({ success: true }, { status: 200 })
   } catch (error: any) {
-    console.error('Failed to send bootcamp notification:', error)
+    console.error('Failed to process bootcamp lead:', error)
     return NextResponse.json(
-      { success: false, error: error?.message || 'Failed to send notification' },
+      { success: false, error: error?.message || 'Failed to process lead' },
       { status: 500 }
     )
   }
