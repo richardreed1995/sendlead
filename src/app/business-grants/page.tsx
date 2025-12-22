@@ -4,7 +4,6 @@ import BenefitsBusinessGrants from "@/components/benefits-business-grants";
 import FAQSBusinessGrants from "@/components/faqs-business-grants";
 import { HeroHeader } from "@/components/header";
 import FooterSection from "@/components/footer";
-import CostComparisonBusinessGrants from "@/components/cost-comparison-business-grants";
 import ROISectionBusinessGrants from "@/components/roi-section-business-grants";
 import CallToAction from "@/components/call-to-action";
 import CompetitiveAdvantages from "@/components/competitive-advantages";
@@ -91,7 +90,6 @@ export default function BusinessGrantsPage() {
         <BenefitsBusinessGrants />
         <CompetitiveAdvantages />
         <ROISectionBusinessGrants />
-        <CostComparisonBusinessGrants />
         <FAQSBusinessGrants />
         <CallToAction />
       </main>

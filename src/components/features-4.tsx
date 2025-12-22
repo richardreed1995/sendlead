@@ -59,18 +59,6 @@ export default function Features() {
                         <p className="text-sm text-muted-foreground">Our partners see 67% average improvement in conversion rates and 85% connect rates within 24 hours.</p>
                     </div>
                 </div>
-
-                {/* Get Started Button */}
-                <div className="flex justify-center mt-8">
-                    <Link href="/get-started" className="w-full sm:w-auto">
-                        <Button
-                            size="lg"
-                            className="bg-[#2998FD] hover:bg-[#1f7fd9] text-white w-full py-7 sm:py-2 text-lg sm:text-base font-bold"
-                        >
-                            Get Started
-                        </Button>
-                    </Link>
-                </div>
             </div>
         </section>
     )

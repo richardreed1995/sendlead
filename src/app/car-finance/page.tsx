@@ -5,7 +5,6 @@ import FAQSCarFinance from "@/components/faqs-car-finance";
 import CTACarFinance from "@/components/cta-car-finance";
 import { HeroHeader } from "@/components/header";
 import FooterSection from "@/components/footer";
-import CostComparisonCarFinance from "@/components/cost-comparison-car-finance";
 import ROISectionCarFinance from "@/components/roi-section-car-finance";
 import CallToAction from "@/components/call-to-action";
 import CompetitiveAdvantages from "@/components/competitive-advantages";
@@ -92,7 +91,6 @@ export default function CarFinancePage() {
         <BenefitsCarFinance />
         <CompetitiveAdvantages />
         <ROISectionCarFinance />
-        <CostComparisonCarFinance />
         <FAQSCarFinance />
         <CallToAction />
       </main>

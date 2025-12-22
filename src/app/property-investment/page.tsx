@@ -5,7 +5,6 @@ import FAQSPropertyInvestment from "@/components/faqs-property-investment";
 import CTAPropertyInvestment from "@/components/cta-property-investment";
 import { HeroHeader } from "@/components/header";
 import FooterSection from "@/components/footer";
-import CostComparisonPropertyInvestment from "@/components/cost-comparison-property-investment";
 import FinalCTAPropertyInvestment from "@/components/final-cta-property-investment";
 import ROISectionPropertyInvestment from "@/components/roi-section-property-investment";
 import CallToAction from "@/components/call-to-action";
@@ -93,7 +92,6 @@ export default function PropertyInvestmentPage() {
         <BenefitsPropertyInvestment />
         <CompetitiveAdvantages />
         <ROISectionPropertyInvestment />
-        <CostComparisonPropertyInvestment />
         <FAQSPropertyInvestment />
         <CallToAction />
       </main>

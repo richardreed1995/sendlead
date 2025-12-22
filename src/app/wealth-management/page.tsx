@@ -4,7 +4,6 @@ import BenefitsWealthManagement from "@/components/benefits-wealth-management";
 import FAQsWealthManagement from "@/components/faqs-wealth-management";
 import { HeroHeader } from "@/components/header";
 import FooterSection from "@/components/footer";
-import CostComparisonWealthManagement from "@/components/cost-comparison-wealth-management";
 import ROISectionWealthManagement from "@/components/roi-section-wealth-management";
 import CallToAction from "@/components/call-to-action";
 import CompetitiveAdvantages from "@/components/competitive-advantages";
@@ -91,7 +90,6 @@ export default function WealthManagementPage() {
         <BenefitsWealthManagement />
         <CompetitiveAdvantages />
         <ROISectionWealthManagement />
-        <CostComparisonWealthManagement />
         <FAQsWealthManagement />
         <CallToAction />
       </main>

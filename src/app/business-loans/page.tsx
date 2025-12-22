@@ -5,7 +5,6 @@ import FAQSBusinessLoans from "@/components/faqs-business-loans";
 import CTABusinessLoans from "@/components/cta-business-loans";
 import { HeroHeader } from "@/components/header";
 import FooterSection from "@/components/footer";
-import CostComparisonBusinessLoans from "@/components/cost-comparison-business-loans";
 import FinalCTABusinessLoans from "@/components/final-cta-business-loans";
 import ROISectionBusinessLoans from "@/components/roi-section-business-loans";
 import CallToAction from "@/components/call-to-action";
@@ -93,7 +92,6 @@ export default function BusinessLoansPage() {
         <BenefitsBusinessLoans />
         <CompetitiveAdvantages />
         <ROISectionBusinessLoans />
-        <CostComparisonBusinessLoans />
         <FAQSBusinessLoans />
         <CallToAction />
       </main>

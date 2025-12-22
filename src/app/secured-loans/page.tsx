@@ -5,7 +5,6 @@ import FAQSSecuredLoans from "@/components/faqs-secured-loans";
 import CTASecuredLoans from "@/components/cta-secured-loans";
 import { HeroHeader } from "@/components/header";
 import FooterSection from "@/components/footer";
-import CostComparisonSecuredLoans from "@/components/cost-comparison-secured-loans";
 import FinalCTASecuredLoans from "@/components/final-cta-secured-loans";
 import ROISectionSecuredLoans from "@/components/roi-section-secured-loans";
 import CallToAction from "@/components/call-to-action";
@@ -93,7 +92,6 @@ export default function SecuredLoansPage() {
         <BenefitsSecuredLoans />
         <CompetitiveAdvantages />
         <ROISectionSecuredLoans />
-        <CostComparisonSecuredLoans />
         <FAQSSecuredLoans />
         <CallToAction />
       </main>

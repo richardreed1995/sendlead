@@ -4,7 +4,6 @@ import BenefitsMortgage from "@/components/benefits-mortgage";
 import FAQsMortgage from "@/components/faqs-mortgage";
 import { HeroHeader } from "@/components/header";
 import FooterSection from "@/components/footer";
-import CostComparisonMortgage from "@/components/cost-comparison-mortgage";
 import ROISectionMortgage from "@/components/roi-section-mortgage";
 import CallToAction from "@/components/call-to-action";
 import CompetitiveAdvantages from "@/components/competitive-advantages";
@@ -91,7 +90,6 @@ export default function MortgagePage() {
         <BenefitsMortgage />
         <CompetitiveAdvantages />
         <ROISectionMortgage />
-        <CostComparisonMortgage />
         <FAQsMortgage />
         <CallToAction />
       </main>

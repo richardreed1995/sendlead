@@ -70,14 +70,6 @@ export default function FAQSBusinessGrants() {
             </div>
           ))}
         </div>
-        
-        <div className="mt-12 text-center">
-          <Link href="/get-started">
-            <Button size="sm" className="bg-[#2998FD] hover:bg-[#1f7fd9] text-white">
-              Get Started
-            </Button>
-          </Link>
-        </div>
       </div>
     </section>
   );

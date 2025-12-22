@@ -4,7 +4,6 @@ import BenefitsFinancialAdvisor from "@/components/benefits-financial-advisor";
 import FAQsFinancialAdvisor from "@/components/faqs-financial-advisor";
 import { HeroHeader } from "@/components/header";
 import FooterSection from "@/components/footer";
-import CostComparisonFinancialAdvisor from "@/components/cost-comparison-financial-advisor";
 import ROISectionFinancialAdvisor from "@/components/roi-section-financial-advisor";
 import CallToAction from "@/components/call-to-action";
 import CompetitiveAdvantages from "@/components/competitive-advantages";
@@ -91,7 +90,6 @@ export default function FinancialAdvisorPage() {
         <BenefitsFinancialAdvisor />
         <CompetitiveAdvantages />
         <ROISectionFinancialAdvisor />
-        <CostComparisonFinancialAdvisor />
         <FAQsFinancialAdvisor />
         <CallToAction />
       </main>

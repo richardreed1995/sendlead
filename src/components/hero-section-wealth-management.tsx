@@ -4,15 +4,10 @@ import Image from "next/image";
 
 export default function HeroSectionWealthManagement() {
   return (
-    <section className="relative overflow-hidden bg-background py-24 sm:py-28 lg:py-32">
+    <section className="relative overflow-hidden bg-background pt-32 sm:pt-40 lg:pt-48 pb-24 sm:pb-28 lg:pb-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
-          <div className="mb-3 sm:mb-4 lg:mb-5">
-            <div className="inline-flex items-center gap-1 sm:gap-2 bg-gray-100 px-2 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm text-gray-700">
-              <span className="text-yellow-500">★★★★★</span>
-              <span>Trusted by Leading Wealth Managers</span>
-            </div>
-          </div>
+          
 
           <div className="mb-3 sm:mb-4 lg:mb-5">
             <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-5xl leading-tight">
