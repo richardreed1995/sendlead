@@ -1,10 +1,45 @@
 "use client";
 
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import Image from "next/image";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { Mail } from "lucide-react";
 
 export default function HeroSectionBootcamp() {
+  const [email, setEmail] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const router = useRouter();
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    try {
+      const response = await fetch("/api/notify-bootcamp", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      if (response.ok) {
+        // Track conversion if needed
+        router.push("/bootcamp/course");
+      } else {
+        // Even if notification fails, we want them to see the course
+        router.push("/bootcamp/course");
+      }
+    } catch (error) {
+      console.error("Error submitting email:", error);
+      router.push("/bootcamp/course");
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <section id="hero" className="relative overflow-hidden bg-background py-8 sm:py-16 lg:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -25,21 +60,34 @@ export default function HeroSectionBootcamp() {
             Learn the system top brokers use to turn marketing spend into consistent, high-quality customers that scale finance businesses.
           </p>
           
-          {/* CTA Button */}
+          {/* Lead Capture Form */}
           <div className="max-w-md mx-auto mb-8">
-            <div className="space-y-4">
-              <Link href="https://buy.stripe.com/9B628k3ubgwS4WKd8qcbC00" target="_blank">
-                <Button 
-                  size="lg" 
-                  className="w-full bg-[#2998FD] hover:bg-[#1f7fd9] text-white px-12 py-6 text-xl font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300"
-                >
-                  Get Instant Access
-                </Button>
-              </Link>
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div className="relative group">
+                <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                  <Mail className="h-5 w-5 text-gray-400 group-focus-within:text-[#2998FD] transition-colors" />
+                </div>
+                <Input 
+                  type="email" 
+                  placeholder="Enter your work email address" 
+                  required 
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="h-14 pl-12 text-lg rounded-xl border-2 border-gray-100 bg-white shadow-sm focus:border-[#2998FD] focus:ring-0 transition-all placeholder:text-gray-400"
+                />
+              </div>
+              <Button 
+                type="submit"
+                size="lg" 
+                disabled={isLoading}
+                className="w-full bg-[#2998FD] hover:bg-[#1f7fd9] text-white px-12 py-6 text-xl font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300"
+              >
+                Access The Bootcamp
+              </Button>
               <p className="text-sm text-gray-600">
-                Secure payment • Start immediately • Complete at your own pace
+                Instant access • Start immediately • Complete at your own pace
               </p>
-            </div>
+            </form>
           </div>
           
           {/* Course Image - Mobile and Desktop */}

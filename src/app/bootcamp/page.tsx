@@ -11,11 +11,11 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "7-Day Lead Generation Bootcamp for Finance Brokers | Sendlead",
-  description: "Fill your calendar with qualified leads every week. Learn the system top brokers use to turn marketing spend into consistent, high-quality leads that scale finance businesses to new profit levels. Just £28.",
+  description: "Fill your calendar with qualified leads every week. Learn the system top brokers use to turn marketing spend into consistent, high-quality leads that scale finance businesses to new profit levels.",
   keywords: "finance broker bootcamp, lead generation training, mortgage broker training, business loan broker course, finance marketing bootcamp, lead generation system, broker training course, finance lead generation training",
   openGraph: {
     title: "7-Day Lead Generation Bootcamp for Finance Brokers | Sendlead",
-    description: "Fill your calendar with qualified leads every week. Learn the system top brokers use to turn marketing spend into consistent, high-quality leads that scale finance businesses to new profit levels. Just £28.",
+    description: "Fill your calendar with qualified leads every week. Learn the system top brokers use to turn marketing spend into consistent, high-quality leads that scale finance businesses to new profit levels.",
     type: "website",
     url: "https://sendlead.co.uk/bootcamp",
     siteName: "Sendlead",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "7-Day Lead Generation Bootcamp for Finance Brokers | Sendlead",
-    description: "Fill your calendar with qualified leads every week. Learn the system top brokers use to turn marketing spend into consistent, high-quality leads. Just £28.",
+    description: "Fill your calendar with qualified leads every week. Learn the system top brokers use to turn marketing spend into consistent, high-quality leads.",
     images: ["https://sendlead.co.uk/og-bootcamp.jpg"],
   },
   alternates: {
@@ -67,13 +67,6 @@ export default function BootcampPage() {
     "audience": {
       "@type": "Audience",
       "audienceType": "Finance Brokers"
-    },
-    "offers": {
-      "@type": "Offer",
-      "price": "28",
-      "priceCurrency": "GBP",
-      "description": "7-day lead generation bootcamp",
-      "availability": "https://schema.org/InStock"
     },
     "duration": "P7D",
     "inLanguage": "en-GB"

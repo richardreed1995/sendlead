@@ -1,13 +1,5 @@
-import { redirect } from 'next/navigation';
+import CourseContent from "@/components/course-content";
 
-export const metadata = {
-  robots: {
-    index: false,
-    follow: false,
-  },
-};
-
-export default function OldCoursePage() {
-  // Redirect to bootcamp landing page
-  redirect('/bootcamp');
+export default function CoursePage() {
+  return <CourseContent />;
 }

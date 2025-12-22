@@ -27,18 +27,18 @@ export default function BootcampAccess() {
               <div className="text-center">
                 <div className="text-4xl mb-2">💷</div>
                 <h4 className="font-semibold text-foreground mb-2">Investment</h4>
-                <p className="text-muted-foreground">Just £28 — instant access</p>
+                <p className="text-muted-foreground">Free for Sendlead customers</p>
               </div>
             </div>
             
             {/* CTA Button */}
             <div className="text-center">
-              <Link href="https://buy.stripe.com/9B628k3ubgwS4WKd8qcbC00" target="_blank">
+              <Link href="#hero">
                 <Button 
                   size="lg" 
                   className="bg-[#2998FD] hover:bg-[#1f7fd9] text-white px-12 py-4 text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
                 >
-                  Enroll Now - £28
+                  Access Now
                 </Button>
               </Link>
             </div>

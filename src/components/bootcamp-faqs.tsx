@@ -7,8 +7,8 @@ import Link from "next/link";
 
 const faqs = [
   {
-    question: "What do I get for £28?",
-    answer: "You get complete access to all 7 video modules, downloadable templates, custom GPTs, and resources. No hidden costs, no upsells. Just a one-time payment of £28 for the entire bootcamp system."
+    question: "How do I access the bootcamp?",
+    answer: "You get complete access to all 7 video modules, downloadable templates, custom GPTs, and resources. Once you're given access, you'll have everything you need to start implementing the system."
   },
   {
     question: "How long does the bootcamp take to complete?",
@@ -33,10 +33,6 @@ const faqs = [
   {
     question: "How quickly will I see results?",
     answer: "Most brokers start seeing improved lead quality within the first week of implementing the strategies. The exact timeline depends on how quickly you can implement the systems, but we provide step-by-step guidance to accelerate your results."
-  },
-  {
-    question: "Is there a money-back guarantee?",
-    answer: "Yes! If you're not satisfied with the bootcamp content, contact us within 30 days for a full refund. We're confident this system will transform your lead generation, but if it's not right for you, we'll refund your £28 investment."
   }
 ];
 
@@ -74,9 +70,9 @@ export default function BootcampFAQs() {
         </div>
         
         <div className="text-center">
-          <Link href="https://buy.stripe.com/9B628k3ubgwS4WKd8qcbC00" target="_blank">
+          <Link href="#hero">
             <Button size="lg" className="bg-[#2998FD] hover:bg-[#1f7fd9] text-white px-12 py-6 text-xl font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300">
-              Enroll Now - £28
+              Access Now
             </Button>
           </Link>
         </div>
