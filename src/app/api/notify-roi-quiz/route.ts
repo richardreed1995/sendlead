@@ -295,23 +295,45 @@ export async function POST(request: NextRequest) {
 
     // Push to Kit (formerly ConvertKit)
     const kitApiKey = process.env.KIT_API_KEY
+    const kitFormId = process.env.KIT_FORM_ID
+    const kitTagId = process.env.KIT_TAG_ID
     
-    let kitPromise = Promise.resolve(null)
+    let kitPromise: Promise<any> = Promise.resolve(null)
     
     if (kitApiKey && contact?.email) {
-      kitPromise = fetch(`https://api.convertkit.com/v3/subscribers`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ 
-          api_key: kitApiKey, 
-          email: contact.email,
-          first_name: contact.name?.split(' ')[0] || ''
-        }),
-      }).then(res => res.json())
-        .catch(err => {
-          console.error('Failed to push to Kit:', err)
-          return null
-        })
+      if (kitFormId) {
+        // Subscribe to a Form
+        kitPromise = fetch(`https://api.convertkit.com/v3/forms/${kitFormId}/subscribe`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ 
+            api_key: kitApiKey, 
+            email: contact.email,
+            first_name: contact.name?.split(' ')[0] || ''
+          }),
+        }).then(res => res.json())
+          .catch(err => {
+            console.error('Failed to push to Kit:', err)
+            return null
+          })
+      } else if (kitTagId) {
+        // Subscribe to a Tag
+        kitPromise = fetch(`https://api.convertkit.com/v3/tags/${kitTagId}/subscribe`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ 
+            api_key: kitApiKey, 
+            email: contact.email,
+            first_name: contact.name?.split(' ')[0] || ''
+          }),
+        }).then(res => res.json())
+          .catch(err => {
+            console.error('Failed to push to Kit:', err)
+            return null
+          })
+      } else {
+        console.warn('Kit integration skipped: Neither KIT_FORM_ID nor KIT_TAG_ID configured')
+      }
     }
 
     // Wait for both
