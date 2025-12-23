@@ -6,6 +6,7 @@ import { Card } from "../../card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Home, Building2, Lock, Briefcase, MoreHorizontal, LineChart, User, Mail } from "lucide-react";
+import { trackEvent } from "@/components/meta-pixel-events";
 import Link from "next/link";
 
 type VerticalKey = 'mortgages' | 'businessLoans' | 'securedLoans' | 'financialAdvisor' | 'wealthManagement' | 'other';
@@ -139,10 +140,20 @@ export default function ROIQQuizFunnel() {
       script.async = true;
       document.body.appendChild(script);
 
+      // Listen for Calendly events
+      const handleCalendlyEvent = (e: MessageEvent) => {
+        if (e.data.event === 'calendly.event_scheduled') {
+          trackEvent("Schedule");
+        }
+      };
+
+      window.addEventListener('message', handleCalendlyEvent);
+
       return () => {
         if (document.body.contains(script)) {
           document.body.removeChild(script);
         }
+        window.removeEventListener('message', handleCalendlyEvent);
       };
     }
   }, [step]);

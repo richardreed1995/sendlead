@@ -2,6 +2,7 @@
 
 import { useEffect } from "react"
 import { Logo } from "@/components/logo"
+import { trackEvent } from "@/components/meta-pixel-events"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 
@@ -13,10 +14,20 @@ export default function SuccessGetStartedUnqualifiedPage() {
     script.async = true
     document.body.appendChild(script)
 
+    // Listen for Calendly events
+    const handleCalendlyEvent = (e: MessageEvent) => {
+      if (e.data.event === 'calendly.event_scheduled') {
+        trackEvent("Schedule")
+      }
+    }
+
+    window.addEventListener('message', handleCalendlyEvent)
+
     return () => {
       if (document.body.contains(script)) {
         document.body.removeChild(script)
       }
+      window.removeEventListener('message', handleCalendlyEvent)
     }
   }, [])
 

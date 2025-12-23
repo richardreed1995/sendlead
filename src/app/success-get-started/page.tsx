@@ -26,8 +26,16 @@ export default function SuccessGetStartedPage() {
       setIsMobile(window.innerWidth < 768)
     }
 
+    // Listen for Calendly events
+    const handleCalendlyEvent = (e: MessageEvent) => {
+      if (e.data.event === 'calendly.event_scheduled') {
+        trackEvent("Schedule")
+      }
+    }
+
     checkMobile()
     window.addEventListener('resize', checkMobile)
+    window.addEventListener('message', handleCalendlyEvent)
 
     return () => {
       // Cleanup script on unmount
@@ -35,6 +43,7 @@ export default function SuccessGetStartedPage() {
         document.body.removeChild(script)
       }
       window.removeEventListener('resize', checkMobile)
+      window.removeEventListener('message', handleCalendlyEvent)
     }
   }, [])
 

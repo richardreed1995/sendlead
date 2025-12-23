@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect } from "react"
+import { trackEvent } from "@/components/meta-pixel-events"
 
 declare global {
   interface Window {
@@ -26,8 +27,18 @@ export function CalendlyWidget() {
       }
     }
 
+    // Listen for Calendly events
+    const handleCalendlyEvent = (e: MessageEvent) => {
+      if (e.data.event === 'calendly.event_scheduled') {
+        trackEvent("Schedule")
+      }
+    }
+
+    window.addEventListener('message', handleCalendlyEvent)
+
     return () => {
       document.body.removeChild(script)
+      window.removeEventListener('message', handleCalendlyEvent)
     }
   }, [])
 
