@@ -60,6 +60,7 @@ export async function POST(request: NextRequest) {
 
     // 2. Push to Kit (formerly ConvertKit)
     const kitApiKey = process.env.KIT_API_KEY
+    const kitSequenceId = process.env.KIT_SEQUENCE_ID
     const kitFormId = process.env.KIT_FORM_ID
     const kitTagId = process.env.KIT_TAG_ID
     
@@ -67,7 +68,15 @@ export async function POST(request: NextRequest) {
     let kitIntegrationAttempted = false
     
     if (kitApiKey) {
-      if (kitFormId) {
+      if (kitSequenceId) {
+        // Add to a Sequence
+        kitIntegrationAttempted = true
+        kitPromise = fetch(`https://api.convertkit.com/v3/sequences/${kitSequenceId}/subscribe`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ api_key: kitApiKey, email }),
+        })
+      } else if (kitFormId) {
         // Subscribe to a Form
         kitIntegrationAttempted = true
         kitPromise = fetch(`https://api.convertkit.com/v3/forms/${kitFormId}/subscribe`, {
@@ -93,7 +102,7 @@ export async function POST(request: NextRequest) {
             return null
           })
       } else {
-        console.warn('Kit integration skipped: Neither KIT_FORM_ID nor KIT_TAG_ID configured')
+        console.warn('Kit integration skipped: Neither KIT_SEQUENCE_ID, KIT_FORM_ID nor KIT_TAG_ID configured')
       }
     } else {
       console.warn('Kit integration skipped: KIT_API_KEY not configured')

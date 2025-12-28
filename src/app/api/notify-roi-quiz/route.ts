@@ -295,13 +295,29 @@ export async function POST(request: NextRequest) {
 
     // Push to Kit (formerly ConvertKit)
     const kitApiKey = process.env.KIT_API_KEY
+    const kitSequenceId = process.env.KIT_SEQUENCE_ID
     const kitFormId = process.env.KIT_FORM_ID
     const kitTagId = process.env.KIT_TAG_ID
     
     let kitPromise: Promise<any> = Promise.resolve(null)
     
     if (kitApiKey && contact?.email) {
-      if (kitFormId) {
+      if (kitSequenceId) {
+        // Add to a Sequence
+        kitPromise = fetch(`https://api.convertkit.com/v3/sequences/${kitSequenceId}/subscribe`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ 
+            api_key: kitApiKey, 
+            email: contact.email,
+            first_name: contact.name?.split(' ')[0] || ''
+          }),
+        }).then(res => res.json())
+          .catch(err => {
+            console.error('Failed to add to Kit sequence:', err)
+            return null
+          })
+      } else if (kitFormId) {
         // Subscribe to a Form
         kitPromise = fetch(`https://api.convertkit.com/v3/forms/${kitFormId}/subscribe`, {
           method: 'POST',
@@ -332,7 +348,7 @@ export async function POST(request: NextRequest) {
             return null
           })
       } else {
-        console.warn('Kit integration skipped: Neither KIT_FORM_ID nor KIT_TAG_ID configured')
+        console.warn('Kit integration skipped: Neither KIT_SEQUENCE_ID, KIT_FORM_ID nor KIT_TAG_ID configured')
       }
     }
 

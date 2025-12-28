@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "../../card";
 import { Input } from "@/components/ui/input";
@@ -8,6 +8,7 @@ import { Label } from "@/components/ui/label";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { Home, Building2, Lock, Briefcase, MoreHorizontal, User, Mail, Phone, Globe, LineChart } from "lucide-react";
+import { trackEvent } from "@/components/meta-pixel-events";
 
 const leadTypes = [
   { id: "mortgages", label: "Mortgages", icon: <Home className="h-6 w-6 text-gray-700" /> },
@@ -42,10 +43,66 @@ export default function QuizFunnel() {
   const [agree, setAgree] = useState(false);
   const [error, setError] = useState("");
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const router = useRouter();
 
-  const totalSteps = 5;
+  const totalSteps = 6;
   const progress = ((step + 1) / totalSteps) * 100;
+
+  useEffect(() => {
+    // Load Calendly script
+    const script = document.createElement('script')
+    script.src = 'https://assets.calendly.com/assets/external/widget.js'
+    script.async = true
+    document.body.appendChild(script)
+
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+    
+    // Listen for Calendly events
+    const handleCalendlyEvent = (e: MessageEvent) => {
+      if (e.data.event === 'calendly.event_scheduled') {
+        trackEvent("Schedule")
+        router.push("/success-get-started");
+      }
+    }
+
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    window.addEventListener('message', handleCalendlyEvent)
+    
+    return () => {
+        if (document.body.contains(script)) {
+            document.body.removeChild(script)
+        }
+        window.removeEventListener('resize', checkMobile)
+        window.removeEventListener('message', handleCalendlyEvent)
+    }
+  }, [router]);
+
+  // Initialize Calendly widget when step 5 becomes active
+  useEffect(() => {
+    if (step === 5) {
+      // Small delay to ensure DOM is ready
+      const timer = setTimeout(() => {
+        const Calendly = (window as any).Calendly;
+        if (Calendly) {
+          const container = document.querySelector('.calendly-inline-widget');
+          if (container) {
+            const url = isMobile 
+              ? "https://calendly.com/richard-sendlead/sendlead-intro?hide_event_type_details=1&hide_gdpr_banner=1"
+              : "https://calendly.com/richard-sendlead/sendlead-intro?hide_gdpr_banner=1";
+            Calendly.initInlineWidget({
+              url: url,
+              parentElement: container,
+            });
+          }
+        }
+      }, 100);
+      return () => clearTimeout(timer);
+    }
+  }, [step, isMobile]);
 
   function validateEmail(email: string) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -113,39 +170,8 @@ export default function QuizFunnel() {
     if (!agree) return setError("You must agree to the privacy policy and terms & conditions");
     
     const completedAt = new Date().toISOString();
-    
-    // Send data to Make.com webhook
-    try {
-      const webhookUrl = process.env.NEXT_PUBLIC_MAKE_WEBHOOK || process.env.MAKE_WEBHOOK;
-      
-      if (webhookUrl) {
-        const response = await fetch(webhookUrl, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            leadType,
-            buyingLeads,
-            salesReps,
-            leadCapacity,
-            contact,
-            agree,
-            completedAt,
-          }),
-        });
-        
-        if (!response.ok) {
-          console.error('Make.com webhook failed:', response.status, response.statusText);
-        } else {
-          console.log('Lead data sent to Make.com successfully');
-        }
-      } else {
-        console.error('Make.com webhook URL is not configured');
-      }
-    } catch (error) {
-      console.error('Failed to send data to Make.com:', error);
-    }
 
-    // Send internal notification email
+    // Send internal notification email and push to Kit
     try {
       const response = await fetch('/api/notify-get-started', {
         method: 'POST',
@@ -169,32 +195,30 @@ export default function QuizFunnel() {
       console.error('Failed to send notification email:', error);
     }
     
-    // Check if qualified: 50+ leads AND 4+ sales reps
-    const isQualifiedLeadCapacity = leadCapacity === "50-99" || leadCapacity === "100-149" || leadCapacity === "150+";
-    const isQualifiedSalesReps = salesReps === "4-10" || salesReps === "11+";
-    const isQualified = isQualifiedLeadCapacity && isQualifiedSalesReps;
-    
-    if (isQualified) {
-      router.push("/success-get-started");
-    } else {
-      router.push("/success-get-started-unqualified");
-    }
+    // Track submission and proceed to Calendly booking
+    trackEvent("SubmitApplication");
+    setStep(5);
   }
 
   return (
     <div>
-      <div className="space-y-2 mb-4">
-        <div className="flex justify-between text-sm text-gray-500">
-          <span>Step {step + 1} of {totalSteps}</span>
-          <span>{Math.round(progress)}% Complete</span>
-        </div>
-        <div className="h-2 w-full bg-gray-200 rounded-full overflow-hidden">
-          <div className="h-full bg-blue-600 transition-all" style={{ width: `${progress}%` }} />
+      {/* Progress bar - always visible, constrained width */}
+      <div className="max-w-2xl mx-auto">
+        <div className="space-y-2 mb-4">
+          <div className="flex justify-between text-sm text-gray-500">
+            <span>Step {step + 1} of {totalSteps}</span>
+            <span>{Math.round(progress)}% Complete</span>
+          </div>
+          <div className="h-2 w-full bg-gray-200 rounded-full overflow-hidden">
+            <div className="h-full bg-blue-600 transition-all" style={{ width: `${progress}%` }} />
+          </div>
         </div>
       </div>
-      
-      {/* Mobile: No card background, Desktop: Keep card */}
-      <div className="block md:hidden">
+
+      {/* Steps 0-4: Constrained width */}
+      <div className={`max-w-2xl mx-auto ${step === 5 ? 'hidden' : ''}`}>
+        {/* Mobile: No card background, Desktop: Keep card */}
+        <div className="block md:hidden">
         {step === 0 && (
           <div className={`transition-opacity duration-300 ${isTransitioning ? 'opacity-50' : 'opacity-100'}`}>
             <div className="flex flex-col items-center justify-center mb-6 w-full">
@@ -370,8 +394,8 @@ export default function QuizFunnel() {
         )}
       </div>
       
-      {/* Desktop: Keep card background */}
-      <div className="hidden md:block">
+        {/* Desktop: Keep card background */}
+        <div className="hidden md:block">
         <Card className="border border-gray-200 shadow-sm p-6">
           {step === 0 && (
             <div className={`transition-opacity duration-300 ${isTransitioning ? 'opacity-50' : 'opacity-100'}`}>
@@ -547,7 +571,29 @@ export default function QuizFunnel() {
             </div>
           )}
         </Card>
+        </div>
       </div>
+
+      {/* Step 5: Calendly - Full width for both mobile and desktop */}
+      {step === 5 && (
+        <div className={`transition-opacity duration-300 ${isTransitioning ? 'opacity-50' : 'opacity-100'}`}>
+          <div className="text-center mb-6">
+            <h3 className="text-xl font-bold mb-2">Book Your Call</h3>
+            <p className="text-gray-600">Book a call below and we'll discuss your requirements and get you set up.</p>
+          </div>
+          
+          <div className="w-full">
+            <div 
+              className="calendly-inline-widget w-full" 
+              style={{
+                minWidth: '320px', 
+                height: '700px',
+                width: '100%'
+              }}
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 } 
